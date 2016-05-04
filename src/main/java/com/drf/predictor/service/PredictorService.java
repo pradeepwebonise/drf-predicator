@@ -2,9 +2,9 @@ package com.drf.predictor.service;
 
 import java.util.Date;
 
-import com.drf.proservice.model.EntriesDetailsWrapper;
+import com.drf.predictor.models.Predictor;
 
 public interface PredictorService {
     
-    EntriesDetailsWrapper getRacePredictor(Date date);
+    Predictor getRacePredictor(Date date);
 }

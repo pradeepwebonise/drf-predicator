@@ -193,19 +193,19 @@
 			</div>
 			<div class="wagerContent">
 				<div class="sectionBlock dateWrapper">
-					<span class="valueLabel">Date:</span> 20/03/2016
+					<span class="valueLabel">Date:</span> <span th:text="${predictor.date}"></span>
 				</div>					
 				<div class="sectionBlock raceCount">
-					<span class="valueLabel">Total Races:</span> 23
+					<span class="valueLabel">Total Races:</span> <span th:text="${predictor.totalRacesCount}"></span>
 				</div>
-				<ul class="dataTable wagerList">
+				<ul class="dataTable wagerList" >
 					<li class="dataRow listHead">
 						<div class="sCell sCellWager">Wagers</div>
 						<div class="sCell sCellCount">Count</div>
 					</li>
-					<li class="dataRow">
-						<div class="sCell sCellWager">PLACE</div>
-						<div class="sCell sCellCount">3</div>
+					<li class="dataRow" th:each="result : ${predictor.wagersPredicationMap}">
+						<div class="sCell sCellWager"><span th:text="${result.key}"></span></div>
+						<div class="sCell sCellCount"><span th:text="${result.value}"></span></div>
 					</li>							
 				</ul>
 			</div>		

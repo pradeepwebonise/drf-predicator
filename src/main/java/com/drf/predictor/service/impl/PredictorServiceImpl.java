@@ -1,7 +1,10 @@
 package com.drf.predictor.service.impl;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,16 +12,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.drf.common.dto.results.RunnerDTO;
+import com.drf.predictor.models.Predictor;
 import com.drf.predictor.service.PredictorService;
 import com.drf.proservice.model.EntriesDatesWrapper;
 import com.drf.proservice.model.EntriesDetailsWrapper;
 import com.drf.proservice.service.EntriesService;
 import com.drf.proservice.service.ResultsService;
 
+import drf.common.wrappers.analysis.ExpertsScore;
+import drf.common.wrappers.analysis.HorseDetails;
 import drf.common.wrappers.entries.RaceDTOWrapper;
 import drf.common.wrappers.entries.TrackEntry;
 import drf.common.wrappers.results.ResultDetailsWrapper;
+import drf.common.wrappers.results.ResultEntry;
 import drf.common.wrappers.results.ResultRaceDTOWrapper;
+import drf.common.wrappers.results.ResultsWrapper;
+import drf.common.wrappers.results.RunnerDTOWrapper;
 
 @Service
 public class PredictorServiceImpl implements PredictorService {
@@ -30,24 +40,21 @@ public class PredictorServiceImpl implements PredictorService {
 
     @Autowired
     private ResultsService resultService;
+    
+    private static final String DATE_FORMAT = "MM/dd/yyyy";
 
     @Value("${breeds}")
     private String breeds;
 
     @Override
-    public EntriesDetailsWrapper getRacePredictor(Date date) {
+    public Predictor getRacePredictor(Date date) {
 
-        EntriesDatesWrapper entriesList = entriesService.getEntriesList(date, breeds);
-        HashMap<String, Long> mapList = new HashMap<String, Long>();
-        mapList.put("WIN", null);
-        mapList.put("PLACE", null);
-        mapList.put("SHOW", null);
-        mapList.put("EXACTA", null);
-        mapList.put("TRIFECTA", null);
-
+        HashMap<String, Long> predicatMap = buildPredicatMap();
+        
+        ResultsWrapper resultList = resultService.getResultList(date, breeds);
         long totalRaces = 0;
 
-        for ( TrackEntry trackEntry : entriesList.getEntries() ) {
+        for ( ResultEntry trackEntry : resultList.getResults() ) {
             HashMap<Integer, ResultRaceDTOWrapper> resultsMap = new HashMap<Integer, ResultRaceDTOWrapper>();
 
             ResultDetailsWrapper resultDetailsWrapper = this.fetchResultForRace(trackEntry.getTrackId(), trackEntry.getCountry(), date);
@@ -60,24 +67,80 @@ public class PredictorServiceImpl implements PredictorService {
                 EntriesDetailsWrapper entriesDetailsWrapper = entriesService.getEntriesDetailsWrapper(trackEntry.getTrackId(), trackEntry.getCountry(), date, breeds);
                 if(entriesDetailsWrapper != null && entriesDetailsWrapper.getRaces() != null) {
                     for ( RaceDTOWrapper raceDTOWrapper : entriesDetailsWrapper.getRaces() ) {
-                        if(resultsMap.containsKey(raceDTOWrapper.getRaceKey().getRaceNumber())) {
-                           // buildPredictionMap();
+                        int raceNumber = raceDTOWrapper.getRaceKey().getRaceNumber();
+                        if(resultsMap.containsKey(raceNumber)) {
+                            ResultRaceDTOWrapper resultRaceDTOWrapper = resultsMap.get(raceNumber);
+                            List<HorseDetails> horseAnalysisList = this.fetchAnalysis(raceDTOWrapper);
+                            this.predictForWinPlaceShow(predicatMap, resultRaceDTOWrapper.getRunnerDTOs(), horseAnalysisList);
                         }
                     }
                 }
                 
             }
         }
+        Predictor predictor = new Predictor();
+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+        predictor.setDate(dateFormat.format(date));
+        predictor.setTotalRacesCount(totalRaces);
+        predictor.setWagersPredicationMap(predicatMap);
+        return predictor;
+    }
 
-        EntriesDetailsWrapper racesDetailsWrapper = entriesService.getEntriesDetailsWrapper("AQU", "USA", new Date(), breeds);
-        // try {
-        // LOG.debug("races: {}", new
-        // ObjectMapper().writeValueAsString(racesDetailsWrapper));
-        // } catch (IOException e) {
-        // // TODO Auto-generated catch block
-        // e.printStackTrace();
-        // }
-        return racesDetailsWrapper;
+    private HashMap<String, Long> buildPredicatMap() {
+        HashMap<String, Long> predicatMap = new HashMap<String, Long>();
+        predicatMap.put("WIN", 0L);
+        predicatMap.put("PLACE", 0L);
+        predicatMap.put("SHOW", 0L);
+        predicatMap.put("EXACTA", 0L);
+        predicatMap.put("TRIFECTA", 0L);
+        return predicatMap;
+    }
+
+    private void predictForWinPlaceShow(HashMap<String, Long> predicatList, List<RunnerDTOWrapper> WinnersHorses, List<HorseDetails> horseAnalysisList) {
+        if(!horseAnalysisList.isEmpty()) {
+            int exactCount = 0;
+            int trifectaCount = 0;
+            if(horseAnalysisList.get(0).getProgramNumber().equals(WinnersHorses.get(0).getProgramNumber())) {
+                Long count = predicatList.get("WIN");
+                count++;
+                predicatList.put("WIN", count);
+                exactCount ++;
+                trifectaCount++;
+            }
+            if(horseAnalysisList.get(1).getProgramNumber().equals(WinnersHorses.get(1).getProgramNumber())) {
+                Long count = predicatList.get("PLACE");
+                count++;
+                predicatList.put("PLACE", count);
+                exactCount ++;
+                trifectaCount++;
+            }
+            if(horseAnalysisList.get(2).getProgramNumber().equals(WinnersHorses.get(2).getProgramNumber())) {
+                Long count = predicatList.get("SHOW");
+                count++;
+                predicatList.put("SHOW", count);
+                trifectaCount++;
+            }
+            if(exactCount == 2 ) {
+                Long count = predicatList.get("EXACTA");
+                count++;
+                predicatList.put("EXACTA", count);
+            }
+            if(trifectaCount == 3) {
+                Long count = predicatList.get("TRIFECTA");
+                count++;
+                predicatList.put("TRIFECTA", count);
+            }
+        }
+    }
+
+    private List<HorseDetails> fetchAnalysis(RaceDTOWrapper raceDTOWrapper) {
+        List<ExpertsScore> expertScore = raceDTOWrapper.getExpertScore();
+        for ( int i = 0; i < expertScore.size(); i++ ) {
+            if(expertScore.get(i).getHeading1().equals("CONSENSUS")) {
+                return expertScore.get(i).getHorseDetails();
+            }
+        }
+        return null;
     }
 
     private ResultDetailsWrapper fetchResultForRace(String trackId, String country, Date date) {

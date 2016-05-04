@@ -7,11 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.thymeleaf.spring4.SpringTemplateEngine;
-import org.thymeleaf.spring4.view.ThymeleafViewResolver;
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import com.drf.proservice.service.EntriesService;
 import com.drf.proservice.service.ResultsService;
@@ -35,7 +30,7 @@ public class DrfPredictorApplication {
         proxy.setServiceUrl(proServiceHost + "/proEntriesService.http");
         return proxy;
     }
-    
+
     @Bean
     public HttpInvokerProxyFactoryBean httpInvokerResultsProxy() {
         HttpInvokerProxyFactoryBean proxy = new HttpInvokerProxyFactoryBean();
