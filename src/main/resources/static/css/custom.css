@@ -1,0 +1,508 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+.loading {
+    filter: alpha(opacity = 50);
+    opacity: 0.5;
+    background: #b7b7b7 url(../images/loader.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;   
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 300; 
+}
+h1 {
+    font-size: 18px;
+}
+h4 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;  
+}
+ul, li {
+    margin: 0;
+    list-style-type: none;
+    line-height: 18px;
+}
+.homeDash {
+    text-align: center;
+    padding: 200px 0;
+    background: #ffffff;
+    font-size: 20px;
+}
+.btn {
+    font-size: 13px;
+    line-height: 17px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+.btnBlue {
+    background: #005bf0;
+    color: #fff;
+    border: 1px solid #005bf0;
+}
+.btnBorder {
+    border: 1px solid #005bf0;
+    color: #005bf0;
+}
+.btnBorder:hover {
+    background: #f9f9f9;
+}
+
+/* Header */
+.headerWrap {
+    margin-bottom: 25px;
+}
+.headerMain {
+    padding: 25px 0;
+}
+.logo {
+    float: left;
+    margin-top: 17px;
+}
+.logo a {
+    display: block;
+    width: 180px;
+}
+.logoMobile {
+    display: none
+}
+.logoPrint {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 10px;
+}
+.headerAds {
+    float: right;
+    width: 728px;
+    height: 90px;   
+    text-align: center;
+    color: #4e4e4e;
+    background: #f1f1f1;
+}
+
+/*icons*/
+[class^="icon-"],
+[class*=" icon-"] {
+    background-image: url("../images/sprite.png");
+}
+
+[class^="icons-"],
+[class*=" icons-"] {
+    background-image: url("../images/icon-sprite.png");
+    display: inline-block;
+}
+
+
+
+/*** top navigation **/
+.topWrap {
+    border-bottom: 1px solid #eeeeee;
+    height: 34px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.topNav {
+    float: left;
+}
+.topWrap li {    
+    line-height: 34px;
+    float: left;
+    font-size: 14px;
+}
+.topWrap a {
+    color: #000;
+    padding: 0 9px;
+    display: block;
+}
+.topWrap a:hover {
+    color: #ec1c24;
+}
+.topWrap .topNavActive a {
+    color: #ec1c24;
+}
+.socialMedia {
+    margin-top: 4px;
+    float: right;
+}
+.socialMedia li {
+    float: left;
+}
+.socialMedia li a {
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    text-indent: -10000px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.socialMedia li a.twitter:before {
+    content: "";
+    background-image: url("../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -39px -876px;
+    display: block;
+    width: 19px;
+    height: 18px;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+}
+.socialMedia li a.facebook:before {
+    content: "";
+    background-image: url("../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -44px -903px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+}
+.socialMedia li a.twitter {
+    background: #00aced;
+}
+.socialMedia li a.facebook {
+    background: #3b5998;
+    margin-left: 5px;
+}
+.toploginNav {
+    float: right;
+    margin-right: 5px;
+}
+/*** end of  top navigation **/
+
+/*** header ***/
+.headerWrap {
+    margin-bottom: 25px;
+}
+header {
+    padding: 25px 0;
+}
+.logo {
+    margin-top: 17px;
+    float: left;   
+}
+
+nav {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    height: 55px;
+    text-transform: uppercase;
+    border-left: 0;
+    background: #404041;
+}
+.searchWrap {
+    position: relative;
+    float: right;
+    width: 38px;
+}
+.searchWrap .icon-search {
+    position: absolute;
+    z-index: 103;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 55px;
+    cursor: pointer;
+    border: 0;
+    border-left: 1px solid #262626;
+    background: none;
+}
+.searchWrap .icon-search:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/iconSprite.png');
+    background-repeat: no-repeat;
+    background-position: 0px -284px;
+    display: block;
+    margin: 19px 0 0 10px;
+}
+.searchWrap .searchBox {
+    position: absolute;
+    z-index: 102;
+    top: 55px;
+    right: 0px;
+    overflow: hidden;
+    width: 330px;
+    display: none;
+    background: #585858;
+}
+.searchWrap .searchBox input {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 40px;
+    width: 235px;
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+    border: 0;
+    border: none !important;
+    outline: none;
+    background: transparent;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0;
+}
+.searchWrap .searchBox input.btnSubmit {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    width: 60px;
+    padding: 0 10px;
+    color: white;
+    border: 0;
+    background: transparent;
+}
+.searchWrap.searchOpen .icon-search {
+    background: #585858;
+}
+.searchWrap.searchOpen .searchBox input.btnSubmit {
+    background-image: none;
+}
+.menuNav {
+    float: left;
+}
+.menuNav li {
+    position: relative;
+    float: left;
+}
+.menuNav > li {
+    border-left: 1px solid #292929;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.menuNav .drfNav {
+    margin: -1px 0 -1px -1px;
+    border: 1px solid #890000;
+    background: #ec1c24;
+    display: none;
+}
+.menuNav > li:nth-child(2) {
+    border-left: 0;
+}
+.menuNav li a {
+    display: block;
+    line-height: 55px;
+    padding: 0 5px;
+    padding: 0 4.5px\9;
+    color: white;
+}
+.menuNav li:hover, .menuNav li.active {
+    background: #ec1c24;
+}
+.subMenu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    position: absolute;
+    z-index: 9999;
+    top: 55px;
+    display: none;
+    width: 198px;
+    text-transform: none;
+    border: 1px solid #d2d2d2;
+    border-top: 0;
+    background: #fff;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+}
+.menuNav li:hover .subMenu {
+    display: block;
+}
+.subMenuArrow::after {
+    background: url(../images/iconSprite.png) -68px -436px no-repeat;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 8px;
+    position: absolute;
+    right: 2px;
+    top: 24px;
+}
+.subMenu .colMenu {
+    float: left;
+    width: 160px;
+    padding: 8px 0;
+    border-left: 1px solid #ccc;
+}
+.subMenu .colMenu:first-child {
+    border-left: 0;
+}
+.subMenu li {
+    float: none;
+}
+.subMenu li:hover {
+    background: transparent;
+}
+.subMenu li a {
+    padding: 0 15px;
+    color: #000;
+    line-height: 18px;
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+.subMenu li a:hover {
+    color: #ec1c24;
+}
+.subMenu li h2 {
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px 10px 10px;
+    text-transform: uppercase;
+    color: #666;
+}
+.subMenu .colMenu ul:first-child h2 {
+    padding-top: 10px;
+}
+.menuNav li a.subMenuArrow {
+    padding-right: 19px;
+}
+/******** end of menu ***/
+
+/******* content ****/
+.contentWrap {
+    position: relative;
+    margin-bottom: 50px;
+    border: solid 1px #eeeeee;
+    background: white;   
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px #d9e0e8;
+    -moz-box-shadow: 0 1px 2px #d9e0e8;
+    box-shadow: 0 1px 2px #d9e0e8;
+} 
+
+.rightColumn {
+    width: 321px;   
+    margin-left: -1px;
+    border-left: solid 1px #eeeeee;
+    float: right;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -ms-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+.adsWrap {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee
+}
+.pageData {
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    border-right: solid 1px #eeeeee;
+    width: 616px;
+    float: left;
+    min-height: 500px;
+}
+/** page data **/
+.pageData .topHead{
+    padding: 10px 20px;
+}
+.pageData .topHead h3 {
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 600;
+    color: #ec1c24;
+    font-size: 24px;
+}
+.dataTable {
+    border-collapse: collapse;
+    margin: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+.dataTable .headRow ,
+.dataTable .dataRow{
+    display: table-row;
+}
+.dataTable .sCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.dataTable .headRow .sCell {
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+/*********** footer ****/
+.footerWrap {
+    font-size: 13px;
+    color: #bbb;
+    font-family: Arial, Helvetica, sans-serif;   
+    line-height: 32px;
+    background: #f9f9f9;   
+    border-top: 1px solid #eeeeee;
+}
+.footerWrap .copyright {   
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #888;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 18px 0 30px 0;
+}
+
+/*** end of footer **/
+.wagerContent {
+    padding: 0 20px;
+}
+.wagerContent .sectionBlock {
+    margin-bottom: 10px;
+}
+.wagerContent .valueLabel {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+}
+.wagerList {
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+}
+.wagerList .listHead {   
+    background: #ccc;
+    font-weight: 600;
+}
+.wagerList .dataRow {
+    border-bottom: 1px solid #ccc;
+}
+.wagerList .sCell {
+    padding: 10px;
+}

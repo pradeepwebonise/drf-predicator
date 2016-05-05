@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<title>DRF Predictor</title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/custom-media.css}"/>
+	<script type="text/javascript" th:src="@{/js/vendor/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/custom.js}"></script>
+
+
+	<link rel="apple-touch-icon" th:href="@{/images/apple-touch-icon.png}"/>
+	<link rel="apple-touch-icon" sizes="57x57" th:href="@{/images/apple-touch-icon-57x57.png}"/>
+	<link rel="apple-touch-icon" sizes="72x72" th:href="@{/images/apple-touch-icon-72x72.png}"/>
+	<link rel="apple-touch-icon" sizes="114x114" th:href="@{/images/apple-touch-icon-114x114.png}"/>
+	<link rel="apple-touch-icon" sizes="144x144" th:href="@{/images/apple-touch-icon-144x144.png}"/>
+	<link rel="apple-touch-icon" sizes="57x57" th:href="@{/images/apple-touch-icon-60x60.png}"/>
+	<link rel="apple-touch-icon" sizes="72x72" th:href="@{/images/apple-touch-icon-120x120.png}"/>
+	<link rel="apple-touch-icon" sizes="114x114" th:href="@{/images/apple-touch-icon-76x76.png}"/>
+	<link rel="apple-touch-icon" sizes="144x144" th:href="@{/images/apple-touch-icon-152x152.png}"/>
+	<!-- Windows 8 Tile Icons -->
+	<meta name="msapplication-square70x70logo" th:content="@{/images/smalltile.png}" />
+	<meta name="msapplication-square150x150logo" th:content="@{/images/mediumtile.png}" />
+	<meta name="msapplication-wide310x150logo" th:content="@{/images/widetile.png}" />
+
+</head>	
+<body>
+
+<!-- top navigation bar -->
+<div class="topWrap">
+    <ul class="topNav clearfix">
+        <li><a href="http://www.drf.com/">DRF.com</a></li>
+        <li><a href="http://www.drf.com/bets">DRF Bets</a></li>
+        <li><a href="http://www.drf.com/breeding">Breeding</a></li>
+        <li><a href="http://www.drf.com/news/harness-racing">Harness</a></li>
+        <li><a href="http://www.bcqualify.com/">BCQualify</a></li>
+        <li><a href="http://www.nhcqualify.com/">NHCQualify</a></li>
+        <li><a href="http://www.head2head.com/">Fantasy Sports</a></li>
+    </ul>
+    <ul class="socialMedia mobileHide clearfix">
+        <li><a href="https://twitter.com/DRFInsidePost" target="_blank" class="twitter"></a></li>
+        <li><a href="https://www.facebook.com/racingform" target="_blank" class="facebook"></a></li>
+    </ul>
+    <ul class="toploginNav clearfix loginHide">
+        <li><a href="javascript:void(0)" class="loginHeader">Login</a></li>
+        <li><a href="https://store.drf.com/stores/1/register.cfm" target="_blank">Register</a></li>
+    </ul>
+</div>  
+<!-- end of top navigation bar -->
+
+<!-- main content -->
+<div class="container">
+
+	<!-- page navigation -->
+	<div class="headerWrap">
+			<header class="clearfix">
+				<div class="logo">
+					<a href="/"><img th:src="@{/images/logo.jpg}" alt="DRF - Daily Racing Form"/></a>
+				</div>			
+				<div class="headerAds mobileHide">
+						<img th:src="@{/images/ad.png}"/>
+				</div>				
+			</header>
+			<nav class="clearfix">
+				<div class="searchWrap">
+					<i class="icon-search"></i>
+					<div class="searchBox">
+						<div class="formWarp clearfix" >
+							<form name="searchForm clearfix">
+								<input type="text" placeholder="Search Races, News, etc"/>
+								<input class="btnSubmit" target="_blank" value="Submit" type="submit"/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<ul class="menuNav">
+					<li class="drfNav"><a class="icon-drfMenu" href="http://www.drf.com" target="_self">Home</a></li>
+					<li>
+						<a href="#" class="subMenuArrow">DRF Bets</a>
+						<div class="subMenu" style="width: 195px; right: inherit;">
+							<div class="colMenu" >
+								<ul>
+									<li>
+										<a href="#">Log In</a>
+									</li>
+									<li>
+										<a href="http://drfbets.com/200">Sign Up</a>
+									</li>
+									<li>
+										<a href="http://www.drfbets.com/why-drf-bets" target="_self">Learn more</a>
+									</li>
+									<li>
+										<a href="#">Rewards Program</a>
+									</li>
+									<li>
+										<a href="#">Points Details</a>
+									</li>
+									<li>
+										<a href="#" >Free DRF Plus</a>
+									</li>
+									<li>
+										<a href="#">Free DRF PPs</a>
+									</li>
+									<li>
+										<a href="#">Free Harness PPs</a>
+									</li>
+									<li>
+										<a href="#">FAQ</a>
+									</li>
+								</ul>
+							</div>							
+						</div>
+					</li>
+					<li>
+							<a href="#" class="subMenuArrow">Handicapping &amp; PPs</a>
+							<div class="subMenu">
+								<div class="colMenu">
+									<ul>
+											<li>
+												<h2>Thoroughbred Past Performances</h2>
+											</li>										
+											<li>
+												<a href="#" >DRF Classic PDF PPs</a>
+											</li>
+											<li>
+												<a href="#" >DRF Formulator PPs</a>
+											</li>
+											<li>
+												<a href="#" >DRF Easyform PPs</a>
+											</li>
+									</ul>
+								</div>
+							</div>
+					</li>
+					<li>
+							<a href="#" class="subMenuArrow">Entries</a>
+							<div class="subMenu">
+								<div class="colMenu">
+									<ul>
+											<li>
+												<h2>Thoroughbred Past Performances</h2>
+											</li>										
+											<li>
+												<a href="#" >Entries</a>
+											</li>
+											<li>
+												<a href="#" >Live Odds</a>
+											</li>
+											<li>
+												<a href="#" >Workouts</a>
+											</li>
+									</ul>									
+								</div>
+							</div>
+					</li>
+					<li>
+							<a href="#" class="subMenuArrow">Results</a>
+					</li>
+					<li>
+							<a href="#" class="subMenuArrow">News</a>
+					</li>				
+					<li>
+							<a href="#" class="">Blogs</a>
+					</li>		
+					<li>
+							<a href="#" class="subMenuArrow">Learn</a>
+					</li>		
+					<li>
+							<a href="#" class="subMenuArrow">Video</a>
+					</li>		
+					<li>
+							<a href="#" class="subMenuArrow">Store</a>
+					</li>	
+					<li>
+							<a href="#" class="subMenuArrow">Events</a>
+					</li>		
+					<li>
+							<a href="#" class="subMenuArrow">Breeding</a>
+					</li>			
+
+				</ul>
+			</nav>
+	</div>
+	<!-- end of page navigation-->
+	
+	<!-- middle main content -->
+	<div class="contentWrap clearfix">
+		<section class="pageData">			
+			<div class="topHead clearfix">
+				<h3 class="pull-left">Prediction</h3>						
+			</div>
+			<div class="wagerContent">
+				<div class="sectionBlock dateWrapper">
+					<span class="valueLabel">Date:</span> 20/03/2016
+				</div>					
+				<div class="sectionBlock raceCount">
+					<span class="valueLabel">Total Races:</span> 23
+				</div>
+				<ul class="dataTable wagerList">
+					<li class="dataRow listHead">
+						<div class="sCell sCellWager">Wagers</div>
+						<div class="sCell sCellCount">Count</div>
+					</li>
+					<li class="dataRow">
+						<div class="sCell sCellWager">PLACE</div>
+						<div class="sCell sCellCount">3</div>
+					</li>							
+				</ul>
+			</div>		
+		</section>
+
+		<!-- right column -->
+		<aside class="rightColumn">
+			<div class="adsWrap">
+				<img th:src="@{/images/ad4.png}" alt="Advertisement"/>
+			</div>			
+		</aside>
+		<!-- end of right column -->
+	</div>
+	<!-- end of middle main content -->
+</div> 
+<!-- end of main content -->
+
+<!-- page footer -->
+<footer class="footerWrap">
+	<div class="container">		
+		<div class="copyright">
+			<span>©</span> 2016 Daily Racing Form. All rights reserved.
+		</div>
+	</div>
+</footer>	 
+<!-- end of page footer -->
+</body>
+</html>
