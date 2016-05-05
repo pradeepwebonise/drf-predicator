@@ -1,6 +1,8 @@
 package com.drf.predictor.service.impl;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -40,7 +42,7 @@ public class PredictorServiceImpl implements PredictorService {
 
     @Autowired
     private ResultsService resultService;
-    
+
     private static final String DATE_FORMAT = "MM/dd/yyyy";
 
     @Value("${breeds}")
@@ -50,7 +52,7 @@ public class PredictorServiceImpl implements PredictorService {
     public Predictor getRacePredictor(Date date) {
 
         HashMap<String, Long> predicatMap = buildPredicatMap();
-        
+
         ResultsWrapper resultList = resultService.getResultList(date, breeds);
         long totalRaces = 0;
 
@@ -63,19 +65,19 @@ public class PredictorServiceImpl implements PredictorService {
                 for ( ResultRaceDTOWrapper resultRaceDTOWrapper : resultDetailsWrapper.getResults() ) {
                     resultsMap.put(resultRaceDTOWrapper.getRaceKey().getRaceNumber(), resultRaceDTOWrapper);
                 }
-                
+
                 EntriesDetailsWrapper entriesDetailsWrapper = entriesService.getEntriesDetailsWrapper(trackEntry.getTrackId(), trackEntry.getCountry(), date, breeds);
-                if(entriesDetailsWrapper != null && entriesDetailsWrapper.getRaces() != null) {
+                if ( entriesDetailsWrapper != null && entriesDetailsWrapper.getRaces() != null ) {
                     for ( RaceDTOWrapper raceDTOWrapper : entriesDetailsWrapper.getRaces() ) {
                         int raceNumber = raceDTOWrapper.getRaceKey().getRaceNumber();
-                        if(resultsMap.containsKey(raceNumber)) {
+                        if ( resultsMap.containsKey(raceNumber) ) {
                             ResultRaceDTOWrapper resultRaceDTOWrapper = resultsMap.get(raceNumber);
                             List<HorseDetails> horseAnalysisList = this.fetchAnalysis(raceDTOWrapper);
                             this.predictForWinPlaceShow(predicatMap, resultRaceDTOWrapper.getRunnerDTOs(), horseAnalysisList);
                         }
                     }
                 }
-                
+
             }
         }
         Predictor predictor = new Predictor();
@@ -97,35 +99,35 @@ public class PredictorServiceImpl implements PredictorService {
     }
 
     private void predictForWinPlaceShow(HashMap<String, Long> predicatList, List<RunnerDTOWrapper> WinnersHorses, List<HorseDetails> horseAnalysisList) {
-        if(!horseAnalysisList.isEmpty()) {
+        if ( !horseAnalysisList.isEmpty() ) {
             int exactCount = 0;
             int trifectaCount = 0;
-            if(horseAnalysisList.get(0).getProgramNumber().equals(WinnersHorses.get(0).getProgramNumber())) {
+            if ( horseAnalysisList.get(0).getProgramNumber().trim().equals(WinnersHorses.get(0).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("WIN");
                 count++;
                 predicatList.put("WIN", count);
-                exactCount ++;
+                exactCount++;
                 trifectaCount++;
             }
-            if(horseAnalysisList.get(1).getProgramNumber().equals(WinnersHorses.get(1).getProgramNumber())) {
+            if ( horseAnalysisList.get(1).getProgramNumber().trim().equals(WinnersHorses.get(1).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("PLACE");
                 count++;
                 predicatList.put("PLACE", count);
-                exactCount ++;
+                exactCount++;
                 trifectaCount++;
             }
-            if(horseAnalysisList.get(2).getProgramNumber().equals(WinnersHorses.get(2).getProgramNumber())) {
+            if ( horseAnalysisList.get(2).getProgramNumber().trim().equals(WinnersHorses.get(2).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("SHOW");
                 count++;
                 predicatList.put("SHOW", count);
                 trifectaCount++;
             }
-            if(exactCount == 2 ) {
+            if ( exactCount == 2 ) {
                 Long count = predicatList.get("EXACTA");
                 count++;
                 predicatList.put("EXACTA", count);
             }
-            if(trifectaCount == 3) {
+            if ( trifectaCount == 3 ) {
                 Long count = predicatList.get("TRIFECTA");
                 count++;
                 predicatList.put("TRIFECTA", count);
@@ -135,12 +137,14 @@ public class PredictorServiceImpl implements PredictorService {
 
     private List<HorseDetails> fetchAnalysis(RaceDTOWrapper raceDTOWrapper) {
         List<ExpertsScore> expertScore = raceDTOWrapper.getExpertScore();
-        for ( int i = 0; i < expertScore.size(); i++ ) {
-            if(expertScore.get(i).getHeading1().equals("CONSENSUS")) {
-                return expertScore.get(i).getHorseDetails();
+        if ( expertScore != null && !expertScore.isEmpty() ) {
+            for ( int i = 0; i < expertScore.size(); i++ ) {
+                if ( expertScore.get(i).getHeading1().equals("CONSENSUS") ) {
+                    return expertScore.get(i).getHorseDetails();
+                }
             }
         }
-        return null;
+        return Collections.emptyList();
     }
 
     private ResultDetailsWrapper fetchResultForRace(String trackId, String country, Date date) {
