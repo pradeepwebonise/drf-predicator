@@ -7,7 +7,7 @@ body {
 .loading {
     filter: alpha(opacity = 50);
     opacity: 0.5;
-    background: #b7b7b7 url(../images/loader.gif) no-repeat center center;
+    background: #b7b7b7 url(../img/loader.gif) no-repeat center center;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -54,17 +54,30 @@ ul, li {
     display: inline-block;
     cursor: pointer;
 }
-.btnBlue {
+.btnBlue,
+a.btnBlue:visited {
     background: #005bf0;
     color: #fff;
     border: 1px solid #005bf0;
 }
-.btnBorder {
+.btnBlue:hover,
+a.btnBlue:visited:hover {
+	background: #3079f0;
+	color: #fff;
+	text-decoration: none;
+}
+.btnBorder,
+a.btnBorder:visited  {
     border: 1px solid #005bf0;
     color: #005bf0;
 }
 .btnBorder:hover {
     background: #f9f9f9;
+    color: #005bf0;
+}
+.ipadShow,
+.logoMobile {
+    display: none;
 }
 
 /* Header */
@@ -95,7 +108,7 @@ ul, li {
 .headerAds {
     float: right;
     width: 728px;
-    height: 90px;   
+    height: 90px;    
     text-align: center;
     color: #4e4e4e;
     background: #f1f1f1;
@@ -104,12 +117,12 @@ ul, li {
 /*icons*/
 [class^="icon-"],
 [class*=" icon-"] {
-    background-image: url("../images/sprite.png");
+    background-image: url("../img/sprite.png");
 }
 
 [class^="icons-"],
 [class*=" icons-"] {
-    background-image: url("../images/icon-sprite.png");
+    background-image: url("../img/icon-sprite.png");
     display: inline-block;
 }
 
@@ -163,7 +176,7 @@ ul, li {
 }
 .socialMedia li a.twitter:before {
     content: "";
-    background-image: url("../images/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: -39px -876px;
     display: block;
@@ -175,7 +188,7 @@ ul, li {
 }
 .socialMedia li a.facebook:before {
     content: "";
-    background-image: url("../images/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: -44px -903px;
     display: block;
@@ -196,6 +209,66 @@ ul, li {
     float: right;
     margin-right: 5px;
 }
+.userNav {
+     position: relative;
+     top: 0;
+     right: 0;
+     float: right;
+     margin-right: 10px;
+ }
+ .userNav .userName {
+     position: relative;
+     z-index: 112;
+     display: block;
+     margin-top: -3px;
+     padding: 8px 15px 0 15px;
+     cursor: pointer;
+ }
+ .userNav .userName .icon-arrow {
+ 	background-image: url('../img/iconSprite.png');
+     background-repeat: no-repeat;
+     background-position: 0 -18px;
+     width: 12px;
+     height: 14px;
+     margin: 10px 0 0 5px;
+     float: right;
+ }
+ .userNav .userName span {
+     font-size: 13px;
+     line-height: 24px;
+     float: left;
+     color: #000;
+ }
+ .userNav ul {
+     position: absolute;
+     z-index: 111;
+     top: 33px;
+     right: 0;
+     display: none;
+     width: 175px;
+     padding: 3px 15px;
+     list-style-type: none;
+     border: 1px solid #e5e5e5;
+     border-top: 1px solid #fff;
+     background: #fff;
+ }
+ .userNav.userNavActive ul {
+     display: block;
+ }
+ .userNav ul li {
+     float: none;
+     border-top: 1px solid #e5e5e5;
+ }
+ .userNav ul li:first-child {
+     border-top: none;
+ }
+ .userNav ul li a {
+     padding: 2px 0 2px 0;
+     display: block;
+     color: #000;
+     font-size: 13px;
+     line-height: 30px;
+ }
 /*** end of  top navigation **/
 
 /*** header ***/
@@ -206,10 +279,9 @@ header {
     padding: 25px 0;
 }
 .logo {
+    float: left;
     margin-top: 17px;
-    float: left;   
 }
-
 nav {
     font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -230,7 +302,7 @@ nav {
     top: 0;
     right: 0;
     width: 38px;
-    height: 55px;
+    height: 54px;
     cursor: pointer;
     border: 0;
     border-left: 1px solid #262626;
@@ -240,7 +312,7 @@ nav {
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url('../images/iconSprite.png');
+    background-image: url('../img/iconSprite.png');
     background-repeat: no-repeat;
     background-position: 0px -284px;
     display: block;
@@ -251,9 +323,9 @@ nav {
     z-index: 102;
     top: 55px;
     right: 0px;
+    height: 0;
     overflow: hidden;
-    width: 330px;
-    display: none;
+    width: 330px;   
     background: #585858;
 }
 .searchWrap .searchBox input {
@@ -290,6 +362,7 @@ nav {
 .searchWrap.searchOpen .searchBox input.btnSubmit {
     background-image: none;
 }
+
 .menuNav {
     float: left;
 }
@@ -318,6 +391,9 @@ nav {
     padding: 0 4.5px\9;
     color: white;
 }
+.menuNav li a.subMenuArrow {
+    padding-right: 19px;
+}
 .menuNav li:hover, .menuNav li.active {
     background: #ec1c24;
 }
@@ -337,11 +413,11 @@ nav {
     -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
 }
-.menuNav li:hover .subMenu {
+.subMenu.subMenuActive {
     display: block;
 }
 .subMenuArrow::after {
-    background: url(../images/iconSprite.png) -68px -436px no-repeat;
+    background: url(../img/iconSprite.png) -68px -436px no-repeat;
     content: '';
     display: block;
     width: 15px;
@@ -384,11 +460,11 @@ nav {
     text-transform: uppercase;
     color: #666;
 }
+.subMenu li h2 a {
+    padding: 0;
+}
 .subMenu .colMenu ul:first-child h2 {
     padding-top: 10px;
-}
-.menuNav li a.subMenuArrow {
-    padding-right: 19px;
 }
 /******** end of menu ***/
 
@@ -409,7 +485,7 @@ nav {
 .rightColumn {
     width: 321px;   
     margin-left: -1px;
-    border-left: solid 1px #eeeeee;
+    border-left: solid 1px #eeeeee; 
     float: right;
     -webkit-border-radius: 0 0 5px 0;
     -moz-border-radius: 0 0 5px 0;
@@ -427,9 +503,543 @@ nav {
     border-radius: 5px 0 0 5px;
     border-right: solid 1px #eeeeee;
     width: 616px;
-    float: left;
+    float: left;   
     min-height: 500px;
 }
+
+/*** stake result ***/
+.stakeResultWrap .topHead{
+    padding: 10px 20px;
+}
+.stakeResultWrap .topHead h3 {
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 600;
+    color: #ec1c24;
+    font-size: 24px;
+}
+.filterWrapper  {
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+    padding: 20px;
+    background: #f3f3f3;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.filterWrapper .label {
+    float: left;
+    line-height: 30px;
+}
+.filterWrapper .filterOption span {
+    color: #333333;
+    border-radius: 4px;
+    padding: 5px 15px;
+    display: inline-block;  
+    border: 1px solid #dcdcdc;
+    float: left;
+    margin-left: 14px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease ;
+}
+.filterWrapper .filterOption span.active,
+.filterWrapper .filterOption span:hover {
+    background: #005bf0;
+    color: #fff;
+    border-color: #005bf0;
+}
+.stakeResultList li > h3 {
+    background: #f0f7fe;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #666666;
+    border: 1px solid #bddeff;
+    padding: 7px 20px;
+    position: relative;
+    margin: -1px -1px 0 -1px;
+    cursor: pointer;
+}
+.stakeResultList .icons-accordian,
+ .icons-accordian {
+    background-position: 0 -10px;
+    width: 15px;
+    height: 10px;
+    margin-top: 5px;
+}
+.stakeResultList h3.active .icons-accordian {
+    background-position: 0 0;
+}
+.stakeResultList .resultRaceDesc {    
+    padding: 16px 0 0 50px;
+    border-bottom: 1px solid #dddddd;
+}
+.stakeResultList li .resultData{
+    display: none;
+}
+
+.stakeResultList li.active .resultData
+{
+    display: block;
+}
+.resultRaceTopDesc {
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.resultRaceTopDesc .resultHead h4 {
+  color: #010101; 
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Titillium Web',Arial,sans-serif;
+  text-decoration: underline;
+  font-weight: 400;
+  display: inline-block; 
+  float: left;
+  margin-right: 5px;
+}
+.resultRaceTopDesc .resultHead span {
+    font-size: 14px;    
+    color: #666666;
+}
+.resultHead .raceTrack  {
+	line-height: 22px;
+}
+.resultHead .raceTrackDesc > span {
+	margin-right: 3px;
+}
+.textGreen,
+.resultRaceTopDesc .resultHead span.textGreen {
+    color: #66aa33;
+}
+.resultRaceTopDesc .resultHead {
+    margin-bottom: 8px;   
+}
+.raceDtlDesc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #888888;
+}
+.raceDtlDesc > div {
+    margin-top: 8px
+}
+.raceDtlDesc .raceDtlMiles {
+    margin-right: 270px;
+}
+.raceDtlDesc > div:first-child{
+    margin-top: 0;
+}
+.raceDtlDesc b {
+    color: #000000;
+    font-weight: normal;
+}
+.raceDtlDesc .winnerText {
+    width: 295px;
+    font-size: 12px;
+}
+.raceDtlDesc .winnerText span{
+    margin-right: 5px;
+    display: inline-block;
+}
+.readMoreInfo {
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+    padding: 13px 20px 13px 0;
+    border-top: 1px solid #dddddd;
+}
+.readMoreInfo p {
+    margin-bottom: 0;
+}
+.readMoreInfo a {
+    color: #000;   
+    position: relative;
+    text-decoration: underline;
+}
+.readMoreInfo a:hover {
+    opacity: 0.8;
+}
+
+.raceDtlDesc .btnBorder{
+    margin-right: 15px;
+}
+.icons-watch {
+    width: 20px;
+    height: 18px;
+    background-position: 0 -21px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.btnViewDetails,
+.resultRaceTopDesc .resultHead span.btnViewDetails {
+    display: inline-block;
+    position: relative;
+    padding-right: 12px;
+    color: #005bf0;
+    cursor: pointer;
+    font-size: 15px;
+}
+.resultRaceTopDesc .btnBlue {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btnViewDetails:hover,
+.resultRaceTopDesc .resultHead span.btnViewDetails:hover{
+    color: #000;
+}
+.btnViewDetails:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0; 
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #005bf0;
+}
+.btnViewDetails.active:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 0px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #005bf0;
+}
+.btnViewDetails:hover:before  {
+    border-top-color: #000;
+}
+.btnViewDetails.open:before {
+    border-top: 0;
+    border-bottom: 4px solid #005bf0;
+}
+.dataTable {
+    border-collapse: collapse;
+    margin: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+.dataTable .headRow ,
+.dataTable .dataRow{
+    display: table-row;
+}
+.dataTable .sCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.dataTable .headRow .sCell {
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 17px;
+}
+.resultDetlChart {
+    border-top: 1px solid #ddd;
+    display: none;
+}
+.resultDetlChart .sCell {    
+    color: #666;
+    padding: 6px 5px 12px 5px;
+    border-bottom: 1px solid #eee; 
+}
+.resultDetlChart .sCell {
+    font-size: 14px;
+    line-height: 18px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+	-webkit-hyphens: auto;
+  	-moz-hyphens: auto;
+    hyphens: auto;
+}
+.resultDetlChart .headRow .sCell {
+	padding: 13px 5px;
+}
+.resultDetlChart .dataRow .sCellHorse,
+.resultDetlChart .dataRow .sCellTrainer,
+.resultDetlChart .sCellJockey span {
+    color: #333333;
+}
+.resultDetlChart  .sCellSrNo {
+    width: 25px;
+    text-align: center;
+}
+
+.timeInHund {
+    padding-right: 5px;
+}
+/** saddle color **/
+.oddsNo {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    margin-top: -1px;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+    border: 1px solid transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    display: inline-block;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.resultDetlChart .saddle1,
+.saddle1 {
+    background: #ec2c28;
+    color: #ffffff;
+}
+.resultDetlChart .saddle2,
+.saddle2 {
+    background: #ffffff;
+    border-color: #babbbe;
+}
+.resultDetlChart .saddle3,
+.saddle3 {
+    background: #1d4fa3;
+    color: #ffffff;
+}
+.resultDetlChart .saddle4,
+.saddle4 {
+    background: #eaeb24;
+}
+.resultDetlChart .saddle5,
+.saddle5 {
+    background: #458544;
+    color: #ffffff;
+}
+.resultDetlChart .saddle6,
+.saddle6 {
+    background: #060103;
+    color: #ffffff;
+}
+.resultDetlChart .saddle7,
+.saddle7 {
+    background: #efa428;
+}
+.resultDetlChart .saddle8,
+.saddle8 {
+    background: #f9bcc5;
+}
+.resultDetlChart .saddle9,
+.saddle9 {
+    background: #1fb8d7;
+}
+.resultDetlChart .saddle10,
+.saddle10 {
+    background: #9a468f;
+    color: #ffffff;
+}
+.resultDetlChart .saddle11,
+.saddle11 {
+    background: #c2c2c2;   
+}
+.resultDetlChart .saddle12,
+.saddle12 {
+    background: #a9d5b5;   
+}
+.resultDetlChart .saddle13,
+.saddle13 {
+    background: #644538;
+    color: #ffffff;  
+}
+.resultDetlChart .saddle14,
+.saddle14 {
+    background: #671033;
+    color: #ffffff; 
+}
+.resultDetlChart .saddle15,
+.saddle15 {
+    background: #c9c2b7;
+}
+.resultDetlChart .saddle16,
+.saddle16 {
+    background: #8688c4;
+}
+.resultDetlChart .saddle17,
+.saddle17 {
+    background: #1c3975;
+    color: #ffffff;
+}
+.resultDetlChart .saddle18,
+.saddle18 {
+    background: #103b1b;
+    color: #ffffff;
+}
+.resultDetlChart .saddle19,
+.saddle19 {
+    background: #0a73a8;
+}
+.resultDetlChart .saddle20,
+.saddle20 {
+    background: #df0a79;
+    color: #ffffff;
+}
+/** end of saddle color **/
+.resultRaceDesc .extraDetl {
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+    padding-top: 20px;
+   /*  border-bottom: 1px solid #dddddd; */
+}
+.extraDetl .infoLabel {   
+    color: #000000;
+}
+.extraDetl > div {
+    margin-bottom: 20px;
+}
+.extraDetl .time {
+    margin-bottom: 30px;
+}
+.extraDetl .winnerInfo {
+    margin-bottom: 26px;
+}
+.extraDetl .winnerInfo a {
+    text-decoration: underline;
+}
+.winnerInfo > div {
+    display: inline;
+    padding-right: 5px;
+}
+.winnerInfo div:nth-child(2),
+.winnerInfo div:first-child{
+    padding-left: 0;
+}
+.winnerInfo .infoLabelBlock,
+.infoLabelBlock {
+    display: block;
+}
+.winnerInfo .infoLabelBlock {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*********** footer ****/
+.footerWrap {
+    font-size: 13px;
+    color: #bbb;
+    font-family: Arial, Helvetica, sans-serif;   
+    line-height: 32px;
+    background: #f9f9f9;   
+    border-top: 1px solid #eeeeee;
+    position: relative;
+}
+.footerWrap .copyright {   
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #888;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 18px 0 30px 0;
+}
+.footerMenu ul {
+    margin-bottom: 35px;
+}
+.footerMenu {   
+    border-bottom: 1px solid #dddddd;
+    padding-top: 42px;
+}
+.footerMenu ul li {
+    padding: 8px 0
+}
+.footerMenu ul li a {
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    display: inline-block;   
+    text-decoration: underline;
+}
+.footerMenu ul li a:hover {
+    color: #ec1c24;
+}
+
+.footerMenu ul li.menuHead a {
+    font-size: 18px;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+.footerMenu  .row {
+    margin-left: -20px;
+}
+.footerMenu  .span2{
+    width: 140px;
+    float: left;
+    margin-left: 20px;
+}
+/*** end of footer **/
+
+/** upcoming event **/
+.upcomingEvents {
+    background: #f4f6fa
+}
+.upcomingEvents h4{
+    font-size: 24px;  
+    display: block;
+    line-height: 28px;
+    color: #fff;
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 600;
+    background: #404041;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+.upcomingEvents ul {
+    padding: 0 12px 0 19px;
+}
+.upcomingEvents ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.upcomingEvents .eventImg {
+    width: 75px;
+    text-align: center;
+}
+.upcomingEvents .eventImg img {
+    max-width: 100%;
+}
+.upcomingEvents .eventDetl {
+    margin-left: 95px;
+}
+.upcomingEvents .eventDetl .eventTitle{
+    font-family: 'Titillium Web',Arial,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+}
+.upcomingEvents .eventDetl .eventTime{
+    font-size: 14px;
+    line-height: 18px;
+    color: #676767;
+}
+.upcomingEvents .viewMore {
+    padding: 20px 30px;
+    font-size: 15px;
+}
+.upcomingEvents .viewMore  a {
+    text-decoration: underline;
+}
+.mobileShow {
+    display: none !important;
+}
+
+.payoffDetail {
+    display: inline-block;
+}
+/** end of upcoming event **/
+
 /** page data **/
 .pageData .topHead{
     padding: 10px 20px;

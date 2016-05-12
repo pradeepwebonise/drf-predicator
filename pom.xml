@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>com.drf</groupId>
 			<artifactId>proservice-client</artifactId>
-			<version>2.7.3</version>
+			<version>2.7.6</version>
 		</dependency>
 		<dependency>
 			<groupId>com.drf</groupId>

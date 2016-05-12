@@ -1,0 +1,1454 @@
+[
+    {
+        "title" : "Home",
+        "link" : "http://www.drf.com",
+        "depth" : "1",
+        "weight" : "-50",
+        "menu" : []
+    },
+    {
+        "title" : "DRF Bets",
+        "link" : "http://www.drf.com/store/drf-bets-125e-bonus",
+        "depth" : "1",
+        "weight" : "-49",
+        "menu" : [
+            {
+                "title" : "Log In",
+                "link" : "http://drfbets.com",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "Sign Up",
+                "link" : "http://www.drf.com/bet100-get150-A?utm_medium=nav&utm_campaign=bets150bonus&utm_source=bet100get150_ctrlLP_betsnav-signup",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "Learn more",
+                "link" : "http://www.drf.com/bet100-get150-A?utm_medium=nav&utm_campaign=bets150bonus&utm_source=bet100get150_ctrlLP_betsnav-learn",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "Rewards Program",
+                "link" : "http://www.drf.com/drf-bets-rewards-program?utm_source=rewardsprogramNAV&utm_medium=nav&utm_campaign=RewardsProgram",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "Points Details",
+                "link" : "http://www.drf.com/drf-bets-rewards-points",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "Free DRF Plus",
+                "link" : "http://www.drf.com/drf-plus-bets-members",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu":[]
+            },
+            {
+                "title" : "Free DRF PPs",
+                "link" : "http://www.drf.com/node/255606",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu":[]
+            },
+            {
+                "title" : "Free Harness PPs",
+                "link" : "http://www.drf.com/store/drf-bets-free-harness-pps",
+                "depth" : "2",
+                "weight" : "-43",
+                "menu":[]
+            },
+            {
+                "title" : "FAQ",
+                "link" : "http://www.drf.com/store/drf-bets-125d-bonus#faq",
+                "depth" : "2",
+                "weight" : "-42",
+                "menu":[]
+            },
+            {
+                "title" : "DRF Ticketmaker",
+                "link" : "http://www.drfticketmaker.com/",
+                "depth" : "2",
+                "weight" : "-41",
+                "menu":[]
+            },
+            {
+                "title" : "LIVE Tournament",
+                "link" : "http://www.drf.com/xpressbet-live-tournament?utm_medium=nav&utm_campaign=xpbtourney&utm_source=xpbmar15tourneynav",
+                "depth" : "2",
+                "weight" : "-40",
+                "menu":[]
+            },
+            {
+                "title" : "Tournament Schedule",
+                "link" : "http://www.drf.com/tournament-schedule",
+                "depth" : "2",
+                "weight" : "-39",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "Handicapping & PPs",
+        "link" : "http://www.drf.com/store/compare-past-performances",
+        "depth" : "1",
+        "weight" : "-47",
+        "menu" : [
+            {
+                "title" : "Horsemen's Products",
+                "link" : "http://www.drf.com/HCPOnlineHorsePickProduct.do?action=horsemensproducts",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu" : [
+                    {
+                        "title" : "Individual Horse PPs",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=horseproducts",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Individual Horse Charts",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=chartproducts",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Mare's Produce with Beyer",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=horsemensproducts",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Pedigree with Beyer",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=horsemensproducts",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Beyer on Demand",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=beyerproducts",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Lifetime Beyer Figures Report",
+                        "link" : "http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=beyerproducts",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Reports",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu" : [
+                    {
+                        "title" : "The Wizard",
+                        "link" : "http://www1.drf.com/Wizard/MainMenu.do ",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Gameplan",
+                        "link" : "http://www1.drf.com/GamePlan/Mainmenu.do",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Quick Sheets",
+                        "link" : "http://www1.drf.com/drfQuickSheet.do",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Picks",
+                        "link" : "http://www1.drf.com/propicks.do?day=today ",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Today's Racing Digest",
+                        "link" : "http://www1.drf.com/data/handicapping/trdigest.html",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Key Race Report",
+                        "link" : "http://www1.drf.com/drfKeyRace.do",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Positive ROI Report",
+                        "link" : "http://www1.drf.com/drfPositiveROI.do",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Moss Pace Figure Reports",
+                        "link" : "http://www1.drf.com/PaceFigsReport.do",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Debut Reports",
+                        "link" : "http://www1.drf.com/products/debreps/debreps.html",
+                        "depth" : "3",
+                        "weight" : "-42",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "BreezeFigs",
+                        "link" : "http://www1.drf.com/breezefigs/breezefigs.html",
+                        "depth" : "3",
+                        "weight" : "-41",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Clocker Reports",
+                        "link" : "http://www.drf.com/clocker",
+                        "depth" : "3",
+                        "weight" : "-40",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "DRF Print",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu" : [
+                    {
+                        "title" : "Digital Paper Access",
+                        "link" : "http://www.drf.com/paperaccess",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+
+                    },
+                    {
+                        "title" : "Digital Paper Subscribe",
+                        "link" : "http://www.drf.com/paper ",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Form Finder",
+                        "link" : "http://www1.drf.com/help/formfinder/formfinder.html",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Access past performances",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu" : [
+                    {
+                        "title" : "DRF EasyForm PPs",
+                        "link" : "http://www1.drf.com/EasyForm/MainMenu.do",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Classic PDF PPs",
+                        "link" : "http://www1.drf.com/drfPastPerformance.do",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Formulator PPs",
+                        "link" : "http://formulator.drf.com",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF HarnessEye PPs",
+                        "link" : "http://www1.drf.com/HarnessEye/MainMenu.do",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Daily Harness Program PPs",
+                        "link" : "http://www1.drf.com/HarnessProgram/MainMenu.do",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Daily Racing Program PPs",
+                        "link" : "http://www1.drf.com/DailyRacingProgram/MainMenu.do",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Equibase & Trackmaster PPs - Thoroughbred",
+                        "link" : "http://www1.drf.com/Equibase/Products.do?productId=50201",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "TrackMaster PPs - Harness",
+                        "link" : "http://www1.drf.com/Equibase/Products.do?productId=50321",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Premium news and data",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu" : [
+                    {
+                        "title" : "DRF Plus Plans",
+                        "link" : "http://www.drf.com/enhanced-drf-plus?utm_source=hppsnavdrfplus&utm_medium=nav&utm_campaign=drfplus",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Plus Access",
+                        "link" : "http://www.drf.com/drf-plus-access",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Digital Paper",
+                        "link" : "http://www.drf.com/paper",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Simulcast Daily",
+                        "link" : "http://www.drf.com/simulcast-daily",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Text Charts",
+                        "link" : "http://www1.drf.com/drfTextChart.do",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Racing and Wagering Information",
+                "link" : "http://www.drf.com/info/",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu" : [
+                    {
+                        "title" : "Stakes Schedule",
+                        "link" : "http://www1.drf.com/misc/stakes_schedule.jsp",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Stakes Results",
+                        "link" : "http://www1.drf.com/stakeresults/drfStakeResults.jsp",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Racing Dates",
+                        "link" : "http://www1.drf.com/entries/racingdates.html",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Cancelled Races",
+                        "link" : "http://www1.drf.com/entries/cancelledraces.html",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "TV Schedule",
+                        "link" : "http://www.drf.com/node/104577",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Point of Call Index",
+                        "link" : "http://www1.drf.com/misc/pointsofcall.pdf",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Purse Value Index",
+                        "link" : "http://www1.drf.com/misc/pursevalueindex.pdf",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "3-Year Best Time Chart",
+                        "link" : "http://www.drf.com/node/246417",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Tools",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu" : [
+                    {
+                        "title" : "Live Odds",
+                        "link" : "http://www.drf.com/live_odds",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Horse Watch",
+                        "link" : "http://www1.drf.com/HorseWatches.do",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Carryover Watch",
+                        "link" : "http://www1.drf.com/CarryoverWatches.do",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Trainer Watch",
+                        "link" : "http://www1.drf.com/TrainerWatches.do",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Race Watch",
+                        "link" : "http://www1.drf.com/racesWatchAction.do",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Leaderboard",
+                        "link" : "http://www1.drf.com/drfLeaderBoard.do?category=trainer",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Watchmaker Watch",
+                        "link" : "http://www.drf.com/news/watchmaker-watch-weekly-divisional-ratings",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Ticketmaker",
+                        "link" : "http://www.drf.com/store/drf-bets-ticketmaker",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Ticketmaker - MOBILE",
+                        "link" : "http://drfticketmaker.com",
+                        "depth" : "3",
+                        "weight" : "-42",
+                        "menu":[]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title" : "Entries",
+        "link" : "http://www.drf.com/race-entries",
+        "depth" : "1",
+        "weight" : "-46",
+        "menu" : [
+            {
+                "title" : "Entries",
+                "link" : "http://www.drf.com/race-entries",
+                "depth" : "2",
+                "weight" : "0",
+                "menu":[]
+            },
+            {
+                "title" : "Live Odds",
+                "link" : "http://www.drf.com/live_odds",
+                "depth" : "2",
+                "weight" : "1",
+                "menu":[]
+            },
+            {
+                "title" : "Workouts",
+                "link" : "http://www1.drf.com/static/indexMenus/windex.html",
+                "depth" : "2",
+                "weight" : "2",
+                "menu":[]
+            },
+            {
+                "title" : "Workout Search",
+                "link" : "http://www1.drf.com/workoutHorseSearch.do",
+                "depth" : "2",
+                "weight" : "3",
+                "menu":[]
+            },
+            {
+                "title" : "Changes",
+                "link" : "http://www1.drf.com/static/indexMenus/cindex.html",
+                "depth" : "2",
+                "weight" : "4",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "Results",
+        "link" : "http://www.drf.com/race-results",
+        "depth" : "1",
+        "weight" : "-45",
+        "menu" : [
+            {
+                "title" : "Results",
+                "link" : "http://www.drf.com/race-results",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "Workouts",
+                "link" : "http://www1.drf.com/static/indexMenus/windex.html",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "Workouts Search",
+                "link" : "http://www1.drf.com/workoutHorseSearch.do",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "PDF Charts",
+                "link" : "http://www1.drf.com/drfPDFCharts.do",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "Chart Information",
+                "link" : "http://www1.drf.com/products/charts/charts.html",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "Stakes Replays",
+                "link" : "http://www1.drf.com/stakeresults/drfStakeResults.jsp",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu":[]
+            },
+            {
+                "title" : "SirePowered Results",
+                "link" : "http://drf.com/breeder-results/",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "News",
+        "link" : "http://www.drf.com/news/all-news",
+        "depth" : "1",
+        "weight" : "-44",
+        "menu" : [
+            {
+                "title" : "Categories",
+                "link" : "http://www.drf.com/news/4 2 3 1 5 6 7",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu" : [
+                    {
+                        "title" : "All Handicapping",
+                        "link" : "http://www.drf.com/news/all-handicapping",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "All News",
+                        "link" : "http://www.drf.com/news/all-news",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Breeding",
+                        "link" : "http://www.drf.com/news/breeding-news",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Harness Racing",
+                        "link" : "http://www.drf.com/news/harness-racing",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Industry",
+                        "link" : "http://www.drf.com/news/industry-news",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "International Racing",
+                        "link" : "http://www.drf.com/news/international-racing",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Opinion Columns",
+                        "link" : "http://www.drf.com/news/opinion-columns",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Sales",
+                        "link" : "http://www.drf.com/news/sales-news",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Slideshows",
+                        "link" : "http://www.drf.com/slideshows",
+                        "depth" : "3",
+                        "weight" : "-42",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Track Notes",
+                "link" : "http://www.drf.com/news/track-news-notes",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu" : [
+                    {
+                        "title" : "Aqueduct",
+                        "link" : "http://www.drf.com/news/track_reports/109",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Belmont Park",
+                        "link" : "http://www.drf.com/news/track_reports/110",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Churchill Downs",
+                        "link" : "http://www.drf.com/news/track_reports/117",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Golden Gate Fields",
+                        "link" : "http://www.drf.com/news/track_reports/243",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Gulfstream Park",
+                        "link" : "http://www.drf.com/news/track_reports/111",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Keeneland",
+                        "link" : "http://www.drf.com/news/track_reports/113",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Pimlico",
+                        "link" : "http://www.drf.com/news/track_reports/269",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Santa Anita Park",
+                        "link" : "http://www.drf.com/news/track_reports/114",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Tampa Bay Downs",
+                        "link" : "http://www.drf.com/news/track_reports/289",
+                        "depth" : "3",
+                        "weight" : "-42",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Woodbine",
+                        "link" : "http://www.drf.com/news/track_reports/293",
+                        "depth" : "3",
+                        "weight" : "-41",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Hazel Park",
+                        "link" : "http://www.drf.com/news/track_reports/354478",
+                        "depth" : "3",
+                        "weight" : "-40",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Triple Crown",
+                "link" : "http://www.drf.com/news/8 9 10",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu" : [
+                    {
+                        "title" : "Kentucky Derby News",
+                        "link" : "http://www.drf.com/news/kentucky-derby",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Kentucky Derby Point Standings",
+                        "link" : "http://www.drf.com/road",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Road To The 2015 Kentucky Derby",
+                        "link" : "http://www.drf.com/events/road-kentucky-derby-churchill-downs",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Derby Watch Top 20",
+                        "link" : "http://www.drf.com/node/243654",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Preakness Stakes",
+                        "link" : "http://www.drf.com/news/9",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+
+                    },
+                    {
+                        "title" : "Belmont Stakes",
+                        "link" : "http://www.drf.com/news/10",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Special Events",
+                "link" : "http://www.drf.com/news/11 12 13 14 15",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu" : [
+                    {
+                        "title" : "Breeders' Cup",
+                        "link" : "http://www.drf.com/news/11",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Saratoga",
+                        "link" : "http://www.drf.com/node/125168",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF/NTRA Handicapping Championship",
+                        "link" : "http://www.drf.com/news/12",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title" : "Blogs",
+        "link" : "http://www.drf.com/blogs",
+        "depth" : "1",
+        "weight" : "-43",
+        "menu" : []
+    },
+    {
+        "title" : "Learn",
+        "link" : "http://www1.drf.com/products/learn/how-to-bet-horses.html",
+        "depth" : "1",
+        "weight" : "-42",
+        "menu" : [
+            {
+                "title" : "Learn to Play",
+                "link" : "http://www1.drf.com/products/learn/how-to-bet-horses.html",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "History of Horseracing",
+                "link" : "http://www1.drf.com/products/learn/horse-racing-history.html",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "How to read PPs",
+                "link" : "http://www1.drf.com/flash/drf_pp_tutorial.html",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "How to use EasyForm",
+                "link" : "http://www1.drf.com/products/easyform/about-easyform.html",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "How to use Formulator",
+                "link" : "http://www.drf.com/formulator",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "How to use TicketMaker",
+                "link" : "http://www.drf.com/drf-bets-ticketmaker",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu":[]
+            },
+            {
+                "title" : "Beyer Speed Figures",
+                "link" : "http://www1.drf.com/products/beyers/beyers.html",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu":[]
+            },
+            {
+                "title" : "Moss Pace Figures",
+                "link" : "http://www1.drf.com/products/moss/moss.html",
+                "depth" : "2",
+                "weight" : "-43",
+                "menu":[]
+            },
+            {
+                "title" : "Racing Post Ratings",
+                "link" : "http://www1.drf.com/products/rpr/rpr.html",
+                "depth" : "2",
+                "weight" : "-42",
+                "menu":[]
+            },
+            {
+                "title" : "BreezeFigs Handicapping",
+                "link" : "http://www.biodatatrack.com",
+                "depth" : "2",
+                "weight" : "-41",
+                "menu":[]
+            },
+            {
+                "title" : "Wagering and Winning",
+                "link" : "http://www1.drf.com/row/fan_ed/DRFFanEd.pdf",
+                "depth" : "2",
+                "weight" : "-40",
+                "menu":[]
+            },
+            {
+                "title" : "Harness Night School",
+                "link" : "http://www.drf.com/node/258075",
+                "depth" : "2",
+                "weight" : "-39",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "Video",
+        "link" : "http://www.drf.com/videos",
+        "depth" : "1",
+        "weight" : "-40",
+        "menu" : [
+            {
+                "title" : "DRF Latest Videos",
+                "link" : "http://www.drf.com/videos#drf-latest-videos",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "Race of the Day",
+                "link" : "http://www.drf.com/videos#race-of-the-day",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "Stakes Previews",
+                "link" : "http://www.drf.com/videos#stakes-previews",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "Del Mar",
+                "link" : "http://www.drf.com/videos#del-mar",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "Saratoga",
+                "link" : "http://www.drf.com/videos#saratoga",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "Friday Happy Hour",
+                "link" : "http://www.drf.com/videos#friday-happy-hour",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu":[]
+            },
+            {
+                "title" : "Mid-Atlantic Report",
+                "link" : "http://www.drf.com/videos#mid-atlantic-report",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu":[]
+            },
+            {
+                "title" : "Tournaments",
+                "link" : "http://www.drf.com/videos#tournaments",
+                "depth" : "2",
+                "weight" : "-43",
+                "menu":[]
+            },
+            {
+                "title" : "Learn to Play the Races",
+                "link" : "http://www.drf.com/videos#learn-to-play-the-races",
+                "depth" : "2",
+                "weight" : "-42",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "Store",
+        "link" : "http://www.drf.com/node/108009",
+        "depth" : "1",
+        "weight" : "-39",
+        "menu" : [
+            {
+                "title" : "Past Performances",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu" : [
+                    {
+                        "title" : "Compare all DRF PPs ",
+                        "link" : "http://www.drf.com/node/108009",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Formulator PPs",
+                        "link" : "http://www.drf.com/node/108006",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Classic PPs",
+                        "link" : "http://www.drf.com/node/108007",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF EasyForm PPs",
+                        "link" : "http://www.drf.com/node/108008",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Daily Racing Program PPs",
+                        "link" : "http://www.drf.com/node/255268",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Expanded Closer Looks",
+                        "link" : "http://www.drf.com/closer-looks",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Equibase & Trackmaster PPs - Thoroughbred",
+                        "link" : "http://www.drf.com/equibase-trackmaster",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Harness PPs",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu" : [
+                    {
+                        "title" : "DRF HarnessEye PPs",
+                        "link" : "http://www.drf.com/node/242193",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Daily Harness Program PPs",
+                        "link" : "http://www.drf.com/node/242193",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "TrackMaster PPs - Harness",
+                        "link" : "http://www.drf.com/harnesspps",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "Packages",
+                "link" : "http://www.drf.com/node/108009",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu" : [
+                    {
+                        "title" : "Preakness Advance-Access",
+                        "link" : "http://www.drf.com/store/preakness-players-package",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Belmont Advance-Access",
+                        "link" : "http://www.drf.com/store/belmont-players-package",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Belmont Spring Meet",
+                        "link" : "http://www.drf.com/store/belmont-spring-summer-players-package",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "DRF Plus",
+                "link" : "http://www.drf.com",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu" : [
+                    {
+                        "title" : "DRF Plus Features",
+                        "link" : "http://www.drf.com/enhanced-drf-plus?utm_source=storenavdrfplus&utm_medium=nav&utm_campaign=drfplus",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "FREE DRF Plus",
+                        "link" : "http://www.drf.com/enhanced-drf-plus-bets?utm_source=storenavdrfplus&utm_medium=nav&utm_campaign=drfplus",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "REPORTS",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu" : [
+                    {
+                        "title" : "DRF Quick Sheets",
+                        "link" : "http://www.drf.com/store/drf-quick-sheets?utm_source=storesubnav&utm_medium=nav&utm_campaign=qs",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Clocker Reports",
+                        "link" : "http://www.drf.com/clocker",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "PICKS",
+                "link" : "<front>",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu" : [
+                    {
+                        "title" : "DRF Gameplan",
+                        "link" : "http://www.drf.com/store/drf-gameplan?utm_source=storenav&utm_medium=nav&utm_campaign=gameplan",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "DRF Picks",
+                        "link" : "http://www.drf.com/store/drf-picks-plans?utm_source=storesubnav&utm_medium=nav&utm_campaign=drfpicks",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Wizard Special Full Card & Betting Window Combo",
+                        "link" : "http://www.drf.com/store/wizard-full-card-and-betting-window",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Wizard Selections",
+                        "link" : "http://www1.drf.com/Wizard/MainMenu.do?utm_source=storesubnav&utm_medium=nav&utm_campaign=wizard",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Wizard's Betting Window",
+                        "link" : "http://www.drf.com/store/wizard-betting-window",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "DIGITAL PAPER",
+                "link" : "http://www.drf.com/paper",
+                "depth" : "2",
+                "weight" : "-43",
+                "menu" : [
+                    {
+                        "title" : "Select an Issue",
+                        "link" : "http://www.drf.com/paperaccess",
+                        "depth" : "3",
+                        "weight" : "-50",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Subscribe",
+                        "link" : "http://www.drf.com/paper",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    }
+                ]
+            },
+            {
+                "title" : "DRF Press",
+                "link" : "http://store.drf.com/acb/stores/1/DRF_Press_C18.cfm",
+                "depth" : "2",
+                "weight" : "-42",
+                "menu" : [
+                    {
+                        "title" : "Latest Releases",
+                        "link" : "http://store.drf.com/acb/stores/1/newprods.cfm ",
+                        "depth" : "3",
+                        "weight" : "-49",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Multimedia",
+                        "link" : "http://store.drf.com/acb/stores/1/Multimedia_C1022.cfm",
+                        "depth" : "3",
+                        "weight" : "-48",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Handicapper's Corner",
+                        "link" : "http://store.drf.com/acb/stores/1/Handicapping_C1023.cfm",
+                        "depth" : "3",
+                        "weight" : "-47",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Reference/Statistical",
+                        "link" : "http://store.drf.com/acb/stores/1/Reference_Statistical_C1024.cfm",
+                        "depth" : "3",
+                        "weight" : "-46",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Classics",
+                        "link" : "http://store.drf.com/acb/stores/1/Classics_C1026.cfm",
+                        "depth" : "3",
+                        "weight" : "-45",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Apparel",
+                        "link" : "http://store.drf.com/acb/stores/1/Apparel_C1027.cfm",
+                        "depth" : "3",
+                        "weight" : "-44",
+                        "menu":[]
+                    },
+                    {
+                        "title" : "Merchandise",
+                        "link" : "http://store.drf.com/acb/stores/1/Merchandise_C1028.cfm",
+                        "depth" : "3",
+                        "weight" : "-43",
+                        "menu":[]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title" : "Events",
+        "link" : "http://www.drf.com/#",
+        "depth" : "1",
+        "weight" : "-38",
+        "menu" : [
+            {
+                "title" : "Race of the Day",
+                "link" : "http://www.drf.com/race-of-the-day",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "2015 Preakness Stakes",
+                "link" : "http://www.drf.com/events/preakness-stakes",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "2014 Eclipse Awards",
+                "link" : "http://www.drf.com/news/2014-eclipse-awards-finalists",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "2015 Dubai World Cup Carnival",
+                "link" : "http://www.drf.com/events/dubai-world-cup-carnival-meydan ",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "Handicapping Tournaments",
+                "link" : "http://www.drf.com/tournaments",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "2015 Penn Gaming Challenge",
+                "link" : "http://www.drf.com/events/2014-penn-gaming-challenge",
+                "depth" : "2",
+                "weight" : "-45",
+                "menu":[]
+            }
+        ]
+    },
+    {
+        "title" : "Breeding",
+        "link" : "http://www.drf.com/breeding",
+        "depth" : "1",
+        "weight" : "-37",
+        "menu" : [
+            {
+                "title" : "Breeding Home",
+                "link" : "http://www.drf.com/breeding",
+                "depth" : "2",
+                "weight" : "-50",
+                "menu":[]
+            },
+            {
+                "title" : "Breeding News",
+                "link" : "http://www.drf.com/news/breeding-news",
+                "depth" : "2",
+                "weight" : "-49",
+                "menu":[]
+            },
+            {
+                "title" : "Sales News",
+                "link" : "http://www.drf.com/news/sales-news",
+                "depth" : "2",
+                "weight" : "-48",
+                "menu":[]
+            },
+            {
+                "title" : "Keeneland January Sale",
+                "link" : "http://www.drf.com/news/drf-breeding-sunday-sections",
+                "depth" : "2",
+                "weight" : "-47",
+                "menu":[]
+            },
+            {
+                "title" : "Breeding Newsletter",
+                "link" : "http://www.drf.com/breedingtoday",
+                "depth" : "2",
+                "weight" : "-46",
+                "menu":[]
+            },
+            {
+                "title" : "Stakes Replays",
+                "link" : "http://www1.drf.com/stakeresults/drfStakeResults.jsp",
+                "depth" : "2",
+                "weight" : "-44",
+                "menu":[]
+            },
+            {
+                "title" : "SirePowered Results",
+                "link" : "http://drf.com/breeder-results/",
+                "depth" : "2",
+                "weight" : "-43",
+                "menu":[]
+            },
+            {
+                "title" : "Florida Stallions",
+                "link" : "http://www.drf.com/news/drf-breeding-sunday-sections",
+                "depth" : "2",
+                "weight" : "-42",
+                "menu":[]
+            },
+            {
+                "title" : "Midwest Stallions",
+                "link" : "http://www.drf.com/news/drf-breeding-sunday-sections",
+                "depth" : "2",
+                "weight" : "-41",
+                "menu":[]
+            },
+            {
+                "title" : "New Sires",
+                "link" : "http://www.drf.com/news/drf-breeding-sunday-sections",
+                "depth" : "2",
+                "weight" : "-40",
+                "menu":[]
+            },
+            {
+                "title" : "New York Stallions",
+                "link" : "http://www.drf.com/news/new-york-stallions-2015-leading-sires-statistics-regional-coverage-more",
+                "depth" : "2",
+                "weight" : "-39",
+                "menu":[]
+            }
+        ]
+    }
+]

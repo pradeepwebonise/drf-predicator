@@ -1,0 +1,6462 @@
+@font-face {
+    font-family: 'TitilliumWeb-Bold';
+    src: url('../fonts/TitilliumWeb-Bold.eot');
+    src: url('../fonts/TitilliumWeb-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/TitilliumWeb-Bold.woff') format('woff'), url('../fonts/TitilliumWeb-Bold.ttf') format('truetype'), url('../fonts/TitilliumWeb-Bold.svg#TitilliumWeb-Bold') format('svg');
+}
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url('../fonts/TitilliumWeb-Regular.eot');
+    src: url('../fonts/TitilliumWeb-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/TitilliumWeb-Regular.woff') format('woff'), url('../fonts/TitilliumWeb-Regular.ttf') format('truetype'), url('../fonts/TitilliumWeb-Regular.svg#TitilliumWeb-Regular') format('svg');
+}
+@font-face {
+    font-family: 'TitilliumWeb-Thin';
+    src: url('../fonts/TitilliumWeb-ExtraLight.eot');
+    src: url('../fonts/TitilliumWeb-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../fonts/TitilliumWeb-ExtraLight.woff') format('woff'), url('../fonts/TitilliumWeb-ExtraLight.ttf') format('truetype'), url('../fonts/TitilliumWeb-ExtraLight.svg#TitilliumWeb-Thin') format('svg');
+}
+@font-face {
+    font-family: 'TitilliumWeb-Light';
+    src: url('../fonts/TitilliumWeb-Light.eot');
+    src: url('../fonts/TitilliumWeb-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/TitilliumWeb-Light.woff') format('woff'), url('../fonts/TitilliumWeb-Light.ttf') format('truetype'), url('../fonts/TitilliumWeb-Light.svg#TitilliumWeb-Light') format('svg');
+}
+@font-face {
+    font-family: 'TitilliumWeb-SemiBold';
+    src: url('../fonts/TitilliumWeb-SemiBold.eot');
+    src: url('../fonts/TitilliumWeb-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/TitilliumWeb-SemiBold.woff') format('woff'), url('../fonts/TitilliumWeb-SemiBold.ttf') format('truetype'), url('../fonts/TitilliumWeb-SemiBold.svg#TitilliumWeb-SemiBold') format('svg');
+}
+@font-face {
+    font-family: 'paddockextmedium';
+    src: url('../fonts/paddocke-webfont.eot');
+    src: url('../fonts/paddocke-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/paddocke-webfont.woff') format('woff'),
+    url('../fonts/paddocke-webfont.ttf') format('truetype'),
+    url('../fonts/paddocke-webfont.svg#paddockextmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Chrome Font face*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'TitilliumWeb-Bold';
+        src: url('../fonts/TitilliumWeb-Bold.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'TitilliumWeb-Regular';
+        src: url('../fonts/TitilliumWeb-Regular.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'TitilliumWeb-Thin';
+        src: url('../fonts/TitilliumWeb-ExtraLight.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'TitilliumWeb-Light';
+        src: url('../fonts/TitilliumWeb-Light.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'TitilliumWeb-SemiBold';
+        src: url('../fonts/TitilliumWeb-SemiBold.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+.loading {
+    filter: alpha(opacity = 50);
+    opacity: 0.5;
+    background: #b7b7b7 url(../img/loader.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+    line-height: normal;
+}
+h1 {
+    font-size: 18px;
+}
+h4 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+ul, li {
+    margin: 0;
+    list-style-type: none;
+    line-height: 18px;
+}
+.homeDash {
+    text-align: center;
+    padding: 200px 0;
+    background: #ffffff;
+    font-size: 20px;
+}
+
+/* Header */
+.headerWrap {
+    margin-bottom: 25px;
+}
+.headerMain {
+    padding: 25px 0;
+}
+.logo {
+    float: left;
+    margin-top: 17px;
+}
+.logo a {
+    display: block;
+    width: 180px;
+}
+.logoMobile {
+    display: none
+}
+.logoPrint {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 10px;
+}
+.headerAds {
+    float: right;
+    width: 728px;
+    height: 90px;
+    text-align: center;
+    color: #4e4e4e;
+    background: #f1f1f1;
+}
+
+/*icons*/
+[class^="icon-"],
+[class*=" icon-"] {
+    background-image: url("../img/sprite.png");
+}
+.icon-favorite,
+.icon-add-favorite,
+.icon-fav-blank {
+    width: 40px;
+    height: 36px;
+    margin: -8px 3px -8px -12px;
+    float: left;
+}
+.icon-favorite {
+    background-position: 12px -302px;
+}
+.icon-add-favorite {
+    background-position: -21px -302px;
+}
+.icon-fav-blank {
+    background: none !important;
+}
+.iconWeather {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: -5px 5px -5px 0;
+    vertical-align: middle;
+}
+.icon-print {
+    background-position: left -370px;
+    width: 20px;
+    height: 17px;
+}
+.sortWrap {
+    width: 34px !important;
+    display: inline-block;
+    vertical-align: top;
+    margin: -10px 0 -12px 0 !important;
+}
+.icon-valSortUp {
+    background-position: 13px -556px;
+    cursor: pointer;
+    height: 8px;
+    width: 14px;
+    display: block;
+    margin: 0;
+    padding: 10px 10px 0 10px;
+}
+.icon-valSortDown {
+    background-position: 13px -580px;
+    cursor: pointer;
+    height: 8px;
+    width: 14px;
+    display: block;
+    margin: 0;
+    padding: 0 10px 10px 10px;
+}
+.icon-favArrow {
+    background-position: -40px -473px;
+    width: 38px;
+    height: 37px;
+    margin-top: 0px;
+    position: absolute;
+    left: 25px;
+    top: 20px;
+}
+.icon-favClose {
+    background-position: -6px -514px;
+    width: 18px;
+    height: 18px;
+    margin-top: 0px;
+    position: absolute;
+    right: 16px;
+    top: 17px;
+    cursor: pointer;
+}
+.icon-user {
+    width: 17px;
+    height: 22px;
+    background-position: 0 2px;
+    text-indent: -100000px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.icon-arrowRight {
+    background-position: left -44px;
+    height: 16px;
+    vertical-align: top;
+}
+.icon-arrowLeft {
+    background-position: left -69px;
+    vertical-align: top;
+    margin: 3px 0 0 15px;
+    width: 9px;
+}
+.icon-livePlus,
+.icon-drf{
+    width: 25px;
+    height: 12px;
+    margin-top: 7px;
+}
+.icon-drfPlus,
+.icon-livePPlus{
+    width: 33px;
+    height: 13px;
+    margin-top: 7px;
+}
+.icon-drfPlus {
+    background-position: 0 -995px;
+}
+.icon-livePPlus{
+    background-position: 0 -1060px;
+}
+.icon-livePlus{
+    background-position: left -1042px;
+}
+.icon-drf {
+    background-position: -49px -996px;
+}
+
+/* User Nav */
+.userNav {
+    float:right;
+    position:relative;
+    top:0;
+    right:0;
+}
+.userNav .userName {
+    position: relative;
+    z-index: 112;
+    display: block;
+    margin-top: -3px;
+    padding: 0 15px;
+    cursor:pointer;
+    font-size: 13px;
+    line-height: 24px;
+    float: left;
+    color: #000;
+}
+.topWrap .userNav .userName {
+    padding-top: 10px;
+}
+.userNav .userName .icon-arrow {
+    background-position: 3px -903px;
+    width: 12px;
+    height: 14px;
+    margin: 10px 0 0 5px;
+    float: right;
+}
+.userNav .name {
+    margin-left: 5px;
+}
+.userNav ul {
+    position: absolute;
+    z-index: 111;
+    top: 33px;
+    right: 0;
+    display: none;
+    width: 175px;
+    padding: 3px 15px;
+    list-style-type: none;
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid #fff;
+    background: #fff;
+}
+.userNavActive .userName .icon-arrow {
+    background-position: -7px -903px;
+}
+.userNav.userNavActive ul{
+    display: block;
+}
+.userNav ul li {
+    float:none;
+    border-top:1px solid #e5e5e5;
+}
+
+.userNav ul li:first-child {
+    border-top:none;
+}
+.userNav ul li a {
+    padding:2px 0 2px 0;
+    display:block;
+    color:#000;
+    font-size:12px;
+    line-height:30px;
+}
+
+/* Nav */
+nav {
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    font-size: 14px;
+    height: 55px;
+    text-transform: uppercase;
+    border-left: 0;
+    background: #404041;
+}
+
+.menuNav {
+    float: left;
+}
+.menuNav li {
+    float: left;
+    position: relative;
+}
+.menuNav > li {
+    border-left: 1px solid #292929;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+}
+.menuNav > li:nth-child(2) {
+    border-left: 0
+}
+.menuNav li:hover,
+.menuNav li.active{
+    background: #ec1c24;
+}
+.menuNav li a {
+    display: block;
+    line-height: 55px;
+    padding: 0 5px;
+    padding: 0 4px\9;
+    color: white;
+}
+.menuNav li a sub {
+    bottom: 0
+}
+.menuNav .drfNav {
+    /*margin: -1px 0 -1px -1px;
+    border: 1px solid #890000;*/
+    background: #ec1c24;
+    display: none;
+}
+.menuNav .drfNav a {
+    width: 40px;
+    height: 55px;
+    padding: 0;
+    text-indent: -10000px;
+    margin-top: 0;
+    background-position: 9px -909px;
+}
+.menuNav .drfNav a:hover {
+    background: #ad1a20;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 9px -909px;
+}
+
+.subMenu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    position: absolute;
+    z-index: 9999;
+    top: 55px;
+    display: none;
+    width: 198px;
+    text-transform: none;
+    border: 1px solid #d2d2d2;
+    border-top: 0;
+    background: #fff;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow:    0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+    box-shadow:         0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+}
+.subMenu.subMenuActive {
+    display: block;
+}
+.subMenu .colMenu {
+    width: 160px;
+    padding: 8px 0;
+    float: left;
+    border-left: 1px solid #ccc;
+}
+.subMenu .colMenu:first-child {
+    border-left: 0;
+}
+.subMenu .colMenu ul:first-child h2 {
+    padding-top: 10px;
+}
+.subMenu li {
+    float: none;
+}
+.subMenu li h2{
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 20px 15px 10px;
+    text-transform: uppercase;
+    color: #666;
+}
+.subMenu li h2 a{
+    padding: 0;
+    margin: 0;
+    color: #666;
+    text-decoration: none;
+}
+.subMenu li:hover {
+    background: transparent;
+}
+.subMenu li a {
+    padding: 0 15px;
+    color: #000;
+    line-height: 18px;
+    margin-bottom: 16px;
+    text-decoration: underline;
+}
+.subMenu li a:hover {
+    color: #ec1c24;
+}
+
+/* Search Box */
+.searchWrap {
+    position: relative;
+    float: right;
+    width: 38px;
+}
+.searchWrap .icon-search {
+    border: 0;
+    border-left: 1px solid #262626;
+    width: 38px;
+    height: 55px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    z-index: 103;
+    cursor: pointer;
+    background: #404041;
+}
+.searchWrap .icon-search:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 -964px;
+    display: block;
+    margin: 19px 0 0 10px;
+}
+.searchWrap.searchOpen .icon-search {
+    background: #585858;
+    height: 55px;
+}
+.searchWrap .searchBox {
+    position: absolute;
+    z-index: 102;
+    top: 55px;
+    right: 0;
+    overflow: hidden;
+    width: 310px;
+    height: 0;
+    background: #585858;
+}
+.searchWrap .searchBox .placeholder {
+    width: 235px;
+    float: left;
+}
+.searchWrap .searchBox .placeholder_span {
+    line-height: 26px;
+    text-indent: 10px;
+    font-size: 12px;
+    text-transform: none;
+}
+.searchWrap .searchBox input {
+    background: transparent;
+    border: 0;
+    width: 235px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    padding: 0 10px;
+    font-size: 13px;
+    outline: none;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.searchWrap .searchBox input.btnSubmit {
+    background: transparent;
+    color: white;
+    font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 14px;
+    border: 0;
+    width: 60px;
+}
+.searchWrap.searchOpen .searchBox input.btnSubmit{
+    background-image: none;
+}
+/* Page Main Content */
+.contentWrap {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+    position: relative;
+    background: #ffffff;
+}
+.pageDataFull {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-top: 10px;
+    min-height: 500px;
+}
+.pageData {
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    border-right: solid 1px #eeeeee;
+    width: 616px;
+    float: left;
+    padding-top: 10px;
+    min-height: 500px;
+}
+.rightColumn {
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    width: 321px;
+    float: left;
+    border-left: solid 1px #eeeeee;
+    margin-left: -1px;
+}
+.rightAdsWrap .sideWrap {
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+}
+.rightAdsWrap .sideWrap:last-child {
+    border-bottom: 0;
+}
+.dateWrap.content {
+    margin: 5px 0 0 0;
+}
+.dateWrap {
+    overflow: hidden;
+    height: 68px;
+    margin: auto
+}
+.dateWrap ul {
+    margin: 0;
+    padding: 0 20px;
+}
+.dateWrap .mCSB_horizontal > .mCSB_container {
+    margin-bottom: 2px;
+}
+.dateWrap li {
+    height: 68px;
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+.dateWrap .mCSB_horizontal.mCustomScrollBox > .mCSB_scrollTools {
+    height: 0px;
+}
+.dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_draggerRail {
+    display: none;
+}
+.dateWrap .mCSB_horizontal.mCustomScrollBox > .mCSB_scrollTools {
+    overflow: visible;
+}
+.dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonLeft,
+.dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonRight {
+    top: -68px;
+    height: 68px;
+    opacity: 1;
+    width: 25px;
+}
+.dateWrap .mCustomScrollBox > .mCSB_scrollTools,
+.dateWrap .mCSB_scrollTools .mCSB_buttonUp:hover,
+.dateWrap .mCSB_scrollTools .mCSB_buttonDown:hover,
+.dateWrap .mCSB_scrollTools .mCSB_buttonLeft:hover,
+.dateWrap .mCSB_scrollTools .mCSB_buttonRight:hover {
+    opacity: 1;
+}
+.dateWrap .mCSB_scrollTools .mCSB_buttonUp,
+.dateWrap .mCSB_scrollTools .mCSB_buttonDown,
+.dateWrap .mCSB_scrollTools .mCSB_buttonLeft,
+.dateWrap .mCSB_scrollTools .mCSB_buttonRight {
+    background-image: url("../img/sprite.png");
+    background-color: #ffffff;
+    background-position: 2px -589px;
+}
+.dateWrap .mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -18px -589px;
+}
+.dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonRight {
+    margin-left: 0;
+}
+.dateWrap .mCSB_scrollTools .mCSB_buttonLeft.disabled {
+    background-position: -38px -589px;
+}
+.dateWrap .mCSB_scrollTools .mCSB_buttonRight.disabled {
+    background-position: -58px -589px;
+}
+
+.dateWrapMobile,
+.mobileShow,
+.titlePrint{
+    display: none;
+}
+.ipadHide {
+    display: block;
+}
+.ipadShow {
+    display: none;
+}
+.dateWrap a {
+    color: #ffffff;
+    display: block;
+}
+.dateWrap a .date {
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    color: #999999;
+    display: block;
+    font-size: 16px;
+    width: 28px;
+    line-height: 28px;
+    height: 28px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    background: #ffffff;
+    margin: 0 5px;
+}
+.dateWrap a .month {
+    text-transform: uppercase;
+    color: #000;
+}
+.dateWrap a .day{
+    color: #666;
+}
+.dateWrap a .month,
+.dateWrap a .day {
+    text-indent: -10000px;
+    display: block;
+}
+.dateWrap a:hover,
+.dateWrap .activeDate a {
+    color: #000000;
+}
+.dateWrap a:hover .month,
+.dateWrap a:hover .day,
+.dateWrap .activeDate a .month,
+.dateWrap .activeDate a .day {
+    text-indent: 0;
+}
+.dateWrap .activeDate a .date,
+.dateWrap .activeDate a:hover .date {
+    color: #ffffff;
+    background: #3079f0;
+}
+.dateWrap a:hover .date {
+    background: #bbd0f9;
+    color: #ffffff;
+}
+.dateWrap a .pullDate {
+    text-indent: -1px;
+}
+.dateWrap a .pushDate {
+    text-indent: 1px;
+}
+.dateWrap a .pushDateOne {
+    text-indent: 2px;
+}
+.btnPrev {
+    float: left;
+    background: url("../img/sprite.png") 12px -39px no-repeat;
+    height: 15px;
+    width: 8px;
+    display: block;
+    padding: 5px 0 5px 12px;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+.btnNext {
+    float: right;
+    background: url("../img/sprite.png") left -64px no-repeat;
+    height: 15px;
+    width: 8px;
+    display: block;
+    padding: 5px 12px 5px 0;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+.disabled {
+    filter: alpha(opacity = 50);
+    opacity: 0.5;
+    cursor: default !important;
+}
+.dateWrap .disabled{
+    filter: alpha(opacity = 100);
+    opacity: 1;
+}
+.disabled a {
+    cursor: default !important;
+}
+.disabled.btnBetNow,
+.disabled.btnGetPp,
+.disabled.btnRaceCard,
+.disabled.btnRaceReplay{
+    background: #dedede !important;
+    border: 1px solid #aaaaaa !important;
+    color: #aaaaaa !important;
+    filter: alpha(opacity = 100);
+    opacity: 1;
+}
+.disabled.btnBetNow a,
+.disabled.btnGetPp a,
+.disabled.btnRaceReplay a{
+    color: #aaaaaa !important;
+}
+/* Table List View*/
+.dataTable {
+    margin: 0;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+}
+.dataTable li {
+    display: table-row;
+}
+.dataTable li .sCell {
+    vertical-align: middle;
+    margin-right: -4px;
+    padding: 11px 12px;
+    display: table-cell;
+}
+.dataTable li.headRow .sCell{
+    vertical-align: top;
+}
+.dataTable a {
+    color: #000000;
+}
+.dataTable a:hover {
+    color: #3079f0
+}
+.headRow {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.resultsWrap .headRow {
+    font-size: 11px;
+}
+.favouritesMsg {
+    background: #fdf1f2;
+    font-size: 16px;
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+    color: #ec1c24;
+    position: relative;
+}
+.entriesListWrap .dataTable.favouritesMsg li .sCell {
+    padding: 15px 70px;
+    border-bottom: 1px solid #ecddde;
+}
+.entriesListWrap .favouritesMsg{
+    border: 1px solid #ecddde;
+    margin-left: -1px;
+}
+.entriesListWrap .favouritesMsg li .sCell.message {
+    border-bottom: 1px solid #ecddde;
+}
+
+/* Track Buttons*/
+.btnTrack {
+    margin: 0;
+    list-style-type: none;
+    float: right;
+}
+.btnTrack li {
+    font-size: 14px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    float: left;
+    border: 1px solid #3079f0;
+    background: #ffffff;
+    display: block;
+    padding: 5px 0;
+    width: 102px;
+    text-align: center;
+    color: #3079f0;
+    cursor: pointer;
+}
+.btnTrack li:first-child {
+    margin-left: 0;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.btnTrack li:last-child {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+.btnTrack li.activeTrack {
+    background: #3079f0;
+    color: #fff;
+    cursor: default;
+}
+
+/*TABS*/
+.tabs {
+    list-style-type: none;
+    margin: 0 -1px;
+    position: relative;
+    z-index: 1;
+}
+.tabs li {
+    float: left;
+    border: 1px solid #3079f0;
+    border-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.333333%;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    text-transform: uppercase;
+}
+.tabs li a {
+    display: block;
+    padding: 10px 15px;
+    color: #3079f0;
+}
+.tabs li:first-child {
+    border-left: 1px solid #3079f0;
+}
+.tabs li.activeTab {
+    background: #3079f0;
+}
+.tabs li.activeTab a {
+    color: #ffffff;
+}
+
+/* Saddle Color */
+.oddsDtlsPanel span .oddsNo,
+.oddsNo {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    margin-top: -1px;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+    border: 1px solid transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    display: inline-block;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+}
+.listFooter .valEquipment .oddsNo{
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    line-height: 18px;
+}
+.oddsDtlsPanel span .saddle1,
+.saddle1 {
+    background: #ec2c28;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle2,
+.saddle2 {
+    background: #ffffff;
+    border-color: #babbbe;
+}
+.oddsDtlsPanel span .saddle3,
+.saddle3 {
+    background: #1d4fa3;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle4,
+.saddle4 {
+    background: #eaeb24;
+}
+.oddsDtlsPanel span .saddle5,
+.saddle5 {
+    background: #458544;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle6,
+.saddle6 {
+    background: #060103;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle7,
+.saddle7 {
+    background: #efa428;
+}
+.oddsDtlsPanel span .saddle8,
+.saddle8 {
+    background: #f9bcc5;
+}
+.oddsDtlsPanel span .saddle9,
+.saddle9 {
+    background: #1fb8d7;
+}
+.oddsDtlsPanel span .saddle10,
+.saddle10 {
+    background: #9a468f;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle11,
+.saddle11 {
+    background: #c2c2c2;
+}
+.oddsDtlsPanel span .saddle12,
+.saddle12 {
+    background: #a9d5b5;
+}
+.oddsDtlsPanel span .saddle13,
+.saddle13 {
+    background: #644538;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle14,
+.saddle14 {
+    background: #671033;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle15,
+.saddle15 {
+    background: #c9c2b7;
+}
+.oddsDtlsPanel span .saddle16,
+.saddle16 {
+    background: #8688c4;
+}
+.oddsDtlsPanel span .saddle17,
+.saddle17 {
+    background: #1c3975;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle18,
+.saddle18 {
+    background: #103b1b;
+    color: #ffffff;
+}
+.oddsDtlsPanel span .saddle19,
+.saddle19 {
+    background: #0a73a8;
+}
+.oddsDtlsPanel span .saddle20,
+.saddle20 {
+    background: #df0a79;
+    color: #ffffff;
+}
+
+/*Listing Entries*/
+.entriesListWrap .entriesBody {
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+}
+.entriesBody .icon-favorite,
+.entriesBody .icon-add-favorite {
+    cursor: pointer;
+}
+.entriesListWrap .listBody li {
+    cursor: pointer;
+}
+.entriesListWrap .dataTable li.headRow span {
+    background: #f0f0f0;
+    color: #333;
+}
+.entriesListWrap .headRow{
+    font-size: 14px;
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+}
+.entriesListWrap .dataTable li.headRow >span{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #e8e8e8;
+}
+.entriesListWrap .dataTable li .sCell {
+    border-bottom: 1px solid #eee;
+}
+.entriesListWrap .listBody li:last-child .valTrack {
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+}
+.entriesListWrap .valTrack {
+    width: 210px;
+    color: #000000;
+}
+.entriesListWrap .listBody .valTrack{
+    font-size: 14px;
+}
+.entriesListWrap .titleTrack {
+    float: left;
+    width: 200px;
+}
+.entriesListWrap .titleTrack a:hover {
+    color: #444444;
+}
+.entriesListWrap .titleTrackFull {
+    display: inline-block;
+    padding-left: 31px;
+}
+.entriesListWrap .valChanges {
+    color: #333333;
+    width: 120px;
+}
+.entriesListWrap .listBody .valChanges,
+.entriesListWrap .listBody .valWeather{
+    font-size: 12px;
+}
+.changesCount {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    max-width: 49px;
+    white-space: nowrap;
+    margin-top: -1px;
+}
+.valChanges .noChangetext {
+    color: #666666;
+}
+.entriesListWrap .valChanges a {
+    color: #005bf0;
+}
+.entriesListWrap .valChanges a:hover {
+    color: #000000;
+}
+.entriesListWrap .Count a,
+.valChanges a.raceChangesLink {
+    color: #333;
+}
+.entriesListWrap .Count a:hover,
+.valChanges a.raceChangesLink:hover {
+    color: #3079f0;
+}
+.entriesListWrap .valWeather {
+    width: 155px;
+}
+.entriesListWrap .valWeather .valCenter {
+    display: block;
+    color: #000;
+    margin-left: 25px;
+}
+.entriesListWrap .valWeather .valDegree,
+.entriesDtlsWeather .valDegree {
+    color: #888888;
+}
+.noWeather {
+    width: 30px;
+    display: inline-block;
+}
+.entriesListWrap .valWeather span {
+    color: #888;
+}
+.entriesDtlsWeather .valPrecip {
+    color: #666;
+    margin-right: 10px;
+}
+.entriesDtlsWeather .valPrecip span {
+    color: #666;
+}
+.entriesListWrap .valWeather span:nth-last-child(2) {
+    margin-left: 5px;
+}
+.entriesListWrap .listBody li:last-child {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.titleTrack .dividerLine{
+    color: #bbb;
+}
+.valChanges .dividerLine{
+    display: none;
+}
+.valChanges .valNoChange{
+    color: #aaa;
+}
+.entriesListWrap .entriesHeader h4{
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    float: left;
+}
+
+/* Race Changes*/
+.eRaceChanges ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: table;
+}
+.eRaceChanges ul li {
+    display: table-row;
+}
+.eRaceChanges li:last-child .valchngRace {
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+}
+.eRaceChanges .valchngRace {
+    display: table-cell;
+    background: #eaf4fe;
+    padding: 10px;
+    width: 105px;
+    border-bottom: 1px solid #dae4ed;
+}
+.valchngRace h3 {
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: -3px;
+}
+.valchngRace .valchngPost span {
+    color: #666666;
+}
+.eRaceChanges .valchngDisc {
+    display: table-cell;
+    padding: 10px 25px;
+    width: 485px;
+    font-size: 13px;
+    color: #666666;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: top;
+}
+.valchngDisc > span {
+    display: block;
+}
+.valchngDisc span span {
+    color: #000000;
+    font-weight: bold;
+}
+
+/*Entries Details*/
+.backButton {
+    margin: 0 0 0 12px;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+}
+.backButton a {
+    color: #005bf0;
+    font-size: 16px;
+}
+.backButton a:hover {
+    color: #000;
+}
+.entriesDtlsWrap .entriesHeader {
+    background: #f7f7f7;
+    border-top: 1px solid #e9e9e9;
+    padding: 17px 12px 16px 8px;
+}
+.entriesListWrap .entriesHeader {
+    margin: 15px 12px;
+}
+.entriesDtlsWrap .entriesDtlsLeft {
+    float: left;
+}
+.entriesDtlsWrap .entriesDtlsRight {
+    float: right;
+}
+.entriesDtlsWrap .entriesDtlsLeft h4 {
+    font-size: 22px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.entriesDtlsLeft .icon-favorite,
+.entriesDtlsLeft .icon-add-favorite {
+    margin: -6px 7px -8px -5px;
+    cursor: pointer;
+    width: 33px;
+    height: 30px;
+}
+.entriesDtlsWeather,
+.entriesDtlsWeather .divider {
+    color: #666;
+    font-size: 14px;
+}
+.entriesDtlsWeather .divider {
+    margin: 0 2px;
+}
+.entriesDtlsWeather .iconWeather {
+    margin-right: 2px;
+}
+.entriesDtlsWeather span {
+    color: #000000;
+}
+.entriesDtlsWeather .mobileHide {
+    color: #666;
+    margin-right: 10px;
+}
+.entriesDtlsWeather .icon-wRainShowers {
+    margin-top: 0;
+}
+.entriesDtlsRight .btnPrint {
+    background: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #3079f0;
+    text-align: center;
+    line-height: 23px;
+    font-size: 13px;
+    padding: 0 23px;
+    color: #3079f0;
+    display: inline-block;
+    float: right;
+}
+.entriesDtlsRight .btnPrint:hover {
+    color: #fff;
+    background: #3079f0;
+}
+.entriesDtlsRight .btnPrint:hover .icon-print{
+    background-position: -23px -370px;
+}
+.entriesDtlsRight .btnRaceCard {
+    background: #3079f0;
+    border: 1px solid #3079f0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    line-height: 23px;
+    font-size: 13px;
+    padding: 0 5px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+.btnEntriesRace .btnRaceChart,
+.btnEntriesRace .btnRaceReplay{
+    background: #3079f0;
+    border: 1px solid #3079f0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+    line-height: 23px;
+    font-size: 13px;
+    padding: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+.btnEntriesRace .btnRaceReplay{
+    margin-left: 10px;
+}
+.resultsWrap .btnEntriesRace .btnRaceChart a{
+    padding: 0 7px;
+    font-size: 13px;
+}
+.entriesDtlsRight .btnRaceCard:hover,
+.btnEntriesRace .btnRaceChart:hover,
+.btnEntriesRace .btnRaceReplay:hover{
+    background: #005bf0;
+}
+.entriesRaceDtls .entriesDtlsbody .raceDisctxt {
+    display: none;
+}
+.entriesDtlsHead {
+    padding: 10px 12px;
+}
+.entriesDtlsHead h2 {
+    font-size: 18px;
+}
+.entriesDtlsHead h2 .titleDetails {
+    margin-left: 0;
+    font-size: 18px;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    color: #000000;
+}
+.entriesDtlsHead h2 span {
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 12px;
+    color: #666666;
+    margin-left: 10px;
+}
+.entriesRaceHeader {
+    background: #f0f7fe;
+    border: 1px solid #bddeff;
+    padding: 10px 12px;
+    position: relative;
+    margin: -1px -1px 0 -1px;
+}
+.entriesRaceHeader h3 {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    margin-right: 20px;
+    line-height: 24px;
+    color: #010101;
+}
+.entriesRaceHeader .mtp {
+    font-size: 12px;
+    margin-right: 24px;
+    color: #666666;
+}
+.entriesRaceHeader .entriesRaceDiscRight{
+    font-size: 12px;
+}
+.entriesRaceHeader .mtp .mtpBlock {
+    color: #666666;
+}
+.entriesDtlsFuture .mtpBlock {
+    display: none;
+}
+.entriesRaceHeader .mtp span {
+    color: #000000;
+}
+.valPostET {
+    font-size: 10px;
+    color: #666666 !important;
+}
+.entriesRaceHeader .valTurf,
+.valSurface .valTurf {
+    color: #66aa33;
+}
+.entriesRaceDisc {
+    color: #666666;
+    font-size: 12px;
+    padding: 10px 12px;
+    line-height: 19px;
+}
+.raceDiscCptl {
+    text-transform: capitalize;
+}
+.entriesDtlsWrap .entriesDtlsbody .dataTable .valentDtlsNum,
+.entriesDtlsWrap .dataTable li.headRow .sCell.valentDtlsNum{
+    padding-left: 13px;
+}
+.entriesRaceDiscMobile, .entriesRaceChanges {
+    display: none;
+}
+.raceDisctxt {
+    display: block;
+    font-size: 12px;
+    text-transform: none;
+}
+.entriesRaceDisc .raceDisctxtUp {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.raceDisctxtName {
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    font-size: 16px;
+    display: block;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.entriesRaceDisc .raceDisctxtUp span {
+    color: #000000;
+}
+.btnEntriesRace {
+    float: right;
+    margin: 0;
+    list-style-type: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.btnEntriesRace li {
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 23px;
+}
+.btnEntriesRace li.btnBetNow {
+    border: 1px solid #66aa33;
+    background: #66aa33;
+}
+.btnEntriesRace li.btnGetPp {
+    border: 1px solid #3079f0;
+    background: #3079f0;
+    margin-left: 10px;
+}
+.btnEntriesRace li.btnGetPp a {
+    text-transform: none;
+}
+.btnEntriesRace li a {
+    display: block;
+    padding: 0 11px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.btnEntriesRace li.disabled:hover {
+    background: #dedede;
+}
+.btnEntriesRace li.btnBetNow:hover {
+    background: #64a030;
+}
+.btnEntriesRace li.btnGetPp:hover {
+    background: #005bf0;
+}
+.btnEntriesRace li:hover {
+    background: #e7e8e9;
+}
+.btnEntriesRace li.disabled:hover {
+    background: #dedede;
+}
+.entriesDtlsWrap .headRow .sCell {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+.resultsWrap .headRow .sCell{
+    color: #888;
+}
+.tabContentWrap .headRow .sCell {
+    border-top: 0;
+    vertical-align: top;
+}
+.entriesDtlsWrap .dataTable li .sCell{
+    padding: 5px 7px;
+}
+.entriesDtlsWrap .dataTable li.headRow .sCell{
+    padding: 12px 7px;
+}
+.entriesDtlsWrap .dataTable li .sCell.valentDtlsQsheet,
+.entriesDtlsWrap .dataTable li.headRow .sCell.valentDtlsQsheet{
+    padding: 5px 14px 5px 0;
+}
+.entriesDtlsWrap .icon-toggleRace {
+    display: none;
+}
+.entriesDtlsWrap .listBody .valHorseName,
+.resultsWrap .listBody .valHorseName{
+    word-break: break-all;
+    display: inline-block;
+}
+.entriesDtlsWrap .listBody span.sCell,
+.entriesDtlsWrap .listPar span.sCell {
+    border-bottom: 1px solid #eee;
+}
+.entriesDtlsWrap .dataTable li.raceSel {
+    cursor: pointer;
+    background: #f0f9e9;
+}
+.valentDtlsNum {
+    width: 25px;
+    text-align: center;
+}
+.valentDtlsNum .valNumHead,
+.valResDtlsNum .valNumHead {
+    width: 24px;
+    display: inline-block;
+}
+.valentDtlspp {
+    width: 25px;
+    text-align: center;
+}
+.valentDtlsodds {
+    width: 45px;
+    color: #6ba444;
+    line-height: 16px;
+}
+.valentDtlsHorse {
+    width: 110px;
+}
+.raceSel .valentDtlsHorse span.valHorseName{
+    text-decoration: underline;
+}
+.valentDtlsHorse .valBeyers {
+    display: block;
+    font-size: 12px;
+    text-transform: none;
+    line-height: 14px;
+    color: #666666;
+}
+.headRow .valentDtlsHorse .valBeyers{
+    font-size: 11px;
+}
+.headRow .valentDtlsHorse .premiumBeyerActive{
+    color:#005bf0;
+}
+.headRow .valentDtlsHorse .premiumBeyerActive:hover{
+    color:#000;
+}
+.entriesDtlsWrap .premiumBeyerMsg{
+    font-size: 14px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    padding: 10px 15px;
+    background: #fdf1f2;
+    border: 1px solid #ecddde;
+    position: relative;
+    margin: -1px -1px 0 -1px;
+
+}
+.entriesDtlsWrap .premiumBeyerMsg li{
+    line-height: 26px;
+}
+.entriesDtlsWrap .premiumBeyerMsg li .icon-drfPlus{
+    margin: 6px 2px 0;
+}
+.headRow .valentDtlsHorse .valBeyers .premiumBeyers{
+    color: #005bf0;
+}
+.headRow .valentDtlsHorse .valBeyers .premiumBeyers:hover{
+    color: #000;
+}
+.entriesDtlsWrap .premiumBeyerMsg .beyerMessage{
+    color: #000;
+    margin-right: 5px;
+}
+.entriesDtlsWrap .premiumBeyerMsg a{
+    background: #3079f0;
+    color: #fff;
+    font-size: 13px;
+    font-family: arial, helvetica, sans-serif;
+    padding: 6px 10px;
+    display: inline-block;
+    border: 1px solid #3079f0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    line-height: 14px;
+}
+.entriesDtlsWrap .premiumBeyerMsg a:hover{
+    background: #005bf0;
+}
+.headRow .valentDtlsHorse .valBeyers .icon-drfPlus{
+    margin: 0 0 0 5px;
+}
+.entriesDtlsWrap .listHeader .valentDtlsNum {
+    width: 25px;
+}
+.valentDtlsJockey {
+    width: 75px;
+}
+.valentDtlsJockey span,
+.valResDtlsJockey span{
+    color: #666666;
+    font-size: 11px;
+    display: block;
+    text-transform: none;
+    line-height: 14px;
+}
+.headRow .valResDtlsJockey span{
+    color: #888;
+}
+.valentDtlsodds span {
+    color: #333;
+    font-size: 12px;
+    display: block;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.valentDtlsTrainer {
+    width: 70px;
+}
+.valentDtlsClaim {
+    width: 53px;
+    color: #666;
+}
+.valClaimCenter {
+    text-align: center;
+}
+.valentDtlsEquip {
+    width: 45px;
+    color: #666666;
+    text-align: center;
+    display: none !important;
+}
+.quickSheetWrap .valentDtlsEquip {
+    display: table-cell !important;
+}
+.valentDtlsMed {
+    width: 30px;
+    color: #666666;
+}
+.valentDtlsQsheet {
+    width: 52px;
+}
+.valentDtlsQsheet .icon-qSheet {
+    width: 20px;
+    height: 20px;
+    background-position: 0px -132px;
+}
+.valentDtlsQsheet .icon-hotStat {
+    width: 52px;
+    height: 16px;
+    background-position: -30px -1042px;
+}
+.entriesDtlsWrap .listFooter li .valentDtlsbtm {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 18px 12px 28px;
+    border-bottom: 0 none;
+}
+.resultsWrap .listFooter li .valResDtlsbtm{
+    padding: 20px 12px;
+}
+.listFooter .valentDtlsbtm > span,
+.valEquipment .valBtmHead,
+.valentDtlsctd .valBtmHead{
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+.listFooter .valentDtlsbtm > span{
+    margin-bottom: 0;
+}
+.listFooter .valentDtlsbtm .valBtmHeadCoupled {
+    display: inline-block;
+}
+.listFooter .valentDtlsbtm .scratchedHorse {
+    color: #000000;
+    font-weight: bold;
+}
+.listFooter .valentDtlsbtm span .valBtmHead {
+    color: #888;
+}
+.listFooter .valentDtlsbtm .valCoupled{
+    margin-top: 5px;
+}
+.listFooter .valentDtlsbtm .valEquipment,
+.listFooter .valentDtlsbtm .valentDtlsctd,
+.listFooter .valResDtlsbtm .valResDtlsctd {
+    margin-top: 20px;
+}
+.listFooter .valentDtlsbtm span:first-child{
+    margin-top: 0;
+}
+.valEquipment .oddsNo {
+    margin-right: 10px;
+}
+.valEquipment .valEquip {
+    margin-right: 10px;
+}
+.entRaceDtlsWrap {
+    display: none;
+    margin: 0 8px 0 45px;
+    border-top: 1px solid #eeeeee;
+    padding: 8px 0 12px;
+    font-size: 12px;
+    color: #666666;
+}
+
+/* Result Listing */
+.resultsWrap .valResDtlsNum {
+    width: 24px;
+    text-align: center;
+}
+
+.resultsWrap .dataTable li.headRow .valResDtlsBeyer,
+.resultsWrap .dataTable li .valResDtlsBeyer,
+.resultsWrap .dataTable li .valResDtlsParAmt {
+    padding-right: 10px;
+}
+.resultsWrap .valResDtlsodds {
+    width: 75px;
+    text-align: center;
+    color: #83C22F;
+    font-weight: bold;
+}
+.resultsWrap .valResDtlsHorse {
+    width: 125px;
+}
+.resultsWrap .listBody .valResDtlsHorse {
+    font-size: 12px;
+}
+.resultsWrap .valResDtlsJockey {
+    width: 88px;
+    line-height: 14px;
+}
+.resultsWrap .valResDtlsodds span {
+    color: #666666;
+    font-size: 13px;
+    display: block
+}
+.resultsWrap .valResDtlsTrainer {
+    width: 82px;
+}
+.resultsWrap .valResDtlsWin,
+.resultsWrap .valResDtlsPlace,
+.resultsWrap .valResDtlsShow,
+.resultsWrap .valResDtlsBeyer,
+.resultsWrap .valResDtlsPar,
+.resultsWrap .valResDtlsParAmt {
+    width: 46px;
+}
+.resultsWrap .listBody .valResDtlsWin,
+.resultsWrap .listBody .valResDtlsPlace,
+.resultsWrap .listBody .valResDtlsShow,
+.resultsWrap .listBody .valResDtlsBeyer{
+    font-size: 12px;
+    color: #666;
+}
+.resultsWrap .valResDtlsPar,
+.resultsWrap .valResDtlsParAmt{
+    font-size: 13px;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: 700;
+    color: #333;
+    line-height: 28px;
+}
+.resultsWrap .resRacedisc {
+    display: inline-block;
+    vertical-align: middle;
+}
+.resultsWrap .valResDtlsbtm {
+    white-space: normal;
+}
+.resultsWrap .resultsDtlsHead {
+    margin: 0 12px 15px;
+}
+.resultsWrap .valResTrack {
+    width: 250px;
+    color: #000000;
+}
+.resultsWrap .entriesRaceHeader .mtp {
+    margin-right: 50px;
+}
+.resultsWrap .btnEntriesRace li a {
+    font-size: 12px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
+.entriesListWrap .dataTable li:last-child .valResTrack {
+    -webkit-border-radius: 0 0 0 3px;
+    -moz-border-radius: 0 0 0 3px;
+    border-radius: 0 0 0 3px;
+}
+.resultsWrap .valResCurRace {
+    width: 150px;
+}
+.resultsWrap .listBody .valResCurRace,
+.resultsWrap .listBody .valResPrevRaces{
+    font-size: 12px;
+}
+.valResCurRace .valCenter, .valResPrevRaces .valCenter {
+    margin-left: 0;
+    color: #666666;
+}
+.valChanges .valCenter {
+    margin-left: 0;
+}
+.resultsWrap .valResCurRace span {
+    color: #888;
+}
+.resultsWrap .valResPrevRaces {
+    width: 160px;
+}
+.resultsWrap .valResPrevRaces .mobileHide {
+    color: #888;
+}
+.resultsWrap .valResPrevRaces a,
+.titleTrack a.trackView {
+    color: #005bf0;
+}
+.resultsWrap .valResPrevRaces a:hover,
+.titleTrack a.trackView:hover {
+    color: #5696ff;
+}
+.resultsWrap .valResPrevRaces .Count a {
+    color: #333;
+}
+.resultsWrap .valResPrevRaces .Count a:hover {
+    color: #3079f0;
+}
+.resultsWrap .titleTrack {
+    float: left;
+    width: 215px;
+}
+.valResDtlsbtm .valResinfo span {
+    line-height: 20px;
+    display: block;
+}
+.valResDtlsbtm .valResinfo .valResWinnerinfo {
+    color: #000;
+    font-size: 13px;
+}
+.valResDtlsbtm .valResinfo .valResTimeinfo{
+    display: none;
+}
+.valResDtlsbtm .valResinfo span.valResUnplaced {
+    display: inline-block;
+    color: #000000;
+    font-size: 13px;
+}
+.valResDtlsbtm .valResinfo strong {
+    color: #333;
+    font-weight: normal;
+}
+.valResDtlsbtm .valResinfo strong span{
+    display: inline;
+}
+.valResDtlsbtm .valResinfo {
+    margin-top: 30px;
+    color: #666;
+}
+.valResDtlsbtm .valResinfo:first-child {
+    margin-top: 0;
+}
+.entriesListWrap h4 span {
+    color: #666666;
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+    margin-left: 10px;
+}
+.raceRecapWrap .raceRecapHead {
+    border-top: 1px solid #cdcccc;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    position: relative;
+    cursor: pointer;
+}
+.raceRecapWrap .raceRecapDtls {
+    border-top: 1px solid #cdcccc;
+    color: #666666;
+    padding: 10px 12px;
+    display: none;
+}
+.raceRecapActive .raceRecapDtls {
+    display: block;
+}
+.noData {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.touchWrap .raceReplayWrap{
+    display: none;
+}
+.touchWrap .btnEntriesRace li.replaysHide {
+    display: inline-block;
+}
+
+/* 404 Page*/
+.errorWrap .rightColumn {
+    display: none;
+}
+.pageNotFound {
+    padding: 110px 0;
+    text-align: center;
+}
+.error404 {
+    margin-bottom: 20px;
+}
+.error404 .errorNo {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    font-size: 30px;
+    display: inline-block;
+    border: 1px solid transparent;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #000000;
+    margin: 0 6px;
+}
+.error404 .no4 {
+    background: #e7e630;
+}
+.error404 .no0 {
+    border: 1px solid #898989;
+}
+
+.pageNotFound h2 {
+    color: #be2025;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.pageNotFound span {
+    display: inline-block;
+    color: #666666;
+    line-height: 20px;
+    width: 330px;
+}
+.pageNotFound a {
+    width: 100px;
+    display: inline-block;
+    border: 1px solid #cdcccc;
+    margin-top: 90px;
+    line-height: 28px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #3079f0;
+}
+.pageNotFound a:hover {
+    color: #005580;
+}
+.errorMsg {
+    background: #fbfbfb;
+    font-size: 16px;
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+    padding: 10px 70px;
+    margin: 20px 0;
+    color: #888888;
+    text-align: center;
+}
+
+/* noScript Page*/
+.noScript .rightColumn {
+    display: none;
+}
+.noScript {
+    padding: 160px 0 200px;
+    text-align: center;
+}
+.noScript h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.noScript h2 .drfPro {
+    font-family: 'TitilliumWeb-Bold', Arial, sans-serif;
+}
+.noScript h2 .drfPro span {
+    color: #ff0000;
+}
+.noScript a {
+    display: inline-block;
+    border: 1px solid #cdcccc;
+    line-height: 28px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #3079f0;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+.noScript a:hover {
+    color: #005580;
+}
+.noScript .refreshPage {
+    color: #666666;
+}
+
+/* footer */
+.footerWrap {
+    text-align: center;
+    color: #888888;
+    padding: 15px 0;
+    position: relative;
+}
+.footerWrap span {
+    color: #aaa;
+}
+
+/* Analysis and Picks */
+.analysisHead {
+    text-transform: uppercase;
+    padding: 20px 16px;
+    border-bottom: 1px solid #f6f6f6;
+}
+.analysisHead .drfPicks {
+    display: none;
+}
+.analysisHead .drfPicks,
+.analysisHead .beyerEgde {
+    width: 46%;
+    float: left;
+}
+.analysisHead .bestBet {
+    width: 54%;
+    float: left;
+}
+.bestBet .bestBetDtl{
+    float: left;
+    margin-right: 6px;
+}
+.bestBet .bestByName{
+    line-height: 22px;
+    font-size: 12px;
+    color: #333;
+}
+.drfPicks .titleAnalysis,
+.bestBet .titleAnalysis,
+.beyerEgde .titleAnalysis{
+    margin-right: 6px;
+    line-height: 22px;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    color: #333;
+}
+.bestBet .titleAnalysis{
+    float: left;
+}
+.drfPicks .oddsNo,
+.beyerEgde .oddsNo,
+.bestBetDtl .oddsNo{
+    margin-right: 3px;
+}
+.betAnalysis ul,
+.horseAnalysis ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-left: 16px;
+}
+.horseAnalysis{
+    padding: 18px 16px 0;
+    color: #878787;
+    line-height: 25px;
+}
+.horseAnalysis .analysisBy{
+    color: #000;
+}
+.betAnalysis {
+    padding: 5px 0 0;
+}
+.betAnalysis li {
+    border-top: 1px solid #f6f6f6;
+    padding: 15px 0;
+    overflow: hidden;
+}
+.betAnalysis li:first-child {
+    border-top: 0;
+}
+.betAnalysis .bestBetInfo {
+    position: relative;
+    width: 33.33%;
+    line-height: 22px;
+    float: left;
+}
+.bestBetInfo .betHorse {
+    padding: 0 40px 0 30px;
+    display: block;
+}
+.bestBetInfo .betRank {
+    color: #888;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+}
+.bestBetInfo .oddsNo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.betAnalysis .betAuthor {
+    margin-bottom: 5px;
+    color: #878787;
+    font-size: 12px;
+}
+.betAnalysis .bestConsensus .betAuthor {
+    font-size: 13px;
+}
+.betAuthor .author {
+    text-transform: uppercase;
+    color: #333;
+}
+.betAnalysis .bestConsensus {
+    border-bottom: 1px solid #eaf5ff;
+    border-top: 1px solid #eaf5ff;
+    background: #f9fcff;
+    padding-left: 0;
+}
+.betAnalysis .bestConsensus li {
+    padding: 15px 0 15px 16px;
+    border-top: 0;
+}
+.betAnalysis .bestConsensus li.noteConsensus {
+    padding: 15px 16px;
+    border-top: 0;
+    color: #888;
+    font-size: 12px;
+}
+.horseAnalysisDtl{
+    border-bottom: 1px solid #eee;
+    color: #888;
+    text-align: justify;
+    padding: 15px 16px;
+}
+.horseAnalysisDtl b{
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+}
+.horseAnalysisDtl span{
+    margin-right: 5px;
+}
+
+/* Closer Looks */
+.closerLooksWrap {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+.closerLooksWrap li {
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+}
+.closerLooksWrap li:last-child{
+    border-bottom: 0;
+}
+.closerLooksWrap .closerLooksHead {
+    line-height: 22px;
+    padding: 8px 40px 8px 50px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.closerLooksHead .oddsNo {
+    position: absolute;
+    left: 10px;
+}
+.closerLooksWrap .closerLooksDtls {
+    display: none;
+    color: #666;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 4px 13px 8px 8px;
+    margin: 0 0 0 42px;
+    text-align: justify;
+}
+.closerLooksHead .descName,
+.closerLooksDtls .descName {
+    float: right;
+    color: #000;
+    font-size: 13px;
+}
+.closerLooksWrap .closerLooksActive {
+    border-bottom: 0;
+}
+.closerLooksActive .closerLooksHead {
+    padding-bottom: 2px;
+}
+.newsListWrap .icon-togglePlus,
+.raceReplayWrap .icon-togglePlus,
+.newsDtlsHeader .icon-togglePlus,
+.closerLooksHead .icon-togglePlus,
+.raceRecapHead .icon-togglePlus {
+    background-position: left -449px;
+    display: block;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    margin-top: 0;
+}
+.newsListActive .icon-togglePlus,
+.raceReplayActive .icon-togglePlus,
+.newsDtlsActive .icon-togglePlus,
+.closerLooksActive .icon-togglePlus,
+.raceRecapActive .icon-togglePlus {
+    background-position: -24px -449px;
+}
+.closerLooksActive .closerLooksDtls {
+    display: block;
+}
+
+/* Quick Sheet */
+.quickSheetWrap .dateWrap {
+    height: 52px;
+}
+.quickSheetWrap .dateWrap li {
+    width: 42px;
+    height: 50px;
+    margin: 0 9px;
+    border-bottom: 2px solid #fff;
+}
+.quickSheetWrap .dataTable li.raceSel {
+    cursor: auto;
+}
+.quickSheetWrap .dateWrap .activeDate {
+    border-bottom: 2px solid #3079f0;
+}
+.quickSheetWrap .dateWrap .oddsNo {
+    margin-top: 15px;
+}
+.quickSheetWrap .dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonLeft,
+.quickSheetWrap .dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonRight {
+    top: -61px;
+}
+.quickSheetWrap .dateWrap .icon-qSheet {
+    background-position: 3px -176px;
+    background-color: #f7f7f7;
+    width: 16px;
+    height: 14px;
+    border: 1px solid #e9e9e9;
+    border-left: 0;
+    -moz-border-radius: 0px 2px 2px 0;
+    -webkit-border-radius: 0px 2px 2px 0;
+    border-radius: 0px 2px 2px 0;
+    vertical-align: top;
+    margin-top: 17px;
+}
+.quickSheetWrap .headRow .sCell {
+    vertical-align: top;
+}
+.quickSheetWrap .offerSubWrap{
+    border-bottom: 1px solid #eeeeee;
+}
+
+.quickSheetBody {
+    border-bottom: 1px solid #e6e5e5;
+}
+.quickSheetBody h5,
+.articleBody h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 0 10px 13px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    color: #333333;
+}
+.quickSheetDtls {
+    margin: 0 0 16px 35px;
+    border-bottom: 1px solid #F6F6F6;
+    padding-bottom: 17px;
+}
+.quickSheetDtls:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.quickSheetDtls ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.quickSheetDtls h6 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+}
+.quickSheetDtls h6 span {
+    text-transform: none;
+    color: #666666;
+}
+.quickSheetTable {
+    display: table;
+    width: 100%;
+}
+.quickSheetTable.mobileShow {
+    display: none;
+}
+.quickSheetTable li {
+    display: table-row;
+    line-height: 20px;
+    color: #888;
+}
+.quickSheetTable .rowHead {
+    color: #666666;
+}
+.quickSheetTable .qCell {
+    display: table-cell;
+}
+.quickSheetTable .valDate {
+    width: 105px;
+}
+.quickSheetTable .valTrack {
+    width: 100px;
+}
+.quickSheetTable .valSurface,
+.quickSheetTable .valDistance,
+.quickSheetTable .valTime,
+.quickSheetTable .varStarts,
+.quickSheetTable .valWin {
+    width: 85px;
+}
+.quickSheetTable .valAngle,
+.quickSheetTable .valRecord,
+.quickSheetTable .valRecordTrack {
+    width: 205px;
+}
+.valRecord span,
+.valMeet span,
+.valYear span,
+.valRecordTrack span,
+.valBeyers span {
+    display: block;
+}
+.quickSheetTable .valMeet {
+    width: 170px;
+}
+.quickSheetTable .valWorkoutRank,
+.quickSheetTable .valROI,
+.quickSheetTable .valYear,
+.quickSheetTable .valBeyers {
+    width: auto;
+}
+
+.qsHorsesExitingKey .quickSheetTable {
+    width: 50%;
+    float: left;
+}
+.quickSheetTable .valqsHead1 {
+    width: 30%;
+    color: #666666;
+}
+.quickSheetTable .valqsHead {
+    width: 60%;
+    color: #666666;
+}
+.quickSheetTable .valFinish {
+    font-family: 'paddockextmedium', Arial, sans-serif;
+}
+.quickSheetTable .valFinish  sup {
+    font-size: 13px;
+}
+
+/* DRF Articles */
+.articleList {
+    margin: 0 0 0 12px;
+    padding: 0;
+    list-style-type: none;
+    color: #888888;
+}
+.articleList li {
+    margin-bottom: 13px;
+    padding: 0 12px 19px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #f1f1f1;
+}
+.articleList li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.articleList .articleDate {
+    text-align: right;
+    float: right;
+}
+.articleList h6 {
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+.articleList .articleMedia {
+    width: 104px;
+    border: 1px solid #e6e5e5;
+    float: left;
+    margin-right: 15px;
+}
+.articleList .articleInfo {
+    margin-bottom: 13px;
+}
+.articleList .articleAuthor {
+    float: left;
+}
+.articleList .articleAuthor span {
+    color: #000000;
+}
+.articleList p:last-child {
+    margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea,
+.btn,
+input.btn,
+input.btn:hover,
+input.btn:active,
+input.btn:focus {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* form Style */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    height: 34px;
+    line-height: 24px;
+    padding-right: 15px;
+    border: 1px solid #dcdcdc;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0;
+    outline: 0;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.btn,
+.btn:active,
+.btn:focus,
+input.btn,
+input.btn:active,
+input.btn:focus {
+    background: #ec1c24;
+    border: 0 none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    font-size: 18px;
+    height: 40px;
+    display: inline-block;
+    line-height: 38px;
+    outline: 0 none;
+    padding: 0 10px;
+}
+.btn:hover,
+input.btn:hover {
+    background: #ce1b28;
+    color: #ffffff;
+}
+.btnBlue,
+.btn:active,
+.btn:focus {
+    background: #3079f0;
+    box-shadow: 0 0 0;
+}
+.btn:hover {
+    background: #256ce0;
+}
+.formWrap {
+    color: #666666;
+    font-size: 14px;
+}
+.formWrap h2 {
+    font-size: 26px;
+    color: #000000;
+    padding: 0 20px;
+}
+.formWrap ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0 20px;
+}
+.formWrap li {
+    margin-top: 10px;
+    position: relative;
+}
+.formWrap li:first-child {
+    margin-top: 0;
+}
+.error {
+    color: red;
+    font-size: 11px;
+    margin-left: 8px;
+}
+.required {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: red;
+}
+
+/* Top Nav */
+.topWrap {
+    border-bottom: 1px solid #eeeeee;
+    height: 34px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.topNav {
+    float: left;
+}
+.toploginNav {
+    float: right;
+    margin-right: 5px;
+}
+nav .toploginNav{
+    display: none;
+}
+.topWrap li {
+    line-height: 34px;
+    float: left;
+    font-size: 13px;
+}
+.topWrap a {
+    color: black;
+    padding: 0 5px;
+    display: block;
+}
+.topWrap a:hover {
+    color: #ec1c24;
+}
+.topWrap .topNavActive a {
+    color: #ec1c24;
+}
+.socialMedia{
+    margin-top: 4px;
+    float: right;
+}
+.socialMedia li {
+    float: left;
+}
+.socialMedia li a {
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    text-indent: -10000px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.socialMedia li a.twitter {
+    background: #00aced;
+}
+.socialMedia li a.twitter:hover {
+    background: #38b1da;
+}
+.socialMedia li a.twitter:before {
+    content:"";
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -39px -876px;
+    display: block;
+    width: 19px;
+    height: 18px;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+}
+.socialMedia li a.facebook {
+    background: #3b5998;
+    margin-left: 5px;
+}
+.socialMedia li a.facebook:hover {
+    background: #2f5b9f;
+}
+.socialMedia li a.facebook:before {
+    content:"";
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -44px -903px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+}
+
+/* LogIn */
+.loginWrap .pageData {
+    width: 597px;
+    min-height: 300px;
+    padding: 0;
+}
+.loginWrap .rightColumn {
+    width: 340px;
+    padding: 20px 0;
+}
+.loginHead {
+    border-bottom: 1px solid #eeeeee;
+    padding: 25px 20px;
+}
+.loginHead h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+}
+.icon-drfplus {
+    background-position: 0 -838px;
+    width: 63px;
+    height: 24px;
+    vertical-align: top;
+}
+.drfplusCnt {
+    color: #666666;
+    line-height: 22px;
+    padding-right: 60px;
+    font-size: 14px;
+}
+.drfplusCnt span {
+    font-weight: bold;
+}
+.drfplusCnt p {
+    font-weight: bold;
+    margin: 20px 0 0 0
+}
+.drfplusCnt p:first-child {
+    margin-top: 0
+}
+.loginCnt sup {
+    top: -5px;
+    font-size: 50%;
+}
+.loginBody {
+    border-bottom: 1px solid #eeeeee;
+    padding: 25px 20px 30px;
+}
+.loginCnt {
+    width: 365px;
+    float: left;
+    margin-right: 20px;
+}
+.loginCnt sup {
+    font-size: 9px;
+}
+.listCnt {
+    margin: 0;
+    list-style-type: none;
+}
+.loginWrap .listCnt li {
+    font-size: 14px;
+}
+.listCnt li {
+    font-size: 15px;
+    padding-left: 30px;
+    margin-top: 12px;
+    background: url("../img/bullet.png") left 3px no-repeat;
+    color: #333;
+}
+.listCnt li:first-child {
+    margin-top: 0;
+}
+.findOutWrap {
+    width: 160px;
+    float: left;
+    text-align: center;
+}
+.findOutWrap .txtAsLow {
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+    font-size: 18px;
+    color: #888;
+}
+.findOutWrap .txtCent {
+    font-family: 'TitilliumWeb-Bold', Arial, sans-serif;
+    font-size: 72px;
+    color: #66aa33;
+    line-height: 62px;
+}
+.findOutWrap .txtPerDay {
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.findOutWrap .btnBlue {
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 35px;
+}
+.offerSubWrap ul {
+    text-align: center;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: .5px;
+    list-style-type: none;
+    margin: 0;
+}
+.offerSubWrap li {
+    border-left: 1px solid #eeeeee;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    padding: 28px 0 22px 0;
+    color: #3079f0;
+}
+.offerSubWrap li:first-child {
+    border: 0;
+    border-radius: 0 0 0 5px;
+}
+.offerSubWrap span {
+    font-family: 'TitilliumWeb-Light', Arial, sans-serif;
+}
+.offerSubWrap .txtSave {
+    position: absolute;
+    top: 10px;
+    left: 23px;
+    color: #e31d1a;
+    font-size: 14px;
+}
+.offerSubWrap .txtSave span {
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+}
+.premiumCnt .loginMsg {
+    padding: 20px;
+}
+.loginAccMsg {
+    text-align: center;
+}
+.loginAccMsg .btnLogin{
+    background: #ec1c24;
+    border: 1px solid #ec1c24;
+    border-radius: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+    line-height: 27px;
+    padding: 0 15px;
+    margin: 0 15px;
+    text-align: center;
+}
+.loginAccMsg .btnLogin:hover{
+    background: #ce1b28;
+}
+.loginAccMsg span.alreadyAcc{
+    font-size: 18px;
+    font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    color: #000;
+}
+.loginAccMsg span.dontAcc{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    text-align: left;
+}
+.loginAccMsg span.dontAcc span{
+    display: block;
+    color: #666666;
+}
+.loginAccMsg span.dontAcc a{
+    color: #005bf0;
+}
+.loginAccMsg span.dontAcc a:hover{
+    color: #000;
+}
+.premiumCnt .offerSubWrap {
+    border-bottom: 1px solid #eee;
+}
+.premiumCnt .offerSubWrap li a{
+    font-size: 18px;
+    color: #005bf0;
+}
+.offerSubWrap li a{
+    color: #005bf0;
+}
+.offerSubWrap li a:hover{
+    color: #0044b4;
+}
+.premiumCnt .loginHead,
+.premiumCnt .loginBody,
+.premiumCnt .offerSubWrap {
+    background: #f9f9f9;
+}
+.premiumCnt .loginCnt {
+    width: 395px;
+}
+.premiumCnt .offerSubWrap .txtSave,
+.premiumBeyerWrap .offerSubWrap .txtSave{
+    left: 26px;
+}
+.loginNote {
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+.btnForgotPass {
+    text-align: right;
+}
+.btnForgotPass a {
+    color: #666666;
+    display: inline-block;
+    margin: 5px 0;
+}
+.btnForgotPass a:hover {
+    color: #3079f0;
+}
+.loginWrap input.btn {
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+    border-bottom: 2px solid #ae0a0f;
+    box-shadow: none;
+}
+.formWrap .btnCreateAc {
+    text-align: center;
+    color: #888888;
+    margin-top: 20px;
+    font-size: 13px;
+}
+.formWrap .btnCreateAc a{
+    color: #005bf0;
+}
+.formErrorWrap {
+    color: #d7181f;
+    background: #fef2f2;
+    border: 1px solid #f5dcdc;
+    position: relative;
+    padding: 5px 18px 5px 55px;
+    margin: 0 -1px 15px -1px;
+}
+.formErrorWrap span {
+    color: #888888;
+    font-size: 12px;
+    display: block;
+}
+input:-ms-input-placeholder {
+    color: #aaa;
+}
+.placeholder{
+    position:relative;
+    overflow:hidden;
+    font-family: arial;
+    font-size: 12px;
+}
+.placeholder_span {
+    top:8px;
+    position:absolute;
+    font-size:15px;
+    text-indent:6px;
+    color:#aaa;
+    white-space:nowrap;
+}
+.icon-error {
+    background-position: left -870px;
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 7px;
+}
+
+/* HOme Popup*/
+.popupOverlay, #drf_openx_page_overlay_ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=70);
+    opacity: 0.7;
+    z-index: 112;
+}
+.popup, #drf_openx_page_overlay_wrapper{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99999;
+}
+.popupCnt, #drf_openx_overlay_ad_zone{
+    width: 770px;
+    min-height: 150px;
+    margin: 50px auto;
+    background: #ffffff;
+    position: relative;
+    z-index: 113;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+.popupCnt img{
+    border: 1px solid #eee;
+}
+.popupClose, #close-button{
+    float: right;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #666;
+    cursor: pointer;
+}
+.popupClose:hover{
+    cursor: pointer;
+    color: #3079f0;
+}
+
+/* Admin page for DA Version */
+.appVerForm,
+.appVerDisc{
+    width: 40%;
+    margin: 5%;
+    float: left;
+    font-family: arial, helvetica, sans-serif;
+}
+.appVerForm li {
+    margin-bottom: 15px;
+}
+.appVerForm li label {
+    cursor: default;
+}
+.appVerForm li .btn {
+    float: left;
+}
+.appVerForm li .btnCancel {
+    margin: 12px 0 0 10px;
+    float: left;
+}
+.appVerDisc h4{
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+}
+.appVerDisc h4 .updateOn {
+    float: right;
+    font-size: 11px;
+    color: #666666;
+    font-family: arial, helvetica, sans-serif;
+}
+.appVerDisc li {
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.valVerStatus {
+    width: 50%;
+    float: left;
+}
+
+/* app promotional */
+.promoAndroid {
+    background: url("../img/promo-android.png") center 210px no-repeat;
+    background-size: 252px auto;
+    padding: 0;
+}
+.promoIos {
+    background: url("../img/promo-ios.png") center 210px no-repeat;
+    background-size: 254px auto;
+    padding: 0;
+}
+.promoWrap {
+    width: 310px;
+    margin: 0 auto;
+    font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    font-size: 14px;
+    color: #888888;
+}
+.promoWrap .pageData{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding-top: 0;
+    min-height: 500px;
+}
+.promoHead {
+    text-align: center;
+    padding: 0 35px;
+    margin: 8px 0 15px;
+}
+.promoHead h2 {
+    color: #EC1C24;
+    font-size: 24px;
+}
+.promoHead p {
+    margin-bottom: 0;
+}
+.promoWrap .btnSkip {
+    border-bottom: 1px solid #eeeeee;
+    text-align: right;
+    padding: 5px 0;
+}
+.promoWrap .btnSkip a {
+    color: #888888;
+    padding: 10px;
+    display: inline-block;
+}
+.promoWrap .btnSkip a:hover{
+    color: #3079F0;
+}
+.promoWrap .promoOs a{
+    display: block;
+    width: 123px;
+    margin: 0 auto;
+}
+.promoAndroid .btnIos{
+    display: none;
+}
+.promoIos .btnPlayStore{
+    display: none;
+}
+
+/* News / Live Listing */
+.newsListWrap {
+    background: #f7f7f7;
+    border-top: 1px solid #eee;
+}
+.newsListWrap .newsHeader{
+    font-family: "TitilliumWeb-SemiBold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 12px 20px;
+    position: relative;
+    color: #ec1c24;
+}
+.newsListWrap .newsCount{
+    color: #ffffff;
+    font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    font-size: 14px;
+    background: #005bf0;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    display: inline-block;
+    margin: 0 5px;
+}
+.newsListWrap .readAll {
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 13px;
+    color: #3079f0;
+}
+.newsListWrap .readAll:hover {
+    color: #000;
+}
+.newsListWrap h3{
+    font-family: "TitilliumWeb-SemiBold", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+.newsListWrap h3 a{
+    color: #005bf0;
+}
+.newsListWrap h3 a:hover{
+    color: #000;
+}
+.newsListWrap li {
+    padding: 0 20px;
+    float: left;
+    width: 165px;
+    font-size: 12px;
+    color: #333;
+    word-wrap: break-word;
+}
+.newsListWrap .twoPost li {
+    width: 268px;
+}
+.newsListWrap .onePost li {
+    width: auto;
+    float: none;
+}
+.nuggetNews, .nuggetLive {
+    font-size: 9px;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 13px;
+    padding: 0 3px;
+    background: #ec1c24;
+    color: #ffffff;
+    display: inline-block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.nuggetLive {
+    background: #3079f0;
+}
+.newsListWrap .newsListCnt{
+    padding-bottom: 20px;
+}
+.newsListWrap .postReadMore {
+    font-size: 12px;
+    color: #005bf0;
+}
+.newsListWrap .postReadMore a{
+    color: #005bf0;
+}
+
+.raceReplayWrap{
+    border-top: 1px solid #eeeeee;
+}
+.raceReplayWrap .icon-togglePlus {
+    top: 16px;
+}
+.raceReplayWrap .raceReplayHeader{
+    font-family: "TitilliumWeb-SemiBold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: relative;
+}
+.raceReplayWrap.raceReplayActive,
+.raceReplayWrap .raceReplayHeader:hover{
+    background: #f9f9f9;
+}
+.raceReplayWrap h3{
+    font-family: "TitilliumWeb-SemiBold", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+.raceReplayWrap h3 a{
+    color: #000000;
+}
+.raceReplayWrap h3 a:hover{
+    color: #3079f0;
+}
+.raceReplayWrap .raceReplayCnt {
+    display: none;
+}
+.raceReplayActive .raceReplayCnt{
+    display: block;
+}
+.raceReplayWrap .videoWrapper {
+    background: none repeat scroll 0 0 #000;
+}
+.raceReplayWrap .videoWrapper .iframeVideo {
+    width: 481px;
+    height: 360px;
+    margin: auto;
+}
+.raceReplayWrap .premiumCnt .offerSubWrap {
+    border-bottom: 0;
+}
+
+/* News Details */
+.entriesHeader .newsRaceDate{
+    color: #888888;
+    padding-left: 35px;
+    font-size: 12px;
+}
+.newsDtlsWrap li {
+    position: relative;
+    padding-left: 50px;
+    border-bottom: 1px solid #eeeeee;
+}
+.newsDtlsWrap li:hover,
+.newsDtlsWrap li.newsDtlsActive{
+    background: #fafafa
+}
+.newsDtlsWrap li:last-child .newsCnt {
+    border-bottom: 0;
+}
+.newsDtlsWrap li .newsLeft {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    text-align: center;
+}
+.newsDtlsWrap li .newsLeft .icon-livePlus,
+.newsDtlsWrap li .newsLeft .icon-livePPlus,
+.newsDtlsWrap li .newsLeft .icon-drf,
+.newsDtlsWrap li .newsLeft .icon-drfPlus{
+    margin-top: 3px;
+}
+.newsDtlsWrap li .imgAuthor {
+    border: 1px solid #cdcdcd;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    margin-bottom: 4px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+.newsDtlsWrap li .imgAuthor img {
+    width: 30px;
+    height: 30px;
+}
+.newsDtlsWrap h3,
+.newsDtlsWrap .newsDis{
+    word-wrap: break-word;
+}
+.newsWrap {
+    margin-top: 10px;
+}
+.newsWrap .articleHeader{
+    position: relative;
+}
+.newsWrap .articleHeader .btnEntriesRace{
+    position: absolute;
+    right: 13px;
+}
+.newsCnt {
+    padding: 10px 20px 10px 10px;
+    color: #666666;
+
+}
+.newsCnt .newsAuthorDate {
+    margin: 8px 0;
+}
+.newsCnt .newsAuthorDate .newsAuthor {
+    color: black;
+    float: left;
+}
+.newsCnt .newsAuthorDate .newsDate {
+    font-size: 11px;
+    float: right;
+    text-align: right;
+    width: 120px;
+    color: #666666;
+}
+.newsCnt .mediaWrap {
+    background:#242424;
+    border: 1px solid #dddddd;
+    cursor: default;
+    margin: 0 0 10px;
+    position: relative;
+    height: 200px;
+    width: 400px;
+}
+.newsCnt .videoWrapper {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 10px;
+    background: #000;
+    display: table;
+}
+.newsCnt .videoWrapper > div {
+    display:table-cell !important;
+}
+.newsCnt .videoWrapper > .vimeoVideo {
+    width: 400px;
+    height: 200px;
+}
+.newsCnt h3 {
+    color: black;
+    margin-bottom: 8px;
+    line-height: 24px;
+    font-family: "TitilliumWeb-SemiBold", Arial, sans-serif;
+    font-size: 20px;
+}
+.newsCnt h3 a {
+    color: black;
+}
+.newsCnt h3 a:hover {
+    color: #3079f0;
+}
+.newsCnt .newsDisc {
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+.newsCnt .newsImg {
+    text-align: center;
+}
+.newsCnt .newsImg img {
+    max-width: 100%;
+    height: 200px;
+}
+.newsDtlsActive .newsDtlsCnt{
+    display: block;
+}
+.newsDtlsActive .teaser{
+    display: none;
+}
+.txtReadLess {
+    display: none;
+}
+.btnReadMore,
+.btnReadMore:focus{
+    color: #3079f0;
+}
+.btnReadMore:hover{
+    color: #000;
+}
+.newsDisMore,
+.newsDtlsActive .txtReadMore {
+    display: none;
+}
+.newsDtlsActive .newsDisMore{
+    display: block;
+}
+.newsDtlsActive .txtReadLess {
+    display: inline-block;
+}
+.newsDtlsActive .btnReadMore,
+.newsDtlsActive .btnReadMore:focus{
+    color: #000;
+}
+.newsDtlsActive .btnReadMore:hover{
+    color: #3079f0;
+}
+.mback {
+    display: none;
+}
+
+
+/* Touch Feedback */
+.mback,
+.dateWrap a,
+.menuNav li,
+.drfNav li a,
+.btnTrack li,
+.backButton a,
+.btnoddsNext,
+.mback,
+.mobileMenu li,
+.entriesRaceHeader,
+.oddsPpaysTab li,
+ul.oddsDetailsTab li a,
+.entriesListWrap .listBody li,
+.entriesRaceDtls .listBody li,
+.traSelBody .listBody li,
+.promoWrap .btnSkip a{
+    -webkit-tap-highlight-color: rgba(170, 170, 170, 0.2);
+}
+.btnEntriesRace li.replaysHide {
+    display: none;
+}
+.raceHeaderDtl{
+    float: left;
+}
+
+/* font changes */
+.entriesDtlsWrap .dataTable.listBody li{
+    font-size: 12px;
+    color: #333;
+}
+.premiumBeyerWrap .offerSubWrap ul{
+    border-bottom: 1px solid #eee;
+}
+.entriesDtlsWrap .valentDtlsHorse span.valHorseName,
+.resultsWrap .valResDtlsHorse span.valHorseName{
+    font-size: 12px;
+}
+.entriesDtlsWrap .listBody .valentDtlsodds{
+    font-size: 12px;
+    font-weight: 700;
+}
+.listBody .valentDtlsJockey span,
+.listBody .valentDtlsHorse .valBeyers{
+    font-size: 12px;
+    line-height: 18px;
+}
+.listBody .valResDtlsJockey span {
+    font-size: 11px;
+    line-height: 18px;
+}
+
+/* table row border colors */
+.dataTable{
+    border-collapse: collapse;
+}
+#drfLiveWebLink {
+    color: #3079f0;
+    cursor: pointer;
+}
+#drfLiveWebLink:hover {
+    color: #000;
+}
+
+.menuNav li a.subMenuArrow {
+    padding-right: 19px;
+}
+.subMenuArrow:after{
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -40px -934px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 8px;
+    position: absolute;
+    right: 2px;
+    top: 24px;
+}
+
+/* for INS premium section */
+.newsWrap .entriesHeader{
+    border-bottom: 1px solid #e9e9e9;
+}
+.entriesDtlsWrap .newsDtlsWrap .premiumCnt{
+    margin: 0 -20px 10px -60px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.entriesDtlsWrap .newsDtlsWrap .premiumBeyerMsg{
+    margin: 0 -21px 10px -61px;
+    padding: 10px 20px 10px 60px;
+}
+.newsDtlsWrap .premiumCnt .loginAccMsg{
+    padding: 20px;
+}
+.entriesDtlsWrap  .newsDtlsWrap .premiumBeyerMsg li{
+    border-bottom: 0;
+    padding-left: 0;
+    line-height: 26px;
+}
+.newsDtlsWrap .premiumBeyerMsg li:hover{
+    background: none;
+}
+.newsCnt .newsAuthorDate .newsAuthor span{
+    color: #005bf0;
+}
+.newsCnt .newsAuthorDate .newsAuthor span a:hover{
+    color: #000;
+}
+
+/* DRF Bets iframe */
+.drfBetsIframe .container {
+    width: 100%;
+}
+.drfBetsIframe .headerWrap {
+    margin-bottom: 0;
+}
+.drfBetsIframe .contentWrap {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px #d9e0e8;
+    -moz-box-shadow: 0 0px 0px #d9e0e8;
+    box-shadow: 0 0px 0px #d9e0e8;
+    border: solid 0px #dddddd;
+}
+
+.drfBetsIframe .pageData {
+    width: auto;
+    float: none;
+    border-right: 0;
+}
+.drfBetsIframe .loginWrap .pageData {
+    width: 655px;
+    float: left;
+    border-right: solid 1px #eeeeee;
+}
+.drfBetsIframe .tabs{
+    margin: 0;
+}
+.drfBetsIframe .entriesRaceHeader,
+.drfBetsIframe .entriesDtlsWrap .premiumBeyerMsg{
+    margin: -1px 0 0;
+}
+.drfBetsIframe .newsListWrap li {
+    width: 28%;
+}
+.drfBetsIframe .newsListWrap .twoPost li {
+    width: 44%;
+}
+.drfBetsIframe .newsListWrap .onePost li {
+    width: auto;
+    float: none;
+}
+.drfBetsIframe .valentDtlsQsheet .icon-hotStat {
+    width: 69px;
+    height: 16px;
+    background-position: 0px -1017px;
+}
+.drfBetsIframe .valentDtlsQsheet {
+    width: 97px;
+}
+.drfBetsIframe .entriesDtlsWrap .newsDtlsWrap .premiumBeyerMsg{
+    margin: 0 -20px 10px -60px;
+}
+
+/* DRF Bets iframe Media queries only */
+@media (min-width: 1160px) {
+    .drfBetsIframe .loginWrap .pageData {
+        width: 810px;
+    }
+    .drfBetsIframe .dateWrap.content {
+        width: 99%;
+        margin: 5px auto 0;
+    }
+    .drfBetsIframe .analysisHead,
+    .drfBetsIframe .horseAnalysis,
+    .drfBetsIframe .entriesRaceDisc,
+    .drfBetsIframe .entriesDtlsWrap .listFooter li .valentDtlsbtm{
+        padding-left: 16px;
+        padding-right: 20px;
+    }
+    .drfBetsIframe .valentDtlspp {
+        width: 30px;
+    }
+    .drfBetsIframe .valentDtlsHorse {
+        width: 155px;
+    }
+    .drfBetsIframe .valentDtlsTrainer {
+        width: 90px;
+    }
+    .drfBetsIframe .valentDtlsClaim {
+        width: 80px;
+        color: #666;
+    }
+    .drfBetsIframe .valentDtlsodds{
+        width: 65px;
+    }
+    .drfBetsIframe .valentDtlsMed{
+        width: 35px;
+    }
+    .drfBetsIframe .valentDtlsNum{
+        width: 25px;
+    }
+    .drfBetsIframe .valentDtlsQsheet{
+        width: 69px;
+    }
+    .drfBetsIframe .loginCnt {
+        width: 496px;
+    }
+    .drfBetsIframe .quickSheetWrap .loginCnt,
+    .drfBetsIframe .premiumCnt .loginCnt {
+        width: 485px;
+    }
+    .drfBetsIframe .newsListWrap li {
+        font-size: 14px;
+    }
+    .drfBetsIframe .newsListWrap .newsHeader{
+        font-size: 18px;
+    }
+    .drfBetsIframe .newsListWrap h3{
+        font-size: 16px;
+    }
+    .drfBetsIframe .newsListWrap .postReadMore{
+        font-size: 13px;
+    }
+    .drfBetsIframe .entriesDtlsHead{
+        padding: 10px 15px;
+    }
+    .drfBetsIframe .newsListWrap .readAll {
+        color: #005bf0;
+    }
+
+    /* new style added */
+    .drfBetsIframe  .entriesDtlsWrap .entriesDtlsLeft h4{
+        font-size: 24px;
+    }
+    .drfBetsIframe .entriesDtlsHead h2 .titleDetails{
+        font-size: 20px;
+    }
+    .drfBetsIframe .entriesDtlsHead h2 span,
+    .drfBetsIframe .entriesRaceHeader .mtp,
+    .drfBetsIframe .entriesRaceHeader .entriesRaceDiscRight,
+    .drfBetsIframe .entriesRaceDisc,
+    .drfBetsIframe .entriesDtlsWrap .dataTable.listBody li,
+    .drfBetsIframe .valentDtlsodds span,
+    .drfBetsIframe .entriesDtlsWrap .listFooter li .valentDtlsbtm,
+    .drfBetsIframe .valResDtlsbtm .valResinfo span.valResUnplaced{
+        font-size: 14px;
+    }
+    .drfBetsIframe .entriesRaceHeader h3{
+        font-size: 20px;
+    }
+    .drfBetsIframe .valPostET{
+        font-size: 11px;
+    }
+    .drfBetsIframe .raceDisctxt{
+        font-size: 13px;
+    }
+    .drfBetsIframe .tabs li{
+        font-size: 18px;
+    }
+    .drfBetsIframe .headRow{
+        font-size: 13px;
+    }
+    .drfBetsIframe .valentDtlsJockey span,
+    .drfBetsIframe .valResDtlsJockey span,
+    .drfBetsIframe .headRow .valentDtlsHorse .valBeyers{
+        font-size: 12px;
+    }
+    .drfBetsIframe .entriesDtlsWrap .dataTable li.headRow .sCell,
+    .drfBetsIframe .entriesDtlsWrap .dataTable.listBody li .sCell{
+        padding: 10px 7px;
+    }
+
+    .drfBetsIframe .entriesDtlsWrap .valentDtlsHorse span.valHorseName,
+    .drfBetsIframe .resultsWrap .valResDtlsHorse span.valHorseName{
+        font-size: 15px;
+    }
+    .drfBetsIframe .listBody .valentDtlsHorse .valBeyers,
+    .drfBetsIframe .listBody .valentDtlsJockey span,
+    .drfBetsIframe .listBody .valResDtlsJockey span{
+        font-size: 13px;
+    }
+    .drfBetsIframe .entriesDtlsWrap .listBody .valentDtlsodds{
+        font-size: 16px;
+    }
+    .drfBetsIframe .entriesDtlsWrap .entriesDtlsbody .dataTable span.valentDtlsNum,
+    .drfBetsIframe .entriesDtlsWrap .dataTable li.headRow .sCell.valentDtlsNum{
+        padding-left: 17px;
+    }
+    .drfBetsIframe .valResDtlsbtm .valResinfo .valResWinnerinfo{
+        font-size: 16px;
+    }
+    .drfBetsIframe .backButton a{
+        color: #015cf0;
+    }
+    .drfBetsIframe .resultsWrap .headRow .sCell,
+    .drfBetsIframe .headRow .valResDtlsJockey span{
+        color: #666;
+    }
+    .drfBetsIframe .resultsWrap .headRow{
+        font-size: 13px;
+    }
+    .drfBetsIframe .resultsWrap .listBody .valResDtlsWin,
+    .drfBetsIframe .resultsWrap .listBody .valResDtlsPlace,
+    .drfBetsIframe .resultsWrap .listBody .valResDtlsShow,
+    .drfBetsIframe .resultsWrap .listBody .valResDtlsBeyer,
+    .drfBetsIframe .resultsWrap .valResDtlsPar,
+    .drfBetsIframe .resultsWrap .valResDtlsParAmt
+    {
+        font-size: 14px;
+    }
+    .drfBetsIframe .dateWrap a .date{
+        margin: 0 12px;
+    }
+    .drfBetsIframe .valentDtlsQsheet .icon-hotStat {
+        width: 69px;
+        height: 16px;
+        background-position: 0px -1017px;
+    }
+
+    /* new listing style */
+    .drfBetsIframe .entriesListWrap .headRow{
+        font-size: 14px;
+        font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    }
+    .drfBetsIframe .entriesListWrap .listBody .valTrack{
+        font-size: 15px;
+    }
+    .drfBetsIframe .entriesListWrap .listBody .valChanges,
+    .drfBetsIframe .entriesListWrap .listBody .valWeather,
+    .drfBetsIframe .resultsWrap .listBody .valResCurRace,
+    .drfBetsIframe .resultsWrap .listBody .valResPrevRaces{
+        font-size: 14px;
+    }
+    .drfBetsIframe .entriesListWrap .entriesHeader h4{
+        font-size: 20px;
+    }
+    .drfBetsIframe .backButton {
+        margin: 0 0 0 16px;
+    }
+    .drfBetsIframe .entriesRaceHeader {
+        padding: 10px 19px;
+    }
+    .drfBetsIframe .entriesDtlsWrap .entriesHeader{
+        padding: 17px 20px 16px 14px;
+    }
+    .drfBetsIframe .entriesDtlsHead{
+        padding: 10px 15px;
+    }
+    .drfBetsIframe .newsListWrap .readAll {
+        color: #005bf0;
+    }
+    .drfBetsIframe .premiumCnt .offerSubWrap li a,
+    .drfBetsIframe .offerSubWrap li a{
+        font-size: 22px;
+    }
+    .drfBetsIframe .premiumCnt .offerSubWrap .txtSave
+    {
+        left: 48px;
+    }
+    .drfBetsIframe .offerSubWrap .txtSave{
+        left: 100px;
+    }
+    .drfBetsIframe .entriesListWrap .titleTrack,
+    .drfBetsIframe .entriesListWrap .valTrack,
+    .drfBetsIframe .resultsWrap .titleTrack {
+        width: 250px;
+    }
+
+    .drfBetsIframe .listCnt li{
+        font-size: 16px;
+    }
+    .drfBetsIframe .closerLooksWrap .closerLooksHead{
+        font-size: 16px;
+    }
+    .drfBetsIframe .closerLooksWrap .closerLooksDtls{
+        font-size: 14px;
+    }
+    .drfBetsIframe .analysisHead .drfPicks,
+    .drfBetsIframe .analysisHead .beyerEgde {
+        width: 34%;
+    }
+    .drfBetsIframe .analysisHead .bestBet {
+        width: 64%;
+    }
+    .drfBetsIframe .horseAnalysisDtl .horseName{
+        font-size: 16px;
+    }
+    .drfBetsIframe .horseAnalysisDtl .horseAnalysisDesp{
+        font-size: 14px;
+    }
+    .drfBetsIframe .bestBetInfo .betRank{
+        width: 80px;
+    }
+    .drfBetsIframe .bestBetInfo .betHorse{
+        padding: 0 80px 0 30px;
+    }
+    .drfBetsIframe .betAnalysis .betAuthor,
+    .drfBetsIframe .betAnalysis .bestBetInfo,
+    .drfBetsIframe .betAnalysis .bestConsensus .betAuthor,
+    .drfBetsIframe .betAnalysis .bestConsensus li.noteConsensus{
+        font-size: 14px;
+    }
+    .drfBetsIframe .newsWrap .articleHeader .btnEntriesRace{
+        right: 20px;
+    }
+    /* DRF Bets iframe */
+    .drfBetsIframe .container {
+        width: 100%;
+    }
+}
+
+/* Media queries */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    .logo {
+        margin-left: 70px;
+        margin-top: 5px
+    }
+    .logo a {
+        width: 240px;
+        height: 80px;
+    }
+    .headerAds {
+        margin-right: 100px
+    }
+    .topWrap li{
+        font-size: 14px;
+    }
+    .topWrap a{
+        padding: 0 9px;
+    }
+    .userNav .userName{
+        font-size: 14px;
+    }
+    .userNav ul li a{
+        font-size: 13px;
+    }
+    .pageData {
+        width: 846px;
+    }
+    .loginWrap .pageData {
+        width: 827px;
+    }
+    .menuNav li a {
+        font-size: 16px;
+        padding: 0 12px;
+    }
+    .subMenu li a {
+        font-size: 14px;
+    }
+    .subMenu .colMenu {
+        width: 193px;
+    }
+    .dateWrap.content {
+        width: 99%;
+        margin: 5px auto 0;
+    }
+    .analysisHead,
+    .horseAnalysis,
+    .entriesRaceDisc,
+    .entriesDtlsWrap .listFooter li .valentDtlsbtm{
+        padding-left: 16px;
+        padding-right: 20px;
+    }
+    .horseAnalysisDtl{
+        padding: 18px 20px 20px 16px;
+    }
+    .entriesRaceHeader{
+        padding-left: 16px;
+        padding-right: 19px;
+    }
+    .valentDtlspp {
+        width: 30px;
+    }
+    .valentDtlsHorse {
+        width: 155px;
+    }
+    .valentDtlsTrainer {
+        width: 90px;
+    }
+    .valentDtlsClaim {
+        width: 80px;
+        color: #666;
+    }
+    .valentDtlsodds{
+        width: 65px;
+    }
+    .valentDtlsMed{
+        width: 35px;
+    }
+    .valentDtlsNum{
+        width: 25px;
+    }
+    .valentDtlsQsheet{
+        width: 69px;
+    }
+    .loginCnt {
+        width: 496px;
+    }
+    .quickSheetWrap .loginCnt,
+    .premiumCnt .loginCnt {
+        width: 485px;
+    }
+    .entriesListWrap .listBody .valTrack{
+        font-size: 15px;
+    }
+    .entriesListWrap .entriesHeader h4{
+        font-size: 20px;
+    }
+    .newsListWrap li {
+        width: 242px;
+        font-size: 14px;
+    }
+    .newsListWrap .newsHeader{
+        font-size: 18px;
+    }
+    .newsListWrap h3{
+        font-size: 16px;
+    }
+    .newsListWrap .postReadMore{
+        font-size: 13px;
+    }
+    .newsListWrap .newsHeader{
+        font-size: 18px;
+    }
+    .newsWrap .articleHeader .btnEntriesRace{
+        right: 20px;
+    }
+    .entriesDtlsHead{
+        padding: 10px 15px;
+    }
+    .newsListWrap .twoPost li {
+        width: 382px;
+    }
+    .newsListWrap .readAll {
+        color: #005bf0;
+    }
+
+    /* new style added */
+    .entriesDtlsWrap .entriesDtlsLeft h4{
+        font-size: 24px;
+    }
+    .entriesDtlsHead h2 .titleDetails{
+        font-size: 20px;
+    }
+    .entriesDtlsHead h2 span,
+    .entriesRaceHeader .mtp,
+    .entriesRaceHeader .entriesRaceDiscRight,
+    .entriesRaceDisc,
+    .entriesDtlsWrap .dataTable.listBody li,
+    .valentDtlsodds span,
+    .entriesDtlsWrap .listFooter li .valentDtlsbtm,
+    .valResDtlsbtm .valResinfo span.valResUnplaced{
+        font-size: 14px;
+    }
+    .entriesRaceHeader h3{
+        font-size: 20px;
+    }
+    .valPostET{
+        font-size: 11px;
+    }
+    .raceDisctxt{
+        font-size: 13px;
+    }
+    .tabs li{
+        font-size: 18px;
+    }
+    .headRow{
+        font-size: 13px;
+    }
+    .valentDtlsJockey span,
+    .valResDtlsJockey span,
+    .headRow .valentDtlsHorse .valBeyers{
+        font-size: 12px;
+    }
+    .entriesDtlsWrap .dataTable li.headRow .sCell,
+    .entriesDtlsWrap .dataTable.listBody li .sCell{
+        padding: 10px 7px;
+    }
+
+    .entriesDtlsWrap .valentDtlsHorse span.valHorseName,
+    .resultsWrap .valResDtlsHorse span.valHorseName{
+        font-size: 15px;
+    }
+    .listBody .valentDtlsHorse .valBeyers,
+    .listBody .valentDtlsJockey span,
+    .listBody .valResDtlsJockey span{
+        font-size: 13px;
+    }
+    .entriesDtlsWrap .listBody .valentDtlsodds{
+        font-size: 16px;
+    }
+    .entriesDtlsWrap .entriesDtlsbody .dataTable span.valentDtlsNum,
+    .entriesDtlsWrap .dataTable li.headRow .sCell.valentDtlsNum{
+        padding-left: 17px;
+    }
+
+    .valResDtlsbtm .valResinfo .valResWinnerinfo{
+        font-size: 16px;
+    }
+    .backButton a{
+        color: #015cf0;
+    }
+    .resultsWrap .headRow .sCell,
+    .headRow .valResDtlsJockey span{
+        color: #666;
+    }
+    .resultsWrap .headRow{
+        font-size: 13px;
+    }
+    .resultsWrap .listBody .valResDtlsWin,
+    .resultsWrap .listBody .valResDtlsPlace,
+    .resultsWrap .listBody .valResDtlsShow,
+    .resultsWrap .listBody .valResDtlsBeyer,
+    .resultsWrap .valResDtlsPar,
+    .resultsWrap .valResDtlsParAmt
+    {
+        font-size: 14px;
+    }
+    .dateWrap a .date{
+        margin: 0 12px;
+    }
+    .valentDtlsQsheet .icon-hotStat {
+        width: 69px;
+        height: 16px;
+        background-position: 0px -1017px;
+    }
+
+    /* new listing style */
+    .entriesListWrap .headRow{
+        font-size: 14px;
+        font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+    }
+    .entriesListWrap .listBody .valTrack{
+        font-size: 15px;
+    }
+    .entriesListWrap .listBody .valChanges,
+    .entriesListWrap .listBody .valWeather,
+    .resultsWrap .listBody .valResCurRace,
+    .resultsWrap .listBody .valResPrevRaces{
+        font-size: 14px;
+    }
+    .backButton {
+        margin: 0 0 0 16px;
+    }
+    .entriesRaceHeader {
+        padding: 10px 19px;
+    }
+    .entriesDtlsWrap .entriesHeader{
+        padding: 17px 20px 16px 14px;
+    }
+    .newsListWrap .readAll {
+        color: #005bf0;
+    }
+    .premiumCnt .offerSubWrap li a,
+    .offerSubWrap li a{
+        font-size: 22px;
+    }
+    .premiumCnt .offerSubWrap .txtSave,
+    .premiumBeyerWrap .offerSubWrap .txtSave{
+        left: 48px;
+    }
+    .offerSubWrap .txtSave{
+        left: 45px;
+    }
+    .entriesListWrap .titleTrack,
+    .entriesListWrap .valTrack,
+    .resultsWrap .titleTrack{
+        width: 250px;
+    }
+    .listCnt li{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .closerLooksWrap .closerLooksHead{
+        font-size: 16px;
+    }
+    .closerLooksWrap .closerLooksDtls,
+    .closerLooksHead .descName{
+        font-size: 14px;
+    }
+    .analysisHead .drfPicks,
+    .analysisHead .beyerEgde {
+        width: 34%;
+    }
+    .analysisHead .bestBet {
+        width: 64%;
+    }
+    .bestBetInfo .betRank{
+        width: 80px;
+    }
+    .bestBetInfo .betHorse{
+        padding: 0 80px 0 30px;
+    }
+    .betAnalysis .betAuthor,
+    .betAnalysis .bestBetInfo,
+    .betAnalysis .bestConsensus .betAuthor,
+    .betAnalysis .bestConsensus li.noteConsensus{
+        font-size: 14px;
+    }
+    .resultsWrap .valResDtlsWin,
+    .resultsWrap .valResDtlsPlace,
+    .resultsWrap .valResDtlsShow,
+    .resultsWrap .valResDtlsBeyer,
+    .resultsWrap .valResDtlsPar,
+    .resultsWrap .valResDtlsParAmt{
+        width: 46px;
+    }
+    .resultsWrap .valResDtlsParBlank {
+        width: 478px;
+    }
+    .resultsWrap .dataTable li.headRow .valResDtlsBeyer,
+    .resultsWrap .dataTable.listBody li .valResDtlsBeyer,
+    .resultsWrap .dataTable li .valResDtlsParAmt{
+        padding-right:12px
+    }
+    .drfBetsIframe .container {
+        width: 100%;
+    }
+    .menuNav li a.subMenuArrow {
+        padding-right: 25px;
+    }
+    .subMenuArrow:after{
+        right: 5px;
+    }
+}
+@media only screen and (max-width: 979px) {
+    .headerWrap {
+        background: white;
+        border-bottom: 1px solid #c9c9c9;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        z-index: 999;
+        margin-bottom: 0;
+    }
+    .headerWrap header {
+        padding: 0;
+    }
+    .logoMobile img {
+        width: 88px
+    }
+    .vsMenuBody .topWrap,
+    .vsMenuBody .headerWrap,
+    .vsMenuBody .searchWrap {
+        position: absolute;
+    }
+    .vsMenuBody .contentWrap {
+        pointer-events: none;
+    }
+    .mobileMenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .mobileMenu li {
+        float: left;
+    }
+    .responsiveButton {
+        pointer-events: auto;
+        display: block;
+        padding: 13px;
+        z-index: 1000;
+    }
+    .responsiveButton .icon-bar {
+        background-color: black;
+        display: block;
+        height: 1px;
+        width: 22px;
+        margin: 4px 0;
+    }
+    .vsMenu {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        z-index: 999999;
+        width: 260px;
+        overflow-y: auto;
+        background: #fafafa;
+        font-family: "TitilliumWeb-Thin", Arial, sans-serif;
+        font-size: 18px;
+        color: #333333;
+        right: -260px;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .logoMobile {
+        display: block;
+        text-align: center;
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .vsMenu .logoMobile a {
+        margin: auto;
+    }
+    .vsMenu li {
+        float: none;
+        margin: 0 15px;
+        line-height: 55px;
+    }
+    .vsMenu li:last-child a {
+        border-bottom: 0;
+    }
+    .vsMenu li a {
+        display: block;
+        color: #222222;
+        padding: 0 15px;
+        text-decoration: none;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .vsMenu li a:hover {
+        color: #3079f0;
+    }
+    .vsMenu .drfProMenu {
+        border-bottom: 1px solid #bbbbbb;
+    }
+    .vsMenu .drfProMenu li {
+        font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    }
+    .vsMenu .drfProMenu li a {
+        color: #3079f0;
+    }
+    .vsMenu .drfProMenu li a:hover {
+        color: #ec1c24;
+    }
+    .vsMenu .toploginNav {
+        font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+        float: none;
+        background: #eeeeee;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .toploginNav a{
+        padding: 0 15px;
+    }
+    .vsMenu .toploginNav .loginUser span{
+        color: #000;
+        width: 165px;
+        height: 55px;
+        margin-left: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        float: left;
+    }
+    .vsMenu .toploginNav .loginUser a{
+        font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+        padding: 0;
+        color: #3079f0;
+        display: inline-block;
+        font-size: 12px;
+        float: right;
+    }
+    .vsMenu .toploginNav .loginUser a:hover {
+        color: #000;
+    }
+    .vsMenuLogo {
+        float: none;
+        display: block;
+        margin: 12px 0 0 15px;
+    }
+    .vsMenuLogo a {
+        display: block;
+        text-indent: -10000px;
+        width: 51px;
+        height: 20px;
+        background: url(../img/logo-drf.png) left top no-repeat;
+    }
+    .vsMenu .mNotLogin {
+        font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+        float: none;
+        background: #eeeeee;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .mNotLogin a{
+        padding: 0 15px;
+    }
+    .vsMenu .mNotLogin .loginUser span{
+        color: #000;
+        width: 165px;
+        height: 55px;
+        margin-left: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        float: left;
+    }
+    .vsMenu .mNotLogin .loginUser a{
+        font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+        padding: 0;
+        color: #3079f0;
+        display: inline-block;
+        font-size: 12px;
+        float: right;
+    }
+    .vsMenu .mNotLogin .loginUser a:hover {
+        color: #000;
+    }
+    .vsMenu .mLogin {
+        background: none repeat scroll 0 0 #eeeeee;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .mLogin li {
+        font-size: 18px;
+        padding: 0 0 0 15px;
+    }
+    .vsMenu .mLogin li span {
+        color: #000;
+        display: inline-block;
+        float: left;
+        font-family: "TitilliumWeb-Regular",Arial,sans-serif;
+        height: 55px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 165px;
+    }
+    .vsMenu .mLogin li a {
+        color: #3079f0;
+        display: inline-block;
+        float: right;
+        font-family: "TitilliumWeb-SemiBold",Arial,sans-serif;
+        font-size: 12px;
+        padding: 0;
+    }
+    .vsMenu .mLogin li a:hover {
+        color: #000;
+    }
+    .socialMedia li a {
+        width: 40px;
+        height: 40px;
+    }
+    .socialMedia li a.facebook {
+        margin-left: 20px
+    }
+    .socialMedia li a.twitter:before {
+        background-position: -61px -874px;
+        width: 20px;
+        height: 18px;
+        left: 10px;
+        top: 10px;
+    }
+    .socialMedia li a.facebook:before {
+        background-position: -64px -901px;
+        width: 9px;
+        height: 20px;
+        left: 16px;
+        top: 10px;
+    }
+    .drfBetsIframe .container {
+        width: 100%;
+    }
+    .drfBetsIframe {
+        padding: 0;
+    }
+    .drfBetsIframe .headerWrap {
+        height: 0;
+        border-bottom: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .ipadHide {
+        display: none;
+    }
+    .ipadShow {
+        display: block;
+    }
+    .container,
+    .navbar-static-top .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container {
+        width: 768px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .contentWrap {
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 0px 0px #d9e0e8;
+        -moz-box-shadow: 0 0px 0px #d9e0e8;
+        box-shadow: 0 0px 0px #d9e0e8;
+        border: solid 0px #dddddd;
+    }
+    .headerWrap {
+        margin-bottom: 0;
+    }
+    .headerWrap header {
+        width: 786px;
+        margin: 15px auto 0
+    }
+    .topWrap {
+        position: fixed;
+        top: 15px;
+        right: 80px;
+        z-index: 9999;
+        border-bottom: 0;
+        padding-right: 5px;
+    }
+    .logo,
+    .topNav,
+    .toploginNav,
+    .menuNav,
+    .userNav .userName,
+    .icon-search {
+        display: none !important;
+    }
+    nav {
+        background: none;
+        height: 0px
+    }
+    .logoMobile {
+        width: 88px;
+        margin-left: 22px;
+    }
+    .searchWrap {
+        position: fixed;
+        top: 0;
+        right: 205px;
+        z-index: 99999;
+    }
+    .searchWrap .searchBox {
+        height: 40px !important;
+        top: 15px;
+        background: #ffffff;
+        width: 435px;
+    }
+    .searchWrap .searchBox .formWarp {
+        border: 1px solid #dedede;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    .searchWrap .searchBox input {
+        line-height: 38px;
+        height: 38px;
+        color: #888888;
+        width: 393px;
+        font-size: 16px;
+    }
+    .searchWrap .searchBox input.btnSubmit,
+    .searchWrap.searchOpen .searchBox input.btnSubmit{
+        width: 36px;
+        height: 38px;
+        background-image: url('../img/sprite.png');
+        background-repeat: no-repeat;
+        background-position: -19px -954px;
+        text-indent: -10000px;
+    }
+    .vsMenu .toploginNav {
+        display: block !important;
+    }
+    .socialMedia {
+        margin-top: 0
+    }
+    .mobileMenu {
+        top: 6px
+    }
+    .responsiveButton .icon-bar {
+        height: 2px;
+        width: 30px;
+        margin: 6px 0;
+    }
+
+    .headerAds {
+        display: none;
+        height: 68px;
+        width: 546px;
+    }
+    .topWrap a {
+        font-size: 11px;
+    }
+    .userNav .userName,
+    .userNav ul li a{
+        font-size: 11px;
+    }
+    .mainNav {
+        width: 565px;
+    }
+    nav {
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    .menuNav li a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .subMenu {
+        max-width: 766px;
+    }
+    .subMenu .colMenu {
+        width: 126px;
+        font-size: 11px;
+    }
+    .subMenu li h2 {
+        padding-left: 8px;
+        font-size: 12px;
+    }
+    .subMenu li h2 a{
+        font-size: 12px;
+    }
+    .subMenu li a {
+        margin-bottom: 10px;
+    }
+    .tabs {
+        margin: 0 0 7px 0;
+    }
+    .pageData {
+        width: 100%;
+        border-radius: 0;
+        border-right: 0 none;
+    }
+    .rightColumn {
+        width: 221px;
+        display: none;
+    }
+
+    .btnPrev {
+        margin: 20px 0 0 0;
+        padding: 5px 0 5px 10px;
+    }
+    .btnNext {
+        margin: 20px 0 0 0;
+        padding: 5px 10px 5px 0;
+    }
+    .valWeather [class^="icon-"], [class*=" icon-"] {
+        width: 25px;
+    }
+    .entriesListWrap .valTrack {
+        width: 295px;
+    }
+    .entriesListWrap .valChanges {
+        width: 185px;
+    }
+    .entriesListWrap .valWeather {
+        width: auto;
+    }
+    .entriesListWrap .valWeather span:last-child {
+        margin-left: 5px;
+    }
+    .valentDtlsodds {
+        width: 60px;
+    }
+    .valentDtlsTrainer {
+        width: 60px;
+    }
+    .valentDtlsEquip {
+        width: 45px;
+    }
+    .valentDtlsHorse {
+        width: 60px;
+    }
+    .valentDtlsClaim {
+        width: 45px;
+    }
+    .valentDtlsQsheet{
+        width: 60px;
+    }
+    .entriesListWrap .titleTrack {
+        width: 260px;
+    }
+    .valentDtlsMed {
+        width: 35px;
+    }
+    .entriesRaceHeader h3,
+    .entriesRaceHeader .mtp {
+        margin-right: 10px;
+    }
+    .resultsWrap .valResDtlsNum {
+        width: 20px;
+    }
+    .resultsWrap .listBody .valResDtlsWin,
+    .resultsWrap .listBody .valResDtlsPlace,
+    .resultsWrap .listBody .valResDtlsShow,
+    .resultsWrap .listBody .valResDtlsBeyer{
+        font-size: 13px;
+    }
+    .resultsWrap .dataTable li.headRow .valResDtlsBeyer,
+    .resultsWrap .dataTable li .valResDtlsBeyer,
+    .resultsWrap .dataTable li .valResDtlsParAmt{
+        padding-right: 7px;
+    }
+    .resultsWrap .listHeader .valResDtlsHorse,
+    .resultsWrap .listBody .valResDtlsHorse {
+        width: 150px;
+    }
+    .resultsWrap .valResDtlsTrainer {
+        width: 100px;
+    }
+    .resultsWrap .titleTrack {
+        width: 270px;
+    }
+    .resultsWrap .valResTrack {
+        width: 275px;
+    }
+    .resultsWrap .valResCurRace {
+        width: 163px;
+    }
+    .resultsWrap .valResPrevRaces {
+        width: 150px;
+    }
+    .resultsWrap .dataTable li .valResDtlsNum {
+        width: 20px;
+    }
+    .resultsWrap .valResDtlsParBlank {
+        width: 520px;
+    }
+    .valPostET {
+        font-size: 11px;
+    }
+    .valResDtlsbtm .valResinfo {
+        margin-top: 20px;
+    }
+    .contentWrap .resultsWrap .entriesRaceHeader .mtp {
+        margin-right: 50px;
+    }
+    .dateWrap .mCSB_scrollTools .mCSB_buttonUp, .dateWrap .mCSB_scrollTools .mCSB_buttonDown,
+    .dateWrap .mCSB_scrollTools .mCSB_buttonLeft, .dateWrap .mCSB_scrollTools .mCSB_buttonRight {
+        background-image: url("../img/sprite.png");
+        background-position: 5px -756px;
+    }
+    .dateWrap .mCSB_scrollTools .mCSB_buttonRight {
+        background-position: -15px -756px;
+    }
+    .dateWrap .mCSB_scrollTools .mCSB_buttonLeft.disabled {
+        background-position: -41px -756px;
+    }
+    .dateWrap .mCSB_scrollTools .mCSB_buttonRight.disabled {
+        background-position: -61px -756px;
+    }
+    .dateWrap li {
+        line-height: 22px;
+    }
+    .dateWrap a .date {
+        font-size: 18px;
+        margin: 0 12px;
+    }
+    .dateWrap a .pullDate {
+        text-indent: -2px;
+    }
+    .dateWrap a .pushDateEleven {
+        text-indent: -1px;
+    }
+    .dateWrap a .month,
+    .dateWrap a .day{
+        font-size: 14px;
+    }
+    .entriesListWrap .entriesHeader {
+        margin: 13px 20px;
+    }
+    .entriesListWrap .dataTable li .sCell {
+        padding: 11px 18px;
+    }
+
+    /*Entries Details*/
+    .dateWrap.content {
+        margin: 0 auto;
+        padding: 0 5px;
+        width: 94%;
+    }
+    .backButton {
+        margin: 0 0 0 20px;
+    }
+    .entriesDtlsHead {
+        padding: 12px 20px;
+    }
+    .entriesRaceDisc{
+        padding: 10px 20px;
+    }
+    .entriesDtlsWrap .entriesHeader {
+        padding: 17px 20px 16px;
+    }
+    .entriesDtlsWrap .entriesRaceHeader {
+        padding: 12px 20px 10px;
+    }
+    .entriesRaceDtls .valentDtlsHorse,
+    .entriesRaceDtls .listBody .valentDtlsHorse {
+        width: 159px;
+    }
+    .entriesRaceDtls .listBody .entDtlsHorseName {
+        max-width: 180px;
+    }
+    .entriesDtlsWrap .valentDtlsJockey {
+        width: 95px;
+    }
+    .entriesDtlsWrap .valentDtlsTrainer {
+        width: 120px;
+    }
+    .entriesDtlsWrap .valentDtlsClaim {
+        width: 50px;
+    }
+    .entriesDtlsWrap .valentDtlsEquip {
+        width: 67px;
+    }
+    .entriesDtlsWrap .entriesDtlsbody .dataTable span.valentDtlsMed {
+        padding-right: 13px;
+    }
+    .entriesDtlsWrap .entriesRaceDtls {
+        margin: 0;
+    }
+    .entriesDtlsWrap .entriesRaceHeader .mtp {
+        margin-right: 24px;;
+    }
+    .entriesDtlsWrap .dataTable li.headRow .sCell{
+        padding: 9px 7px;
+    }
+    .eRaceChanges .valchngDisc {
+        width: 615px;
+    }
+    .loginWrap .pageData {
+        width: 448px;
+        border-right: 1px solid #eeeeee;
+    }
+    .loginWrap .rightColumn {
+        width: 319px;
+        display: block;
+    }
+    .formWrap ul{
+        padding: 0 16px;
+    }
+    .loginCnt {
+        width: 235px;
+    }
+    .loginWrap .loginBody{
+        padding: 25px 13px 30px;
+    }
+    .loginWrap .drfplusCnt{
+        padding-right: 10px;
+    }
+    .offerSubWrap ul {
+        text-align: left;
+    }
+    .offerSubWrap li {
+        padding-left: 20px;
+    }
+    .offerSubWrap li:first-child {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .premiumCnt .offerSubWrap span,
+    .premiumBeyerWrap .offerSubWrap span{
+        display: inline-block;
+    }
+    .offerSubWrap .txtSave,
+    .offerSubWrap .txtSave span {
+        display: inline-block;
+    }
+    .quickSheetWrap .loginCnt,
+    .premiumCnt .loginCnt,
+    .premiumBeyerWrap .loginCnt{
+        width: 510px;
+    }
+    .premiumCnt .offerSubWrap .txtSave,
+    .premiumBeyerWrap .offerSubWrap .txtSave{
+        left: 20px;
+    }
+    .popupCnt, #drf_openx_overlay_ad_zone{
+        width: 630px;
+    }
+    .footerWrap{
+        border-top: 1px solid #eeeeee;
+    }
+    .newsListWrap li {
+        width: 216px;
+    }
+    .btnEntriesRace li.replaysHide {
+        display: inline-block;
+    }
+    .raceReplayWrap {
+        display: none;
+    }
+    .newsListWrap .twoPost li {
+        width: 344px;
+    }
+    .entriesDtlsHead h2 span{
+        font-size: 14px;
+        color: #888;
+    }
+    .entriesRaceHeader,
+    .entriesDtlsWrap .premiumBeyerMsg{
+        margin: -1px 0 0 0;
+    }
+    .entriesDtlsWrap .newsDtlsWrap .premiumBeyerMsg{
+        margin: 0 -20px 10px -60px;
+    }
+    .entriesDtlsWrap .listHeader .valentDtlsNum{
+        width: 24px;
+    }
+    .entriesDtlsbody .tabContentWrap .listBody{
+        margin: 0 -1px;
+    }
+    .valentDtlsClaim{
+        color: #333;
+    }
+    .analysisHead .drfPicks,
+    .analysisHead .beyerEgde {
+        width: 37%;
+    }
+    .analysisHead .bestBet {
+        width: 63%;
+    }
+    .formErrorWrap{
+        margin: 0 0 15px 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .newsWrap .articleHeader .btnEntriesRace{
+        right: 20px;
+    }
+    /*DRF Bets iframe*/
+    .drfBetsIframe .container {
+        width: 100%;
+    }
+    .drfBetsIframe.drfBetsIframeTouchWrap .container{
+        width: 937px;
+    }
+    .drfBetsIframe .loginWrap .pageData {
+        width: 64%;
+    }
+    .drfBetsIframe .loginWrap .rightColumn  {
+        width: 35%;
+    }
+    .drfBetsIframe .entriesListWrap .valWeather  {
+        width: 200px;
+    }
+    .drfBetsIframe .topWrap {
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+    .drfBetsIframe .topWrap {
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* for stick footer at bottom */
+    /*body{
+        padding: 70px 0 0;
+    }*/
+    html, body{
+        height: 100%;
+    }
+    .contentWrap{
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .container {
+        min-height:100%;
+        position:relative;
+    }
+    .footerWrap {
+        width:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+    }
+    .vsMenuBody .container,
+    .vsMenuBody .container .footerWrap{
+        position: static;
+    }
+    .drfBetsIframe .contentWrap{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .drfBetsIframe .topWrap {
+        position: static;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .drfBetsIframe .userNav .userName{
+        display: block !important;
+    }
+    .drfBetsIframe .userNav .userName,
+    .drfBetsIframe .userNav ul li a{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .drfBetsIframe .container{
+        width: 100%;
+    }
+    .drfBetsIframe.drfBetsIframeTouchWrap .container{
+        width: 768px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        padding: 45px 0 0 0;
+        background: #fff;
+    }
+    .headerWrap {
+        background: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 45px;
+        z-index: 100;
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+    .vsMenuBody .headerWrap {
+        position: absolute;
+    }
+    .headerWrap .headerMain {
+        padding: 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logoMobile {
+        display: block;
+        margin: 12px auto 0;
+        width: 51px;
+    }
+    .logoMobile img {
+        width: 50px;
+    }
+
+    .mobileMenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .mobileMenu li {
+        float: left;
+    }
+
+    .userLink {
+        padding: 12px;
+        display: block;
+    }
+    .userLink .icon-user {
+        background-position: 0 -343px;
+        width: 18px;
+        height: 19px;
+    }
+
+    .vsMenuBody .contentWrap {
+        pointer-events: none;
+    }
+
+    .responsiveButton {
+        pointer-events: auto;
+        display: block;
+        padding: 13px;
+        z-index: 1000;
+    }
+    .responsiveButton .icon-bar {
+        background-color: black;
+        display: block;
+        height: 1px;
+        width: 22px;
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+        -webkit-transition: transform 80ms ease-out;
+        -moz-transition: transform 80ms ease-out;
+        -ms-transition: transform 80ms ease-out;
+        -o-transition: transform 80ms ease-out;
+        transition: transform 80ms ease-out;
+        margin: 4px 0;
+    }
+    .vsMenuBody .dateWrap.content {
+        position: absolute;
+        top: 0;
+    }
+    .vsMenu li {
+        float: none;
+        margin: 0 15px;
+        line-height: 55px;
+    }
+    .vsMenu li:last-child a {
+        border-bottom: 0;
+    }
+    .vsMenu li a {
+        display: block;
+        color: #222222;
+        padding: 0 15px;
+        text-decoration: none;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .vsMenu li a:hover {
+        color: #3079f0;
+    }
+    .vsMenu .drfProMenu {
+        border-bottom: 1px solid #bbbbbb;
+    }
+    .vsMenu .drfProMenu li {
+        font-family: "TitilliumWeb-Regular", Arial, sans-serif;
+    }
+    .vsMenu .drfProMenu li a {
+        color: #3079f0;
+    }
+    .vsMenu .drfProMenu li a:hover {
+        color: #be2025;
+    }
+    .vsMenu .mNotLogin {
+        font-family: 'TitilliumWeb-Regular', Arial, sans-serif;
+        float: none;
+        background: #eeeeee;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .mNotLogin a{
+        padding: 0 15px;
+    }
+    .vsMenu .mNotLogin .loginUser span{
+        color: #000;
+        width: 165px;
+        height: 55px;
+        margin-left: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        float: left;
+    }
+    .vsMenu .mNotLogin .loginUser a{
+        font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+        padding: 0;
+        color: #3079f0;
+        display: inline-block;
+        font-size: 12px;
+        float: right;
+    }
+    .vsMenu .mNotLogin .loginUser a:hover {
+        color: #000;
+    }
+    .vsMenu .mLogin {
+        background: none repeat scroll 0 0 #eeeeee;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.25) inset;
+    }
+    .vsMenu .mLogin li {
+        font-size: 18px;
+        padding: 0 0 0 15px;
+    }
+    .vsMenu .mLogin li span {
+        color: #000;
+        display: inline-block;
+        float: left;
+        font-family: "TitilliumWeb-Regular",Arial,sans-serif;
+        height: 55px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 165px;
+    }
+    .vsMenu .mLogin li a {
+        color: #3079f0;
+        display: inline-block;
+        float: right;
+        font-family: "TitilliumWeb-SemiBold",Arial,sans-serif;
+        font-size: 12px;
+        padding: 0;
+    }
+    .vsMenu .mLogin li a:hover {
+        color: #000;
+    }
+    .vsMenuBody .dateWrap.content {
+        position: absolute;
+        top: 0;
+    }
+    .entriesListWrap .dataTable li .sCell {
+        padding: 11px 15px;
+    }
+    .dateWrap.content {
+        margin: 0;
+        position: fixed;
+        background: #fff;
+        top: 45px;
+        z-index: 101;
+        display: block;
+        width: 100%;
+    }
+    .dateWrapMobile {
+        display: block;
+        width: 320px;
+        margin: 0 auto;
+        overflow-y: hidden;
+        height: 67px;
+    }
+    .dateWrapDesktop,
+    .topWrap,
+    .rightColumn,
+    .backButton,
+    .mobileHide {
+        display: none !important;
+    }
+    .pageData {
+        width: 100%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border-right: 0;
+        padding-top: 0;
+        min-height: 300px;
+    }
+    .promoWrap .pageData {
+        min-height: 500px;
+    }
+    .contentWrap {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: 0 0 0 #d9e0e8;
+        -moz-box-shadow: 0 0 0 #d9e0e8;
+        box-shadow: 0 0px 0 #d9e0e8;
+        border: solid 0 #dddddd;
+    }
+
+    .headerMain {
+        background: transparent;
+    }
+    nav {
+        margin-bottom: 0;
+    }
+    .icon-mMenu {
+        width: 22px;
+        height: 11px;
+        background-position: left -396px;
+    }
+    .mback {
+        padding: 13px 14px;
+        display: inline-block;
+        color: #000000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 103;
+    }
+    .mback:hover {
+        color: #3079f0;
+    }
+    .icon-mBack {
+        width: 12px;
+        height: 21px;
+        background-position: left -417px;
+        margin-right: 5px;
+    }
+    .mobileShow {
+        display: block;
+    }
+
+    .dateWrap li {
+        line-height: 16px;
+    }
+
+    .dateWrap a:hover {
+        color: #000000;
+    }
+    .dateWrap a:hover .month,
+    .dateWrap a:hover .day {
+        text-indent: 0;
+    }
+    .dateWrap a:hover .date {
+        color: #fff;
+        background: #bbd0f9;
+    }
+    .dateWrap a .day {
+        margin-top: 2px;
+    }
+    .dateWrap a .pullDate {
+        text-indent: -2px;
+    }
+    .dateWrap a .pushDate {
+        text-indent: 1px;
+    }
+    .dateWrap a .pushDateOne {
+        text-indent: 1px;
+    }
+    .dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonLeft,
+    .dateWrap .mCSB_horizontal > .mCSB_scrollTools .mCSB_buttonRight {
+        height: 68px;
+        opacity: 1;
+        top: -72px;
+    }
+    .icon-favArrow {
+        top: 18px;
+        left: 12px;
+    }
+    .icon-favClose{
+        top: 12px;
+    }
+    .btnTrack {
+        float: none;
+        text-align: center;
+    }
+    .btnTrack li {
+        font-size: 16px;
+        float: none;
+        display: inline-block;
+        padding: 7px 0;
+        width: 142px;
+        text-align: center;
+    }
+    .btnTrack li:first-child {
+        margin-right: -4px;
+    }
+    .dividerLine {
+        float: left;
+        color: #dddddd;
+    }
+    .valChanges .dividerLine{
+        display: block;
+    }
+    .titleTrack .dividerLine {
+        float: none;
+        color: #aaa;
+    }
+    .entriesListWrap h4 {
+        color: #000000;
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    .entriesListWrap h4 span {
+        color: #888;
+        display: inline-block;
+        margin-left: 12px;
+    }
+    .entriesListWrap.activePage,
+    .entriesDtlsWrap.activePage {
+        margin-top: 68px;
+    }
+    .entriesListWrap .entriesHeader {
+        margin: 0 15px 15px;
+    }
+    .entriesListWrap .valTrack {
+        width: 185px;
+    }
+    .entriesListWrap .dataTable li.headRow .titleTrackFull {
+        padding: 0;
+    }
+    .entriesListWrap .dataTable li.headRow span {
+        background: #ffffff;
+        padding: 0 14px 5px;
+        color: #888;
+        font-size: 11px;
+    }
+    .entriesListWrap .dataTable li.headRow >span {
+        border-top: 0;
+        border-bottom: 1px solid #eee;
+    }
+    .entriesListWrap .dataTable li .valChanges {
+        text-align: right;
+        font-size: 14px;
+    }
+    .entriesListWrap .entriesBody {
+        border: 0;
+        margin: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+
+    }
+    .entriesListWrap .dataTable li .sCell {
+        border-bottom: 1px solid #eee;
+    }
+
+    /*Entries Details*/
+    .entriesDtlsWrap .entriesHeader {
+        padding: 8px 15px 12px;
+        margin: 10px 0 0 0;
+        background: #f7f7f7;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+    .entriesDtlsLeft .icon-favorite,
+    .entriesDtlsLeft .icon-add-favorite{
+        margin-left: -12px;
+    }
+    .entriesDtlsWeather .divider {
+        margin: 0 5px;
+    }
+    .entriesDtlsWeather .valPrecip span {
+        color: #000;
+    }
+    .entriesDtlsWrap .entriesDtlsRight {
+        float: right;
+        display: none;
+    }
+    .entriesDtlsHead h2 {
+        text-align: center;
+        color: #000000;
+    }
+    .entriesRaceDtls {
+        margin: 0;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    .entriesRaceHeader {
+        background: none;
+        padding: 20px 15px 0;
+        line-height: 24px;
+        cursor: pointer;
+        position: relative;
+        border: 0;
+        margin: 0;
+    }
+    .entriesDtlsFuture .btnEntriesRace {
+        display: none;
+    }
+    .btnEntriesRace {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+    .newsWrap .articleHeader .btnEntriesRace{
+        right: 20px;
+        top: 12px;
+    }
+    .articleHeader .btnEntriesRace,
+    .raceActive .btnEntriesRace {
+        display: block;
+    }
+    .btnEntriesRace li a {
+        padding: 0 14px;
+        font-size: 12px;
+    }
+    .entriesRaceHeader h3 {
+        font-size: 20px;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .entriesRaceHeader .mtp {
+        float: right;
+        margin-right: 0;
+        margin-bottom: 5px;
+        text-align: right;
+        width: 50%;
+        font-size: 13px;
+    }
+    .entriesRaceHeader .mtpOff {
+        font-size: 10px;
+    }
+    .entriesRaceHeader .mtp .mtpBlock {
+        color: #888;
+    }
+    .valPostET{
+        color: #888 !important;
+    }
+    .entriesRaceHeader .mtp span {
+        margin-right: 0;
+    }
+    .entriesRaceHeader .mtp .mtpBlock span {
+        color: #000000;
+    }
+    .valTurfRight {
+        float: left;
+    }
+    .entriesRaceHeader .entriesRaceDiscRight {
+        float: left;
+        width: 50%;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    .entriesRaceDiscMobile {
+        display: block;
+        color: #666666;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .entriesRaceDiscMobile .raceDisctxt {
+        display: inline;
+    }
+    .entriesRaceDiscMobile .raceDisctxtUp {
+        margin-right: 2px;
+    }
+    .entriesRaceDiscMobile .raceDisctxtUp span {
+        background-image: url("../img/sprite.png");
+        background-position: -35px -94px;
+        width: 7px;
+        height: 14px;
+        text-indent: -10000px;
+        margin: 0 0 -4px 1px;
+        display: inline-block;
+        line-height: 14px;
+    }
+    .raceDisctxt span {
+        color: #000000;
+    }
+    .raceDisctxtName {
+        font-size: 15px;
+    }
+    .entriesRaceDiscMobile .raceDisctxt,
+    .entriesRaceDiscMobile .raceDisctxtUp,
+    .entriesRaceDiscMobile .entriesRaceHeader .mtp {
+        font-size: 14px;
+    }
+    .entriesRaceDiscMobile .raceDisctxt{
+        margin-bottom: 5px;
+    }
+    .entriesRaceDiscMobile .raceDisctxt,
+    .entriesRaceDiscMobile .raceDisctxtUp {
+        display: block;
+    }
+    .entriesRaceDiscMobile .raceDisctxt .MClaimingBold {
+        font-weight: bold;
+        color: #666666;
+    }
+    .entriesRaceDiscMobile .entriesRaceHeader .mtp span {
+        margin-right: 0;
+    }
+    .entriesRaceChanges {
+        display: block;
+        clear: both;
+        border-top: 1px solid #eeeeee;
+        padding: 7px 0 6px;
+        margin-right: -15px;
+    }
+    .entriesRaceChanges span {
+        font-size: 12px;
+        color: #888;
+    }
+    .entriesRaceDtls .entriesRaceDiscMobile .entriesraceDisctxt {
+        display: none;
+        font-size: 13px;
+        color: #666666;
+    }
+    .entriesRaceDtls .raceActive .entriesraceDisctxt {
+        display: block;
+    }
+    .entriesRaceDtls .raceActive .entriesRaceChanges,
+    .entriesDtlsbody .valentDtlsJockey,
+    .entriesDtlsbody .valentDtlsTrainer,
+    .entriesDtlsbody .valentDtlsClaim,
+    .entriesDtlsbody .valentDtlsEquip,
+    .entriesDtlsbody .valentDtlsMed,
+    .entriesListWrap .valWeather,
+    .entriesRaceDisc,
+    .RaceDtlsShow .valResDtlsTrainer,
+    .RaceDtlsShow .valResDtlsJockey {
+        display: none !important;
+    }
+    .entriesDtlsFuture .dataTable li .valentDtlspp {
+        display: table-cell;
+    }
+    .entriesRaceDtls .entriesDtlsbody {
+        display: none;
+    }
+    .entriesRaceDtls .RaceDtlsShow {
+        display: block;
+    }
+    .entRaceDtlsWrap {
+        display: block;
+        margin: 0 10px 0 70px;
+        border-top: 1px solid #eee;
+        padding: 8px 0 12px 6px;
+        font-size: 12px;
+        color: #333;
+    }
+    .raceSel .entRaceDtlsWrap {
+        border-top: 1px solid #c0ef9d;
+    }
+    .valMClaiming,
+    .valMMed {
+        margin-right: 15px;
+    }
+    .valMClaiming span,
+    .valMMed span,
+    .valMEquip span,
+    .valWorkouts span {
+        color: #666666;
+    }
+    .valWorkouts span {
+        display: block;
+    }
+    .valWorkouts {
+        display: block;
+        margin-top: 10px;
+    }
+    .entriesDtlsWrap .listBody {
+        margin-bottom: 0;
+    }
+    .entriesDtlsbody .dataTable li:last-child {
+        border-bottom: 0;
+    }
+    .quickSheetWrap .entriesDtlsbody .dataTable li:last-child{
+        border-bottom: 1px solid #eee;
+    }
+    .entriesDtlsbody .dataTable li.headRow {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    .tabContentWrap .dataTable li.headRow {
+        border-top: 0;
+    }
+    .entriesDtlsbody .dataTable li.headRow .sCell {
+        font-size: 12px;
+        border: 0;
+        padding: 15px 5px;
+    }
+    .resultsWrap .dataTable li.headRow .sCell {
+        font-size: 11px;
+        color: #aaa;
+    }
+    .entriesDtlsbody .dataTable li {
+        display: block;
+        padding-left: 5px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    .entriesDtlsbody .listFooter li {
+        border-top: 1px solid #eee;
+        border-bottom: 0;
+    }
+    .entriesDtlsWrap .dataTable li.raceSel .sCell {
+        border: 0;
+    }
+    .entriesDtlsWrap .entriesDtlsbody .dataTable span.valentDtlsNum,
+    .entriesDtlsWrap .dataTable li.headRow span.valentDtlsNum{
+        padding-left: 10px;
+    }
+    .entriesDtlsWrap .entriesDtlsbody .dataTable span.valentDtlsNum .valNumHead {
+        width: 20px;
+    }
+    .entriesDtlsWrap .dataTable li .sCell {
+        padding: 10px 4.5px;
+        vertical-align: top;
+        border-bottom: 0 none;
+        display: inline-block;
+    }
+    .entriesDtlsWrap .listBody li .valentDtlsodds{
+        font-size: 16px;
+    }
+    .valentDtlsodds span{
+        font-size: 12px;
+    }
+    .entriesRaceDtls .oddsNo {
+        font-size: 12px;
+    }
+    .entriesDtlsWrap .entriesDtlsbody .valentDtlsNum {
+        width: 18px;
+    }
+    .entriesDtlsbody .valentDtlsodds {
+        width: 49px;
+    }
+    .valentDtlsHorse .mobileShow {
+
+    }
+    .entriesDtlsWrap .entDtlsJockey,
+    .entriesDtlsWrap .entDtlsTrainer {
+        display: block;
+        width: 300px;
+    }
+    .resultsWrap .entDtlsJockey,
+    .resultsWrap .entDtlsTrainer{
+        font-size: 12px;
+        width: auto;
+    }
+    .mJockeyTrainer {
+        margin-left: 70px;
+        margin-bottom: 10px;
+    }
+    .entDtlsJockey span,
+    .entDtlsTrainer span {
+        color: #888;
+        font-size: 14px;
+    }
+    .resultsWrap .entDtlsJockey span,
+    .resultsWrap .entDtlsTrainer span {
+        font-size: 12px;
+        color: #666;
+    }
+    .entDtlsJockey .jockeyWt,
+    .resultsWrap .entDtlsJockey .jockeyWt{
+        font-size: 11px;
+        color: #666;
+    }
+    .entriesDtlsWrap .icon-toggleRace {
+        display: none;
+        background-position: left -449px;
+        width: 14px;
+        height: 14px;
+        float: right;
+        margin: 12px 16px 0 0;
+    }
+    .entRaceDtlsPanel {
+        background: #f9f9f9 !important;
+    }
+    .resultsWrap .entRaceDtlsPanel {
+        background: #ffffff !important;
+    }
+    .entRaceDtlsPanel .icon-toggleRace {
+        background-position: -24px -449px;
+    }
+    .resultsWrap .entriesRaceDtls .listBody li {
+        cursor: default;
+    }
+    .entriesDtlsWrap .dataTable li:nth-child(even) > .sCell {
+        background: none;
+    }
+    .entriesListWrap .dataTable li:last-child .valTrack {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .entriesDtlsWrap .listFooter li .valentDtlsbtm {
+        line-height: 18px;
+        padding: 15px 10px 10px 40px;
+    }
+    .listFooter .valentDtlsbtm .valBtmHeadCoupled{
+        display: block;
+    }
+    .resultsWrap .listFooter li .valentDtlsbtm{
+        padding: 20px 10px 10px 45px;
+    }
+    .entriesListWrap .titleTrack {
+        width: 75%;
+    }
+    .entriesListWrap .valChanges {
+        width: 110px;
+    }
+    .entriesDtlsWrap .dataTable li.headRow .valentDtlsQsheet {
+        display: none;
+    }
+    .entriesDtlsWrap .dataTable li .sCell.valentDtlsQsheet {
+        padding: 0 12px 0 0;
+        margin-right: 0;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 51px;
+    }
+    .tabContentWrap {
+        overflow: hidden;
+    }
+    .entriesRaceChanges {
+        font-size: 12px;
+    }
+    .entriesRaceDtls .valentDtlsHorse {
+        width: 300px;
+        padding-right: 30px !important;
+    }
+
+    /* Tabs*/
+    ul.tabs {
+        border: 0;
+        text-align: center;
+        margin: 0 0 15px -1px;
+    }
+    ul.tabs li {
+        width: auto;
+        text-transform: none;
+        font-size: 16px;
+        display: inline-block;
+        float: none;
+        margin-right: -4px;
+    }
+    ul.tabs li a {
+        padding: 9px 6px;
+    }
+    .tabs li:first-child {
+        margin-right: -5px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+    }
+    .tabs li:last-child {
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+    }
+    .tabs li.activeTab {
+        background: #3079f0;
+    }
+    .tabs li.activeTab a {
+        color: #ffffff;
+    }
+
+    /*Results List and Details*/
+    .resultsWrap .titleTrack {
+        width: 75%;
+    }
+    .resultsWrap .valResTrack {
+        width: 150px;
+    }
+    .resultsWrap .valResCurRace {
+        width: 150px;
+    }
+    .resultsWrap .valResPrevRaces {
+        width: 130px;
+    }
+    .valResCurRace,
+    .valResPrevRaces {
+        display: none !important;
+    }
+    .valResDtlsHorse .mobileShow {
+        display: inline;
+    }
+    .resultsWrap .valResDtlsWin,
+    .resultsWrap .valResDtlsPlace,
+    .resultsWrap .valResDtlsShow{
+        width: 41px;
+    }
+    .resultsWrap .valResDtlsTrainer {
+        color: #000000;
+    }
+    .resultsWrap .entriesRaceHeader .mtp {
+        margin-right: 0;
+    }
+    .RaceDtlsShow .headRow .valResDtlsHorse {
+        font-weight: normal;
+    }
+    .valResDtlsHorse .mobileShow {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+    .resultsWrap .listBody li .valResDtlsWin,
+    .resultsWrap .listBody li .valResDtlsPlace,
+    .resultsWrap .listBody li .valResDtlsShow {
+        font-size: 13px;
+        vertical-align: middle;
+    }
+    .valResDtlsbtm .valResinfo{
+        margin-top: 5px;
+    }
+    .valResDtlsbtm .valRespPayOff{
+        margin-top: 0;
+    }
+    .valResDtlsbtm .valResinfo .valResWinnerinfo{
+        font-size: 14px;
+    }
+    .valResDtlsbtm .valResinfo .valResTimeinfo{
+        font-size: 14px;
+        color: #000;
+        display: block;
+    }
+    .valResDtlsbtm .valResinfo span.valResUnplaced{
+        font-size: 14px;
+    }
+    .resultsWrap .dataTable li {
+        display: table-row;
+    }
+    .resultsWrap .dataTable li .sCell {
+        display: table-cell;
+    }
+    .resultsWrap .entriesDtlsbody .dataTable li.headRow{
+        border-top: 0;
+    }
+    .resultsWrap .dataTable li .sCell {
+        border-bottom: 1px solid #EEEEEE;
+    }
+    .resultsWrap .listFooter li .sCell {
+        border-bottom: 0;
+    }
+    .resultsWrap .valResDtlsHorse {
+        width: 97px;
+    }
+    .resultsWrap .entriesDtlsbody .btnEntriesRace {
+        position: inherit;
+        text-align: center;
+        float: none;
+        margin: 0 0 15px 0;
+        display: block;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart,
+    .resultsWrap .btnEntriesRace .btnRaceReplay{
+        line-height: 33px;
+        padding: 0;
+        width: 127px;
+        float: none;
+        margin: 0 auto;
+        display: inline-block;
+        background: #fff;
+        color: #3079f0;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart{
+        width: 127px;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceReplay{
+        width: 126px;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart:hover,
+    .resultsWrap .btnEntriesRace .btnRaceReplay:hover{
+        background: #3079f0;
+        color: #fff;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart a:hover,
+    .resultsWrap .btnEntriesRace .btnRaceReplay a:hover{
+        color: #fff;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart{
+        -webkit-border-radius: 4px ;
+        border-radius: 4px;
+        /*margin-right: -3px;*/
+    }
+    .disabled.btnRaceReplay{
+        border-left: 0 !important;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceReplay{
+        -webkit-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+        border-left: 0;
+    }
+    .resultsWrap .btnEntriesRace .btnRaceChart a,
+    .resultsWrap .btnEntriesRace .btnRaceReplay a{
+        font-size: 16px;
+        font-family: 'TitilliumWeb-SemiBold', Arial, sans-serif;
+        text-transform: none;
+        color: #3079f0;
+    }
+    .resultsWrap .entDtlsTrainer, .jWeight {
+        display: none;
+    }
+    .entriesRaceDiscMobile span.greyClr {
+        color: #888;
+    }
+    .valResDtlsbtm .valResinfo span {
+        font-size: 13px;
+        line-height: 25px
+    }
+    .valResDtlsbtm .valResTime{
+        color: #888;
+    }
+
+    /*Entries Details*/
+    .entriesDtlsWrap .entriesDtlsHead h2 {
+        text-align: left;
+    }
+    .entriesDtlsWrap .entriesDtlsHead h2 .titleDetails {
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .entriesDtlsWrap .entriesDtlsHead h2 span {
+        font-size: 12px;
+        margin-left: 13px;
+    }
+    .entriesDtlsWrap .entriesDtlsLeft h4 {
+        margin-left: 5px;
+    }
+    .entriesDtlsWrap .entriesRaceHeader {
+        background: #fbfbfb;
+    }
+    .entriesDtlsWrap .raceActive {
+        background: #fff;
+    }
+
+    /*Future Details*/
+    .eRaceChanges ul,
+    .eRaceChanges ul li {
+        display: block;
+    }
+    .eRaceChanges ul li {
+        border-bottom: 1px solid #EEEEEE;
+        padding: 15px;
+    }
+    .eRaceChanges .valchngRace {
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .eRaceChanges .valchngRace,
+    .eRaceChanges .valchngDisc {
+        display: block;
+        width: auto;
+        padding: 0;
+        background: none;
+        border-bottom: 0;
+    }
+    .valchngRace h3 {
+        float: left;
+    }
+    .valchngPost {
+        float: right;
+        font-size: 13px;
+    }
+    .errorMsg {
+        padding: 5px 20px;
+    }
+
+    /* Analysis Picks */
+    .betAnalysis {
+        padding: 10px 0 0 0;
+    }
+    .betAnalysis li {
+        padding: 18px 0 18px 16px;
+    }
+    .betAnalysis .bestConsensus li {
+        padding: 18px 0 18px 16px;
+        border-bottom: 1px solid #eaf5ff;
+    }
+
+    .betAnalysis .bestConsensus li.noteConsensus {
+        padding-left: 15px;
+        background: #fff;
+        font-size: 13px;
+        border-bottom: 0;
+    }
+    .analysisHead {
+        padding: 0 15px 10px;
+    }
+    .analysisHead .titleAnalysis {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .analysisHead .drfPicks,
+    .analysisHead .beyerEgde,
+    .analysisHead .bestBet{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .horseAnalysis {
+        line-height: 22px;
+    }
+    .horseAnalysis ul{
+        padding: 15px;
+    }
+
+    .betAnalysis ul{
+        padding-left: 0;
+    }
+
+    .betAnalysis .bestBetInfo {
+        width: 100%;
+        float: none;
+        margin-bottom: 15px;
+    }
+    .betAnalysis .betAuthor{
+        margin-bottom: 15px;
+    }
+    .betAnalysis .bestBetInfo:last-child {
+        margin-bottom: 0;
+    }
+    .betAnalysis .bestConsensus {
+        border-bottom: 0;
+    }
+    .bestBetInfo .betRank {
+        text-align: right;
+        right: 15px;
+    }
+    .bestBetInfo .betHorse {
+        padding-right: 35px;
+    }
+    .closerLooksHead .icon-togglePlus {
+        right: 15px;
+    }
+
+    /* Quick Sheet */
+    .quickSheetWrap .entriesRaceHeader {
+        cursor: auto;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 10px;
+    }
+    .quickSheetWrap .entriesRaceDtls .entriesDtlsbody {
+        display: block;
+    }
+    .entriesDtlsWrap.quickSheetWrap {
+        margin-top: 10px;
+    }
+    .quickSheetDtls h6 span {
+        display: block;
+        margin-top: -5px;
+    }
+    .quickSheetDtls {
+        margin-left: 15px;
+    }
+    .quickSheetTable.mobileShow {
+        display: table;
+    }
+    .quickSheetWrap .entDtlsJockey,
+    .quickSheetWrap .entDtlsTrainer{
+        width: 100%;
+    }
+    .qsWorkouts li .qCell:first-child {
+        color: #666666;
+    }
+    ul.qsMobile {
+        display: block;
+        margin-right: 15px;
+        width: auto;
+    }
+    .qsMobile li {
+        display: block;
+        float: left;
+    }
+    .qsMobile .qCell {
+        display: block;
+        width: auto !important;
+    }
+    .qsMobile li.rowHead {
+        width: 70%;
+    }
+    .qsMobile li:last-child {
+        width: 30%;
+        text-align: right;
+    }
+    .qsMobile .qCell span {
+        display: inline;
+    }
+    .quickSheetTable .valAngle {
+        width: 182px;
+    }
+    .quickSheetTable .valWin,
+    .quickSheetTable .varStarts {
+        width: 45px;
+    }
+    .quickSheetTable .valROI {
+        width: 27px;
+        text-align: right;
+        padding-right: 15px;
+    }
+    .raceRecapWrap .raceRecapHead,
+    .raceRecapWrap .raceRecapDtls {
+        padding: 10px 15px;
+    }
+    .loginWrap .pageData {
+        display: none;
+    }
+    .loginWrap .rightColumn {
+        width: 100%;
+        padding: 10px 0;
+        border: 0;
+        display: block !important;
+        margin: 0 auto;
+        float: none;
+    }
+    .btnForgotPass a {
+        margin: 15px 0;
+    }
+    .formWrap h2,
+    .loginNote,
+    .formWrap ul {
+        padding: 0 10px;
+    }
+    .formErrorWrap {
+        padding-left: 45px;
+        margin: 0 0 15px 0;
+    }
+    .icon-error {
+        left: 10px;
+    }
+    .premiumCnt .loginMsg,
+    .premiumCnt .loginHead,
+    .premiumCnt .loginBody {
+        padding: 15px;
+    }
+    .loginAccMsg span.alreadyAcc, .loginAccMsg span.dontAcc{
+        display: block;
+        text-align: center;
+    }
+    .loginAccMsg span.alreadyAcc{
+        font-size: 20px;
+    }
+    .loginAccMsg .btnLogin{
+        margin: 15px 15px 10px;
+        font-size: 18px;
+        padding: 0 38px;
+        line-height: 37px;
+    }
+    .loginHead h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .listCnt li{
+        font-size: 14px;
+    }
+    .drfplusCnt {
+        padding-right: 0;
+        font-size: 14px;
+    }
+    .quickSheetWrap .loginCnt,
+    .premiumCnt .loginCnt,
+    .premiumBeyerWrap .loginCnt{
+        width: auto;
+        float: none;
+        margin-right: 0;
+    }
+    .quickSheetWrap .findOutWrap,
+    .premiumCnt .findOutWrap,
+    .premiumBeyerWrap .findOutWrap{
+        float: none;
+        margin: 15px auto;
+    }
+    .offerSubWrap li {
+        width: auto;
+        float: none;
+        border-left: 0;
+        border-top: 1px solid #eeeeee;
+        text-align: left;
+        padding: 28px 15px 22px;
+    }
+    .quickSheetWrap .offerSubWrap .txtSave,
+    .premiumCnt .offerSubWrap .txtSave,
+    .premiumBeyerWrap .offerSubWrap .txtSave{
+        left: 15px;
+    }
+    #drf_openx_page_overlay_wrapper {
+        display: none;
+    }
+    .footerWrap{
+        border-top: 1px solid #eeeeee;
+        width: auto;
+        padding: 15px 10px 25px;
+    }
+    .appVerForm,
+    .appVerDisc{
+        width: auto;
+        float: none;
+        margin: 0 5% 5%;
+    }
+    .valVerStatus {
+        float: none;
+        display: block;
+        width: auto;
+    }
+    .newsWrap,
+    .entriesDtlsWrap .entriesHeader{
+        margin-top: 0;
+    }
+    .newsListWrap li {
+        width: auto;
+        float: none;
+        font-size: 14px;
+    }
+    .newsListWrap h3{
+        font-size: 16px;
+    }
+    .newsListWrap .postReadMore{
+        font-size: 13px;
+    }
+    .newsListWrap li:nth-child(2),
+    .newsListWrap li:nth-child(3) {
+        display: none;
+    }
+    .newsCnt  h3 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .newsCnt .newsAuthorDate {
+        margin: 3px 0;
+    }
+    .newsCnt .newsAuthorDate .newsAuthor,
+    .newsCnt .newsAuthorDate .newsDate {
+        float: none;
+        width: auto;
+        text-align: left;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .newsCnt .newsAuthorDate .newsDate {
+        font-size: 11px;
+    }
+    .newsDtlsHeader .authorAvatar {
+        margin-bottom: 12px;
+    }
+    .newsDtlsHeader .icon-togglePlus {
+        right: 15px;
+    }
+    .newsListWrap {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .newsCnt .videoWrapper,
+    .newsCnt .mediaWrap {
+        height: 144px;
+        width: 240px;
+    }
+    .newsCnt .videoWrapper .vimeoVideo {
+        height: 144px;
+        width: 240px;
+    }
+    .newsCnt .newsImg img {
+        height: 144px;
+    }
+    .raceReplayWrap {
+        display: none;
+    }
+    .btnReadMore,
+    .btnReadMore:hover,
+    .btnReadMore:focus{
+        color: #3079f0;
+    }
+    .newsDtlsActive .btnReadMore,
+    .newsDtlsActive .btnReadMore:hover,
+    .newsDtlsActive .btnReadMore:focus{
+        color: #000;
+    }
+    .qsHorsesExitingKey .quickSheetTable {
+        width: 100%;
+        float: none;
+    }
+    .quickSheetTable .valqsHead1,
+    .quickSheetTable .valqsHead {
+        width: 50%;
+    }
+    .offerSubWrap ul{
+        font-family: 'Titilliumweb-Bold', Arial, sans-serif;
+    }
+    .premiumCnt .offerSubWrap li a{
+        font-size: 18px;
+    }
+
+    /* table row border colors */
+    .entriesDtlsWrap .dataTable.listBody li{
+        border-top: 0;
+        font-size: 14px;
+    }
+    .entriesDtlsWrap .headRow .sCell{
+        border-bottom: none;
+    }
+    .entriesDtlsWrap .listBody span.sCell{
+        border-bottom: 0;
+    }
+    .raceHeaderDtl{
+        float: none;
+    }
+    .entriesDtlsWrap .valentDtlsHorse span.valHorseName,
+    .resultsWrap .valResDtlsHorse span.valHorseName{
+        font-size: 15px;
+    }
+    .listBody .valentDtlspp{
+        font-size: 13px;
+        font-weight: 700;
+        color: #666;
+        margin-top: 3px;
+    }
+    .dateWrap a .date{
+        margin: 0 6px
+    }
+    .valentDtlsQsheet{
+        width: 69px;
+    }
+    .valentDtlsQsheet .icon-hotStat {
+        width: 69px;
+        height: 16px;
+        background-position: 0px -1017px;
+    }
+
+    .entriesListWrap .headRow{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .entriesListWrap .entriesHeader h4{
+        float: none;
+    }
+    .entriesListWrap .listBody .valTrack{
+        font-size: 14px;
+    }
+    .favouritesMsg{
+        font-size: 14px;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+    .entriesListWrap .dataTable.favouritesMsg li .sCell {
+        padding: 12px 36px 12px 50px;
+        line-height: 16px;
+    }
+    .listBody .valentDtlsHorse .valBeyers{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .bestBet .titleAnalysis{
+        float: none;
+    }
+    .bestBet .bestByName{
+        font-size: 13px;
+    }
+    .icon-favArrow {
+        background-position: left -470px;
+        height: 40px;
+    }
+    .resultsWrap .dataTable li .valResDtlsBeyer,
+    .resultsWrap .dataTable.listPar{
+        display: none;
+    }
+    .valPostET {
+        font-size: 11px;
+    }
+    .closerLooksWrap .closerLooksHead{
+        font-size: 16px;
+    }
+    .closerLooksWrap .closerLooksDtls,
+    .closerLooksHead .descName{
+        font-size: 14px;
+    }
+    .drfPicks .titleAnalysis,
+    .bestBet .titleAnalysis,
+    .beyerEgde .titleAnalysis{
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #888;
+    }
+    .entriesRaceDtls .horseAnalysis .oddsNo{
+        font-size: 10px;
+        height: 18px;
+        line-height: 18px;
+        width: 18px;
+    }
+    .betAnalysis .betAuthor{
+        font-size: 13px;
+    }
+    .horseAnalysisDtl b{
+        font-size: 13px;
+    }
+    .entriesDtlsWrap .premiumBeyerMsg{
+        margin: -1px 0 0 0;
+        padding: 15px;
+    }
+    .entriesDtlsWrap .premiumBeyerMsg li{
+        line-height: 24px;
+    }
+    .copyRight {
+        line-height: 18px;
+        margin-bottom: 10px;
+        float: none;
+    }
+    .socialMedia {
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+    }
+    .newsListWrap li,
+    .newsListWrap .twoPost li,
+    .newsListWrap .onePost li,
+    .drfBetsIframe .newsListWrap li,
+    .drfBetsIframe .newsListWrap .twoPost li,
+    .drfBetsIframe .newsListWrap .onePost li{
+        width: auto;
+        float: none;
+    }
+    .drfBetsIframe {
+        padding: 45px 0 0 0;
+    }
+    .drfBetsIframe .container,
+    .drfBetsIframe.drfBetsIframeTouchWrap .container{
+        width: auto;
+    }
+    .drfBetsIframe .entriesRaceDtls .entriesRaceHeader{
+        margin: 0;
+    }
+    .drfBetsIframe .headerWrap{
+        height: 45px;
+    }
+    .newsDtlsWrap .premiumCnt .loginAccMsg{
+        padding: 20px;
+    }
+    .entriesDtlsWrap .newsDtlsWrap .premiumBeyerMsg{
+        padding: 15px 20px 15px 60px;
+        margin: 0 -20px 10px -60px;
+    }
+    .newsCnt .newsAuthorDate .newsAuthor span{
+        display: block;
+    }
+}
+
+@media (max-width: 479px) {
+    .icon-favArrow {
+        top: 22px;
+        left: 5px;
+    }
+    .icon-favClose{
+        top: 18px;
+    }
+    .pageNotFound {
+        padding: 50px 0;
+    }
+    .pageNotFound h2 {
+        font-size: 25px;
+    }
+    .pageNotFound span {
+        width: 300px;
+    }
+    .noScript {
+        width: 300px;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .entriesListWrap .dataTable.favouritesMsg li .sCell{
+        padding: 8px 36px 8px 40px;
+    }
+    .entriesRaceDtls .valentDtlsHorse {
+        width: 155px;
+    }
+    .entriesDtlsbody .valentDtlsodds {
+        width: 45px;
+    }
+    .raceReplayWrap .videoWrapper {
+        width: 320px;
+        height: 160px;
+    }
+    .entriesListWrap .dataTable li .sCell {
+        padding: 11px 8px;
+    }
+    .entriesDtlsWrap .entDtlsJockey,
+    .entriesDtlsWrap .entDtlsTrainer{
+        width: 160px;
+    }
+    .resultsWrap .entDtlsJockey,
+    .resultsWrap .entDtlsTrainer{
+        width: auto;
+    }
+    .quickSheetWrap .entDtlsJockey,
+    .quickSheetWrap .entDtlsTrainer{
+        width: 100%;
+    }
+    .entriesDtlsWrap .articleHeader h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 69%;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 320px) {
+    body,
+    .drfBetsIframe .container,
+    .drfBetsIframe.drfBetsIframeTouchWrap .container{
+        width: 320px;
+    }
+}
+
+/* for IE10 and Above only */
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none){
+    .topWrap {
+        padding-right: 20px;
+    }
+}
+
+@media print {
+    body,
+    .entriesRaceDisc,
+    .pageData,
+    .oddsDtlsPanel span .oddsNo, .oddsNo,
+    .valentDtlsodds,
+    .valentDtlsodds span,
+    .valentDtlsJockey span,
+    .footerWrap,
+    .valentDtlsHorse .valBeyers,
+    .horseAnalysis{
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+    h1, h2, h3, h4, h5, h6,
+    .entriesDtlsWrap .entriesDtlsLeft h4,
+    .entriesRaceDisc .raceDisctxtUp,
+    .headRow,
+    .closerLooksHead,
+    .tabContentWrap .headRow .sCell,
+    .bestConsensus .betRank,
+    .betAnalysis .highestBet{
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-weight: bold;
+    }
+    .titlePrint {
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-weight: bold;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+        display: block;
+    }
+    .headRow {
+        font-size: 13px;
+    }
+    .logoPrint,
+    .tabContent,
+    .closerLooksDtls{
+        display: block !important;
+    }
+    .headerWrap,
+    .dateWrap,
+    .backButton,
+    .rightColumn,
+    .icon-add-favorite,
+    .icon-favorite,
+    .rightColumn,
+    .rightAdsWrap,
+    .entriesDtlsRight,
+    .btnEntriesRace,
+    .tabs,
+    .premiumCnt{
+        display: none !important;
+    }
+    .pageData {
+        width: 100% !important;
+        border: 1px solid #BABBBE;
+    }
+    .oddsDtlsPanel span .oddsNo, .oddsNo {
+        border: 1px solid #BABBBE;
+        color: #000000 !important;
+    }
+    .newsListWrap .newsHeader,
+    .newsListWrap .readAll,
+    .newsListWrap h3 a,
+    .newsListWrap .postReadMore a,
+    .headRow .valentDtlsHorse .premiumBeyerActive,
+    .valentDtlsodds{
+        color: #000000 !important;;
+    }
+    .entriesDtlsWrap .headRow .sCell{
+        color: #666 !important;
+    }
+    .btnEntriesRace li {
+        margin-left: 0;
+    }
+    @page {
+        margin: .5cm;
+    }
+    .entriesDtlsWrap .entriesHeader {
+        border-bottom: 0;
+    }
+    .entriesRaceHeader {
+        padding-top: 25px;
+        padding-bottom: 0;
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: #eee;
+    }
+    .betAnalysis .bestConsensus{
+        border-top: 1px solid #eee;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+    [class^="icon-"],
+    [class*=" icon-"],
+    .btnPrev,
+    .btnNext,
+    .dateWrap .mCSB_scrollTools .mCSB_buttonUp,
+    .dateWrap .mCSB_scrollTools .mCSB_buttonDown,
+    .dateWrap .mCSB_scrollTools .mCSB_buttonLeft,
+    .dateWrap .mCSB_scrollTools .mCSB_buttonRight,
+    .entriesRaceDiscMobile .raceDisctxtUp span,
+    .socialMedia li a.twitter:before,
+    .socialMedia li a.facebook:before,
+    .subMenuArrow:after,
+    .searchWrap .icon-search:before,
+    .searchWrap .searchBox input.btnSubmit{
+        background-image: url("../img/sprite@2x.png");
+        background-size: 85px auto;
+    }
+    .traSelCheckbox .checkbox {
+        background-image: url("../img/checkBox@2x.png");
+        background-size: 16px auto;
+    }
+    .listCnt li {
+        background: url("../img/bullet@2x.png") left 3px no-repeat;
+        background-size: 16px auto;
+    }
+}

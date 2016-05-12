@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8"/>
-	<title>DRF Predictor</title>
-	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
-	<link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
-	<link rel="stylesheet" type="text/css" th:href="@{/css/custom-media.css}"/>
-	<script type="text/javascript" th:src="@{/js/vendor/jquery.min.js}"></script>
-	<script type="text/javascript" th:src="@{/js/custom.js}"></script>
+	<meta charset="utf-8" />
+    <title>DRF - Predictor</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="apple-touch-icon" th:href="@{/img/apple-touch-icon.png}" />
+    <link rel="apple-touch-icon" sizes="57x57" th:href="@{/img/apple-touch-icon-57x57.png}" />
+    <link rel="apple-touch-icon" sizes="72x72" th:href="@{/img/apple-touch-icon-72x72.png}" />
+    <link rel="apple-touch-icon" sizes="114x114" th:href="@{/img/apple-touch-icon-114x114.png}"/>
+    <link rel="apple-touch-icon" sizes="57x57" th:href="@{/img/apple-touch-icon-60x60.png}"/>
+    <link rel="apple-touch-icon" sizes="72x72" th:href="@{/img/apple-touch-icon-120x120.png}"/>
+    <link rel="apple-touch-icon" sizes="114x114" th:href="@{/img/apple-touch-icon-76x76.png}"/>
+    <link rel="apple-touch-icon" sizes="144x144" th:href="@{/img/apple-touch-icon-152x152.png}"/>
+    <!-- Windows 8 Tile Icons -->
+    <meta name="msapplication-square70x70logo" th:content="@{/img/smalltile.png}" />
+    <meta name="msapplication-square150x150logo" th:content="@{/img/mediumtile.png}" />
+    <meta name="msapplication-wide310x150logo" th:content="@{/img/widetile.png}" />
+    <meta name="msapplication-square310x310logo" th:content="@{/img/largetile.png}" />
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom-media.css}" />
 
-	<link rel="apple-touch-icon" th:href="@{/images/apple-touch-icon.png}"/>
-	<link rel="apple-touch-icon" sizes="57x57" th:href="@{/images/apple-touch-icon-57x57.png}"/>
-	<link rel="apple-touch-icon" sizes="72x72" th:href="@{/images/apple-touch-icon-72x72.png}"/>
-	<link rel="apple-touch-icon" sizes="114x114" th:href="@{/images/apple-touch-icon-114x114.png}"/>
-	<link rel="apple-touch-icon" sizes="144x144" th:href="@{/images/apple-touch-icon-144x144.png}"/>
-	<link rel="apple-touch-icon" sizes="57x57" th:href="@{/images/apple-touch-icon-60x60.png}"/>
-	<link rel="apple-touch-icon" sizes="72x72" th:href="@{/images/apple-touch-icon-120x120.png}"/>
-	<link rel="apple-touch-icon" sizes="114x114" th:href="@{/images/apple-touch-icon-76x76.png}"/>
-	<link rel="apple-touch-icon" sizes="144x144" th:href="@{/images/apple-touch-icon-152x152.png}"/>
-	<!-- Windows 8 Tile Icons -->
-	<meta name="msapplication-square70x70logo" th:content="@{/images/smalltile.png}" />
-	<meta name="msapplication-square150x150logo" th:content="@{/images/mediumtile.png}" />
-	<meta name="msapplication-wide310x150logo" th:content="@{/images/widetile.png}" />
+    <script type="text/javascript" th:src="@{/js/vendor/adPush.js}"></script>
+    <!--[if lt IE 9]>
+    <base href="/">
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/headerMenus.js}"></script>
+    <script type="text/javascript" th:src="@{/js/vendor/modernizr.js}"></script>
+    <script type="text/javascript" th:src="@{/js/custom.js}"></script>
+    <script>
+        ///////GA Code///////////////////////////
+
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-973056-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>	
 <body>
 
+
 <!-- top navigation bar -->
-<div class="topWrap">
+<ul class="topWrap mobileHide">
     <ul class="topNav clearfix">
         <li><a href="http://www.drf.com/">DRF.com</a></li>
         <li><a href="http://www.drf.com/bets">DRF Bets</a></li>
@@ -39,151 +69,126 @@
         <li><a href="http://www.nhcqualify.com/">NHCQualify</a></li>
         <li><a href="http://www.head2head.com/">Fantasy Sports</a></li>
     </ul>
+
     <ul class="socialMedia mobileHide clearfix">
         <li><a href="https://twitter.com/DRFInsidePost" target="_blank" class="twitter"></a></li>
         <li><a href="https://www.facebook.com/racingform" target="_blank" class="facebook"></a></li>
     </ul>
     <ul class="toploginNav clearfix loginHide">
-        <li><a href="javascript:void(0)" class="loginHeader">Login</a></li>
+        <li><a href="http://access.drf.com/?refferUrl=http://www.drf.com" class="loginHeader loginLink">Login</a></li>
         <li><a href="https://store.drf.com/stores/1/register.cfm" target="_blank">Register</a></li>
     </ul>
-</div>  
+    <div class="userNav clearfix loginShow">
+        <div class="userName clearfix mobileHide">
+            <span class="displayUserName"></span>
+            <i class="icon-arrow"></i>
+        </div>
+        <ul>
+            <li><a href="http://www1.drf.com/formulator-web/Launch.do">Get PPs</a></li>
+            <li><a href="http://drf.com/admin/drfwebMembersPage.jsp">Member Center</a></li>
+            <li><a href="http://store.drf.com/acb/stores/1/orders.cfm">Account Settings</a></li>
+            <li class="logout"><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+</ul>
 <!-- end of top navigation bar -->
 
 <!-- main content -->
 <div class="container">
 
 	<!-- page navigation -->
-	<div class="headerWrap">
-			<header class="clearfix">
-				<div class="logo">
-					<a href="/"><img th:src="@{/images/logo.jpg}" alt="DRF - Daily Racing Form"/></a>
-				</div>			
-				<div class="headerAds mobileHide">
-						<img th:src="@{/images/ad.png}"/>
-				</div>				
-			</header>
-			<nav class="clearfix">
-				<div class="searchWrap">
-					<i class="icon-search"></i>
-					<div class="searchBox">
-						<div class="formWarp clearfix" >
-							<form name="searchForm clearfix">
-								<input type="text" placeholder="Search Races, News, etc"/>
-								<input class="btnSubmit" target="_blank" value="Submit" type="submit"/>
-							</form>
-						</div>
-					</div>
-				</div>
-				<ul class="menuNav">
-					<li class="drfNav"><a class="icon-drfMenu" href="http://www.drf.com" target="_self">Home</a></li>
-					<li>
-						<a href="#" class="subMenuArrow">DRF Bets</a>
-						<div class="subMenu" style="width: 195px; right: inherit;">
-							<div class="colMenu" >
-								<ul>
-									<li>
-										<a href="#">Log In</a>
-									</li>
-									<li>
-										<a href="http://drfbets.com/200">Sign Up</a>
-									</li>
-									<li>
-										<a href="http://www.drfbets.com/why-drf-bets" target="_self">Learn more</a>
-									</li>
-									<li>
-										<a href="#">Rewards Program</a>
-									</li>
-									<li>
-										<a href="#">Points Details</a>
-									</li>
-									<li>
-										<a href="#" >Free DRF Plus</a>
-									</li>
-									<li>
-										<a href="#">Free DRF PPs</a>
-									</li>
-									<li>
-										<a href="#">Free Harness PPs</a>
-									</li>
-									<li>
-										<a href="#">FAQ</a>
-									</li>
-								</ul>
-							</div>							
-						</div>
-					</li>
-					<li>
-							<a href="#" class="subMenuArrow">Handicapping &amp; PPs</a>
-							<div class="subMenu">
-								<div class="colMenu">
-									<ul>
-											<li>
-												<h2>Thoroughbred Past Performances</h2>
-											</li>										
-											<li>
-												<a href="#" >DRF Classic PDF PPs</a>
-											</li>
-											<li>
-												<a href="#" >DRF Formulator PPs</a>
-											</li>
-											<li>
-												<a href="#" >DRF Easyform PPs</a>
-											</li>
-									</ul>
-								</div>
-							</div>
-					</li>
-					<li>
-							<a href="#" class="subMenuArrow">Entries</a>
-							<div class="subMenu">
-								<div class="colMenu">
-									<ul>
-											<li>
-												<h2>Thoroughbred Past Performances</h2>
-											</li>										
-											<li>
-												<a href="#" >Entries</a>
-											</li>
-											<li>
-												<a href="#" >Live Odds</a>
-											</li>
-											<li>
-												<a href="#" >Workouts</a>
-											</li>
-									</ul>									
-								</div>
-							</div>
-					</li>
-					<li>
-							<a href="#" class="subMenuArrow">Results</a>
-					</li>
-					<li>
-							<a href="#" class="subMenuArrow">News</a>
-					</li>				
-					<li>
-							<a href="#" class="">Blogs</a>
-					</li>		
-					<li>
-							<a href="#" class="subMenuArrow">Learn</a>
-					</li>		
-					<li>
-							<a href="#" class="subMenuArrow">Video</a>
-					</li>		
-					<li>
-							<a href="#" class="subMenuArrow">Store</a>
-					</li>	
-					<li>
-							<a href="#" class="subMenuArrow">Events</a>
-					</li>		
-					<li>
-							<a href="#" class="subMenuArrow">Breeding</a>
-					</li>			
+    <div class="headerWrap">
+        <header class="clearfix">
+            <div class="logo">
+                <a href="/"><img th:src="@{/img/logo.png}" alt="DRF - Daily Racing Form" /></a>
+            </div>
+            <div class="logoMobile ipadShow">
+                <a href="/">
+                    <img src="img/logo-drf.png" alt="DRF - Daily Racing Form" />
+                </a>
+            </div>
+            <div class="headerAds mobileHide">
+                <!-- <img th:src="@{/img/ad.png}"/> -->
+                <!-- /25704096/DRF_728x90_ATF_1 -->
+                <div id='div-gpt-ad-1434395586969-7' style='height:90px; width:728px;'>
+                    <script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1434395586969-7'); });
+			        </script>
+                </div>
+            </div>
+            <div class="mobileShow ipadShow">
+                <ul class="mobileMenu">
+                    <li>
+                        <a class="responsiveButton" href="#">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- mobile menu -->
+                <div class="vsMenu">
+                    <div class="logoMobile">
+                        <a href="/"><img th:src="@{/img/logo-drf.png}" alt="DRF - Daily Racing Form" /></a>
+                    </div>
+                    <ul class="drfProMenu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="http://pro.drf.com/race-entries">Entries</a></li>
+                        <li><a href="http://www.drf.com/race-results">Results</a></li>
+                        <li><a href="http://www.drf.com/live_odds">Live Odds</a></li>
+                        <li><a href="http://www.drfticketmaker.com/">TicketMaker</a></li>
+                        <li><a href="http://www.drf.com/news/all-news">News</a></li>
+                        <li><a href="http://live.drf.com/">DRF Live</a></li>
+                    </ul>
+                    <ul>
+                        <li class="mobileHide"><a href="#">Formulator PPs</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/drfPastPerformance.do">Classic PPs</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/EasyForm/MainMenu.do">EasyForm PPs</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/DailyRacingProgram/MainMenu.do">DRP PPs</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/Wizard/MainMenu.do">The Wizard</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/propicks.do?day=today">DRF Picks</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/simulcast-daily">Simulcast Daily</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/DigitalNewspaper/MainMenu.do">Digital Paper</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/HorseWatches.do">Alerts</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/drfQuickSheet.do">QuickSheets</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/GamePlan/Mainmenu.do">GamePlan</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/belmont-clocker">Clocker Report</a></li>
+                        <li><a target="_blank"  href="http://www1.drf.com/HCPOnlineHorsePickProduct.do?action=horsemensproducts">Horsemen's Products</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/stakes-results">Stakes Results</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/bets">DRF Bets</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/harness">DRF Harness</a></li>
+                        <li><a target="_blank"  href="http://www.drf.com/breeding">DRF Breeding</a></li>
+                    </ul>
+                    <ul class="toploginNav clearfix">
+                        <li ><a class="loginLink loginHide" href="#">Login</a></li>
+                        <li><a href="http://drf.com/admin/drfwebMembersPage.jsp">Member Center</a></li>
+                        <li><a href="http://store.drf.com/acb/stores/1/orders.cfm">Account Settings</a></li>
+                        <li class="loginUser">
+                            <span class="displayUserName"></span>
+                            <a class="logout loginShow" href="" >Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- mobile menu end -->
+            </div>
+        </header>
+        <nav class="clearfix" id="headerMenu">
+            <div class="searchWrap">
+                <i class="icon-search"></i>
+                <div class="searchBox">
+                    <div class="formWarp clearfix" >
+                        <form name="searchForm clearfix" id="searchBox">
+                            <input id="searchTerms" type="text" placeholder="Search Races, News, etc" />
+                            <input class="btnSubmit" target="_blank" value="Submit" type="button" />
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-				</ul>
-			</nav>
-	</div>
-	<!-- end of page navigation-->
+        </nav>
+    </div>
+    <!-- end of page navigation-->
+	
 	
 	<!-- middle main content -->
 	<div class="contentWrap clearfix">
@@ -191,6 +196,8 @@
 			<div class="topHead clearfix">
 				<h3 class="pull-left">Prediction</h3>						
 			</div>
+			
+			
 			<div class="wagerContent">
 				<div class="sectionBlock dateWrapper">
 					<span class="valueLabel">Date:</span> <span th:text="${predictor.date}"></span>
@@ -211,13 +218,27 @@
 			</div>		
 		</section>
 
-		<!-- right column -->
-		<aside class="rightColumn">
-			<div class="adsWrap">
-				<img th:src="@{/images/ad4.png}" alt="Advertisement"/>
-			</div>			
-		</aside>
-		<!-- end of right column -->
+		 <!-- right column -->
+        <aside class="rightColumn">
+            <div class="adsWrap">
+                <!-- /25704096/DRF_300x1050_300x600_300x500_300x250_320x50_ATF_1 -->
+                <div id='div-gpt-ad-1434395586969-2'>
+                    <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1434395586969-2'); });
+					</script>
+                </div>
+            </div>
+
+            <div class="adsWrap">
+                <!-- /25704096/DRF_300x600_300x250_ATF_2 -->
+                <div id='div-gpt-ad-1435083304219-0'>
+                    <script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1435083304219-0'); });
+					</script>
+                </div>
+            </div>
+        </aside>
+        <!-- end of right column -->
 	</div>
 	<!-- end of middle main content -->
 </div> 
