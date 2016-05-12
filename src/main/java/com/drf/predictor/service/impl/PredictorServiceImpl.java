@@ -1,11 +1,9 @@
 package com.drf.predictor.service.impl;
 
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -14,10 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.drf.common.dto.results.RunnerDTO;
 import com.drf.predictor.models.Predictor;
 import com.drf.predictor.service.PredictorService;
-import com.drf.proservice.model.EntriesDatesWrapper;
 import com.drf.proservice.model.EntriesDetailsWrapper;
 import com.drf.proservice.service.EntriesService;
 import com.drf.proservice.service.ResultsService;
@@ -25,7 +21,6 @@ import com.drf.proservice.service.ResultsService;
 import drf.common.wrappers.analysis.ExpertsScore;
 import drf.common.wrappers.analysis.HorseDetails;
 import drf.common.wrappers.entries.RaceDTOWrapper;
-import drf.common.wrappers.entries.TrackEntry;
 import drf.common.wrappers.results.ResultDetailsWrapper;
 import drf.common.wrappers.results.ResultEntry;
 import drf.common.wrappers.results.ResultRaceDTOWrapper;
@@ -73,6 +68,7 @@ public class PredictorServiceImpl implements PredictorService {
                         if ( resultsMap.containsKey(raceNumber) ) {
                             ResultRaceDTOWrapper resultRaceDTOWrapper = resultsMap.get(raceNumber);
                             List<HorseDetails> horseAnalysisList = this.fetchAnalysis(raceDTOWrapper);
+                            this.validateProgramNumberForHorse(horseAnalysisList, resultRaceDTOWrapper.getRunnerDTOs());
                             this.predictForWinPlaceShow(predicatMap, resultRaceDTOWrapper.getRunnerDTOs(), horseAnalysisList);
                         }
                     }
@@ -86,6 +82,23 @@ public class PredictorServiceImpl implements PredictorService {
         predictor.setTotalRacesCount(totalRaces);
         predictor.setWagersPredicationMap(predicatMap);
         return predictor;
+    }
+
+    private void validateProgramNumberForHorse(List<HorseDetails> horseAnalysisList, List<RunnerDTOWrapper> runnerDTOs) {
+        for ( HorseDetails horseDetails : horseAnalysisList ) {
+            if ( horseDetails.getProgramNumber() == null ) {
+                horseDetails.setProgramNumber(searchProgramNumber(runnerDTOs, horseDetails));
+            }
+        }
+    }
+
+    private String searchProgramNumber(List<RunnerDTOWrapper> runnerDTOs, HorseDetails horseDetails) {
+        for ( RunnerDTOWrapper runnerDTOWrapper : runnerDTOs ) {
+            if ( runnerDTOWrapper.getHorseName().equals(horseDetails.getHorseName()) ) {
+                return runnerDTOWrapper.getProgramNumber();
+            }
+        }
+        return null;
     }
 
     private HashMap<String, Long> buildPredicatMap() {
@@ -102,21 +115,21 @@ public class PredictorServiceImpl implements PredictorService {
         if ( !horseAnalysisList.isEmpty() ) {
             int exactCount = 0;
             int trifectaCount = 0;
-            if ( horseAnalysisList.get(0).getProgramNumber().trim().equals(WinnersHorses.get(0).getProgramNumber().trim()) ) {
+            if ( horseAnalysisList.get(0).getProgramNumber() != null && horseAnalysisList.get(0).getProgramNumber().trim().equals(WinnersHorses.get(0).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("WIN");
                 count++;
                 predicatList.put("WIN", count);
                 exactCount++;
                 trifectaCount++;
             }
-            if ( horseAnalysisList.get(1).getProgramNumber().trim().equals(WinnersHorses.get(1).getProgramNumber().trim()) ) {
+            if ( horseAnalysisList.get(1).getProgramNumber() != null && horseAnalysisList.get(1).getProgramNumber().trim().equals(WinnersHorses.get(1).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("PLACE");
                 count++;
                 predicatList.put("PLACE", count);
                 exactCount++;
                 trifectaCount++;
             }
-            if ( horseAnalysisList.get(2).getProgramNumber().trim().equals(WinnersHorses.get(2).getProgramNumber().trim()) ) {
+            if ( horseAnalysisList.get(2).getProgramNumber() != null && horseAnalysisList.get(2).getProgramNumber().trim().equals(WinnersHorses.get(2).getProgramNumber().trim()) ) {
                 Long count = predicatList.get("SHOW");
                 count++;
                 predicatList.put("SHOW", count);
