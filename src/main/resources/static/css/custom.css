@@ -1095,6 +1095,8 @@ nav {
 }
 .wagerContent .sectionBlock {
     margin-bottom: 10px;
+    display: inline-block;
+    width: 45%;
 }
 .wagerContent .valueLabel {
     font-size: 14px;
