@@ -1,12 +1,10 @@
 package com.drf.predictor.controller;
 
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +35,6 @@ public class PredictorController {
     String predictorResults(@PathVariable String date, Model model) {
         Date parseDate = this.formateDate(date);
         Predictor predictor = predictorService.getRacePredictor(parseDate);
-        try {
-            LOG.debug("racePredictor: {}", new ObjectMapper().writeValueAsString(predictor));
-        } catch (IOException ex) {
-            LOG.error("Exception occured during fetching data", ex);
-        }
         model.addAttribute("predictor", predictor);
 
         return "predictor-results";

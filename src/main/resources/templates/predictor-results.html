@@ -207,10 +207,10 @@
 						<span class="valueLabel">Total Races:</span> <span th:text="${predictor.totalRacesCount}"></span>
 					</div>
 					<div class="sectionBlock raceWinner">
-						<span class="valueLabel">Base Bet:</span> <span >$2</span>
+						<span class="valueLabel">Base Bet:</span> <span th:text="${predictor.baseBet}"></span>
 					</div>
 					<div class="sectionBlock totalAmount">
-						<span class="valueLabel">Total amount wagered:</span> <span>$108</span>
+						<span class="valueLabel">Total amount wagered:</span> <span th:text="${predictor.totalAmountWagered}"></span>
 					</div>					
 				</div>
 				<ul class="dataTable wagerList" >
@@ -222,10 +222,10 @@
 					</li>
 					<li class="dataRow" th:each="result : ${predictor.wagersPredicationMap}">
 						<div class="sCell sCellWager"><span th:text="${result.key}"></span></div>
-						<div class="sCell sCellCount"><span th:text="${result.value}"></span></div>
-						<div class="sCell sCellCount">100</div>
-						<div class="sCell sCellCount">0.6</div>
-					</li>							
+						<div class="sCell sCellCount"><span th:text="${result.value.count}"></span></div>
+						<div class="sCell sCellCount"><span th:text="${result.value.totalPayout}"></span></div>
+						<div class="sCell sCellCount"><span th:text="${result.value.profit}"></span></div>
+					</li>
 				</ul>
 			</div>		
 		</section>
